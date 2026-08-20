@@ -73,8 +73,15 @@ import {
   aiMasteryWealthTotalReadingMinutes,
   aiMasteryWealthWorkbookExercises,
 } from "./ai-mastery-wealth-book";
+import {
+  houseRememberedChapters,
+  houseRememberedChapterLoaders,
+  houseRememberedBookMeta,
+  houseRememberedAllWorkbookExercises,
+  houseRememberedTotalReadingMinutes,
+} from "./house-remembered-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
@@ -326,6 +333,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}ai-mastery-wealth-building.pdf`,
     pdfPageCount: 500,
     learningOutcomes: ["AI concepts, prompting, context, verification ও responsible use বোঝা", "AI দিয়ে productivity, research, content, automation ও agents workflow তৈরি করা", "AI-powered service, business, career ও real-world project prototype করা", "Skill → Value → Income → Ownership → Scale → Compounding wealth system গড়া"],
+  },
+  "house-remembered": {
+    id: "house-remembered",
+    title: "THE HOUSE THAT REMEMBERED",
+    subtitle: "যে বাড়ি মনে রাখত — ১০টি সম্পূর্ণ বাংলা dark crime ও psychological thriller case",
+    description: "দশটি মৌলিক বাংলা crime ও psychological thriller case, প্রতিটির শেষে Case Breakdown এবং শেষে Crime & Thriller Masterclass।",
+    longDescription: "রায়বাড়ির অদৃশ্য স্মৃতি থেকে শুরু করে হারিয়ে যাওয়া রেকর্ড, নীরব প্রত্যক্ষদর্শী, অসম্ভব সময়রেখা ও মানুষের মনে থাকা অপরাধ—এই পূর্ণাঙ্গ collection পাঠককে fair-play clue, চরিত্রের motive, evidence এবং নৈতিক ambiguity-এর ভিতর দিয়ে নিয়ে যায়।",
+    category: "মনোবিজ্ঞান",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}house-that-remembered-cover.png`,
+    accent: "#2B1D2E",
+    accentSoft: "#F1E9F0",
+    chapters: houseRememberedChapters,
+    chapterLoaders: houseRememberedChapterLoaders,
+    workbookExercises: houseRememberedAllWorkbookExercises,
+    totalReadingMinutes: houseRememberedTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}the-house-that-remembered.pdf`,
+    pdfPageCount: houseRememberedBookMeta.pages,
+    learningOutcomes: ["ঘটনা, evidence, inference ও সন্দেহ আলাদা করে পড়া", "motive, opportunity, timeline ও contradiction বিশ্লেষণ করা", "fair-play mystery-র clue map তৈরি করা", "crime fiction-এর নৈতিক ambiguity ও psychological consequence বোঝা"],
   },
 };
 
