@@ -1,0 +1,91 @@
+/* জীবন-ড্যাশবোর্ড: mobile swipe mode is a calm, full-page reading stage—not a boxed dashboard panel. */
+.swipe-reader__immersive-bar { display: none; }
+
+@media (max-width: 720px) {
+  html.immersive-swipe-active,
+  body.immersive-swipe-active { overflow: hidden; overscroll-behavior: none; }
+
+  .swipe-reader-page { min-height: 100dvh; background: var(--forest-deep); }
+  .swipe-reader-page > .app-header,
+  .swipe-reader-page .chapter-sidebar,
+  .swipe-reader-page .swipe-reader__context-wait,
+  .swipe-reader-page .swipe-reader__header,
+  .swipe-reader-page .swipe-reader__status,
+  .swipe-reader-page .swipe-reader__hint { display: none; }
+
+  .swipe-reader-page .swipe-reader-layout { display: block; min-height: 100dvh; }
+  .swipe-reader-page .swipe-reader {
+    display: grid;
+    grid-template-rows: 3.9rem minmax(0, 1fr) 4.8rem;
+    width: 100%;
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 0;
+    overflow: hidden;
+    background: var(--forest-deep);
+  }
+
+  .swipe-reader__immersive-bar {
+    display: grid;
+    grid-template-columns: 2.7rem minmax(0, 1fr) 2.7rem;
+    align-items: center;
+    gap: .55rem;
+    padding: max(.55rem, env(safe-area-inset-top)) 1rem .5rem;
+    color: var(--paper);
+    background: color-mix(in srgb, var(--forest-deep) 92%, black);
+    border-bottom: 1px solid color-mix(in srgb, var(--paper) 15%, transparent);
+  }
+  .swipe-reader__immersive-bar .jibon-back-button {
+    height: 2.35rem;
+    width: 2.35rem;
+    min-height: 2.35rem;
+    border-color: color-mix(in srgb, var(--paper) 34%, transparent);
+    background: transparent;
+    color: var(--paper);
+  }
+  .swipe-reader__immersive-bar > div { display: grid; min-width: 0; gap: .05rem; text-align: center; }
+  .swipe-reader__immersive-bar strong { color: var(--gold); font-family: "Noto Sans Bengali", sans-serif; font-size: .88rem; }
+  .swipe-reader__immersive-bar span { overflow: hidden; color: color-mix(in srgb, var(--paper) 82%, transparent); font-family: "Noto Sans Bengali", sans-serif; font-size: .7rem; text-overflow: ellipsis; white-space: nowrap; }
+  .swipe-reader__immersive-bar > a { display: grid; width: 2.35rem; height: 2.35rem; place-items: center; border: 1px solid color-mix(in srgb, var(--paper) 34%, transparent); border-radius: 50%; color: var(--paper); }
+
+  .swipe-reader-page .swipe-reader__workspace {
+    min-height: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: color-mix(in srgb, var(--forest) 84%, black);
+  }
+  .swipe-reader-page .swipe-reader__paper {
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    touch-action: pan-x;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--forest) 84%, black);
+  }
+  .swipe-reader-page .swipe-reader__paper .pdf-canvas-viewer {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+  }
+  .swipe-reader-page .swipe-reader__paper canvas { max-width: 100%; max-height: 100%; box-shadow: 0 1.1rem 2.4rem rgb(0 0 0 / 31%); }
+  .swipe-reader-page .swipe-reader__page-cue { display: none; }
+
+  .swipe-reader-page .swipe-reader__controls {
+    position: static;
+    z-index: auto;
+    width: 100%;
+    margin: 0;
+    padding: .6rem max(1rem, env(safe-area-inset-right)) max(.6rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+    border: 0;
+    border-radius: 0;
+    background: color-mix(in srgb, var(--forest-deep) 94%, black);
+    box-shadow: none;
+  }
+  .swipe-reader-page .swipe-reader__controls button { min-width: 7.65rem; min-height: 2.9rem; font-size: .84rem; }
+  .swipe-reader-page .swipe-reader__controls span { color: var(--paper); }
+  .swipe-reader-page .swipe-reader__controls b { color: var(--gold); }
+}

@@ -3,6 +3,7 @@ import App from "./App";
 import "./index.css";
 import "./pwa.css";
 import "./refinement.css";
+import "./immersive-swipe.css";
 
 if ("serviceWorker" in navigator && import.meta.env.PROD) {
   window.addEventListener("load", () => {

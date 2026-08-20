@@ -2,6 +2,7 @@
 import { AppHeader } from "@/components/AppHeader";
 import { ChapterSidebar } from "@/components/ChapterSidebar";
 import { ContextRail } from "@/components/ContextRail";
+import { BackButton } from "@/components/BackButton";
 import { PdfPageCanvas, prefetchPdfPages } from "@/components/PdfPageCanvas";
 import { Button } from "@/components/ui/button";
 import type { BookChapter } from "@/data/book";
@@ -61,7 +62,21 @@ export default function SwipePageReader() {
     return () => { cancelled = true; };
   }, [book, currentChapterMeta, page, setActiveChapter, setProgress]);
 
+  useEffect(() => {
+    document.documentElement.classList.add("immersive-swipe-active");
+    document.body.classList.add("immersive-swipe-active");
+    return () => {
+      document.documentElement.classList.remove("immersive-swipe-active");
+      document.body.classList.remove("immersive-swipe-active");
+    };
+  }, []);
+
   return <div className="page-shell swipe-reader-page"><AppHeader /><div className="swipe-reader-layout"><ChapterSidebar bookId={book.id} currentChapterId={currentChapterMeta?.id} mode="swipe" /><main className="swipe-reader">
+    <div className="swipe-reader__immersive-bar" aria-label="পাঠের নিয়ন্ত্রণ">
+      <BackButton fallback={`/book/${book.id}`} label="ফিরুন" compact />
+      <div><strong>{page.toLocaleString("bn-BD")} / {book.pdfPageCount.toLocaleString("bn-BD")}</strong><span>{currentChapterMeta ? currentChapterMeta.title : book.title}</span></div>
+      <Link href={`/book/${book.id}/page/${page}`} aria-label="নির্দিষ্ট পৃষ্ঠা বেছে পড়ুন"><FileText className="size-4" /></Link>
+    </div>
     <header className="swipe-reader__header"><div><span className="store-eyebrow"><Hand className="size-4" /> পাতা উল্টে পাঠ · একবারে একটি পৃষ্ঠা</span><h1>{book.title}</h1><p>পাতা বদলাতে ডানে বা বাঁয়ে টানো। এই mode-এ উপরে-নিচে scrolling বন্ধ।</p></div><div className="swipe-reader__mode-links"><Link href={`/book/${book.id}/page/${page}`}><FileText className="size-4" /> পৃষ্ঠা বেছে পড়া</Link><Link href={`/book/${book.id}/chapter/${firstChapterId}`}><BookOpen className="size-4" /> অধ্যায়ভিত্তিক পাঠ</Link></div></header>
     <section className="swipe-reader__status" aria-label="বর্তমান পাতা-উল্টে পাঠের অবস্থা"><div><span>এখন দেখছ</span><strong>{pageLabel(page, book.pdfPageCount)}</strong><small>{currentChapterMeta ? `অধ্যায় ${String(currentChapterMeta.number).padStart(2, "0")} · ${currentChapterMeta.title}` : "পাঠের অবস্থান নির্ধারণ হচ্ছে"}</small></div><div className="swipe-reader__thread"><span style={{ width: `${progress}%` }} /></div><small>{progress.toLocaleString("bn-BD")}% পথ এগিয়েছে</small></section>
     <section className="swipe-reader__workspace" aria-label="PDF পৃষ্ঠা পড়ুন"><div className="swipe-reader__paper" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}><PdfPageCanvas source={book.pdfUrl} page={page} fit="contain" /><span className="swipe-reader__page-cue">ডানে বা বাঁয়ে টেনে পাতা বদলাও</span></div></section>
