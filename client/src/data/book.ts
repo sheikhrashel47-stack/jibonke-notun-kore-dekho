@@ -1,6 +1,6 @@
 /* জীবন-ড্যাশবোর্ড: app-wide chapter metadata and lazy loaders. */
 
-export type BookBlock = { type: "paragraph" | "subheading"; content: string };
+export type BookBlock = { type: "paragraph" | "subheading" | "image"; content: string; alt?: string };
 export type BookSection = { id: string; title: string; blocks: BookBlock[] };
 export type WorkbookExercise = { title: string; prompt: string };
 export type BookChapter = {

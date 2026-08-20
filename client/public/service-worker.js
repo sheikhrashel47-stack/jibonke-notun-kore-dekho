@@ -14,7 +14,8 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   const requestUrl = new URL(event.request.url);
-  if (requestUrl.pathname.endsWith(".pdf") || requestUrl.hostname !== self.location.hostname) return;
+  const isExternalBookAsset = requestUrl.hostname === "github.com" || requestUrl.hostname === "raw.githubusercontent.com";
+  if (requestUrl.pathname.endsWith(".pdf") || (requestUrl.hostname !== self.location.hostname && !isExternalBookAsset)) return;
   if (event.request.mode === "navigate") {
     event.respondWith(fetch(event.request).then((response) => {
       const contentType = response.headers.get("content-type") || "";
