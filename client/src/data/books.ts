@@ -49,10 +49,16 @@ import {
   communicationTotalReadingMinutes,
   communicationWorkbookExercises,
 } from "./communication-book";
+import {
+  futureChapters,
+  futureChapterLoaders,
+  futureTotalReadingMinutes,
+  futureWorkbookExercises,
+} from "./future-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
 export type BookDefinition = {
   id: BookId;
@@ -189,6 +195,7 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfPageCount: 289,
     learningOutcomes: ["মনোযোগ ও working memory অনুশীলন করা", "recall, pattern ও logical reasoning উন্নত করা", "সমস্যাকে ভেঙে root cause ও alternatives দেখা", "নিজের training performance আগের baseline-এর সঙ্গে তুলনা করা"],
   },
+<<<<<<< HEAD
   wealth: {
     id: "wealth",
     title: "THE WEALTH CODE",
@@ -226,6 +233,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}the-art-of-communication.pdf`,
     pdfPageCount: 500,
     learningOutcomes: ["শোনা, প্রশ্ন করা ও message পরিষ্কার করা", "কঠিন কথোপকথনে assertive ও ethical থাকা", "গল্প, body language ও public speaking উন্নত করা", "conflict, negotiation ও boundary conversation অনুশীলন করা"],
+  },
+  future: {
+    id: "future",
+    title: "আগামী পৃথিবী",
+    subtitle: "AI, মহাকাশ, মানুষের শরীর ও প্রযুক্তির বদলে যাওয়া পৃথিবী",
+    description: "বিজ্ঞান, প্রযুক্তি, মানবতা ও সম্ভাব্য future scenario-র মধ্য দিয়ে 300-পৃষ্ঠার একটি cinematic Bengali non-fiction journey।",
+    longDescription: "AI, robotics, jobs, human body, longevity, brain interfaces, energy, climate, cities, space, biotechnology, digital reality ও power—বর্তমান evidence এবং অনিশ্চিত সম্ভাবনার সীমা আলাদা রেখে লেখা একটি বই।",
+    category: "বিজ্ঞান ও ভবিষ্যৎ",
+    creator: "Zayan",
+    cover: `${import.meta.env.BASE_URL}the-future-cover.png`,
+    accent: "#0B5D66",
+    accentSoft: "#E4F1F2",
+    chapters: futureChapters,
+    chapterLoaders: futureChapterLoaders,
+    workbookExercises: futureWorkbookExercises,
+    totalReadingMinutes: futureTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}the-future.pdf`,
+    pdfPageCount: 300,
+    learningOutcomes: ["KNOWN, EMERGING, PLAUSIBLE, SPECULATIVE ও UNCERTAIN আলাদা করে ভবিষ্যৎ ভাবা", "AI, robotics, biotechnology ও space technology সহজ ভাষায় বোঝা", "প্রযুক্তির মানবিক consequence—কাজ, পরিবার, privacy ও inequality—দেখা", "একটি নির্দিষ্ট ভবিষ্যৎ নয়, একাধিক সম্ভাব্য scenario নিয়ে চিন্তা করা"],
   },
 };
 

@@ -9,7 +9,7 @@ import { Link } from "wouter";
 
 export default function Store() {
   const { activeBookId, progress, lastChapterByBook, libraryBookIds, setLibraryBook } = useReader();
-  const featured = bookDefinitions.brain;
+  const featured = bookDefinitions.future;
   const activeBook = bookDefinitions[activeBookId];
   const activeChapterId = getCurrentChapter(activeBookId, lastChapterByBook);
   return <section className="jibon-surface jibon-store">
