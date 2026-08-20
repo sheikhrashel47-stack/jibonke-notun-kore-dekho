@@ -59,3 +59,9 @@
 - [x] বর্তমান দৃশ্যমান chapter tracking ও chapter-mode-এ ফেরার navigation যোগ করা
 - [x] catalogue ও chapter reader-এ scroll-mode entry point যোগ করা
 - [x] mobile ও desktop layout, TypeScript build এবং GitHub Pages update যাচাই করা
+
+## বই ১ প্রথম পৃষ্ঠা bug fix
+
+- [x] বই ১-এর প্রথম chapter ও প্রথম PDF page route-এ সমস্যা পুনরুৎপাদন ও কারণ শনাক্ত করা
+- [x] প্রথম পৃষ্ঠা navigation এবং initial scroll position সংশোধন করা
+- [ ] desktop ও mobile-এ fix যাচাই করে GitHub Pages update প্রকাশ করা

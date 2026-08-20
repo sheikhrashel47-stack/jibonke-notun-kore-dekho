@@ -25,6 +25,8 @@ export type BookDefinition = {
   chapterLoaders: Record<string, () => Promise<{ default: BookChapter }>>;
   workbookExercises: WorkbookExercise[];
   totalReadingMinutes: number;
+  pdfUrl: string;
+  pdfPageCount: number;
 };
 
 export const bookDefinitions: Record<BookId, BookDefinition> = {
@@ -35,6 +37,8 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     chapterLoaders,
     workbookExercises,
     totalReadingMinutes,
+    pdfUrl: "/manus-storage/jibonke_notun_kore_dekho_ebook_a2073b56.pdf",
+    pdfPageCount: 300,
   },
   dark: {
     id: "dark",
@@ -43,6 +47,8 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     chapterLoaders: darkChapterLoaders,
     workbookExercises: darkWorkbookExercises,
     totalReadingMinutes: darkTotalReadingMinutes,
+    pdfUrl: "/manus-storage/main_3d8d46da.pdf",
+    pdfPageCount: 500,
   },
 };
 
@@ -54,8 +60,8 @@ export const chapterStorageKey = (bookId: BookId, chapterId: string) => `${bookI
 export const chapterNoteStorageKey = (bookId: BookId, chapterId: string) => `note:${bookId}:${chapterId}`;
 export const workbookNoteStorageKey = (bookId: BookId) => `reflection:${bookId}`;
 
-export const darkPdfUrl = "/manus-storage/main_3d8d46da.pdf";
-export const darkPdfPageCount = 500;
+export const darkPdfUrl = bookDefinitions.dark.pdfUrl;
+export const darkPdfPageCount = bookDefinitions.dark.pdfPageCount;
 
 export function getDarkChapterPageRange(chapterNumber: number) {
   if (chapterNumber >= 1 && chapterNumber <= 10) {
