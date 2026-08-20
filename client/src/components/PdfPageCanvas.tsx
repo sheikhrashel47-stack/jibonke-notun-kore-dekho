@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 GlobalWorkerOptions.workerSrc = workerSource;
 
-type PdfPageCanvasProps = { source: string; page: number };
+type PdfPageCanvasProps = { source: string; page: number; fit?: "width" | "contain" };
 const documentCache = new Map<string, Promise<PDFDocumentProxy>>();
 
 function loadPdf(source: string) {
@@ -32,10 +32,19 @@ export function prefetchPdfPages(source: string, pages: number[]) {
     .catch(() => undefined);
 }
 
-export function PdfPageCanvas({ source, page }: PdfPageCanvasProps) {
+export function PdfPageCanvas({ source, page, fit = "width" }: PdfPageCanvasProps) {
   const shellRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [state, setState] = useState<"loading" | "ready" | "error">("loading");
+  const [layoutVersion, setLayoutVersion] = useState(0);
+
+  useEffect(() => {
+    const shell = shellRef.current;
+    if (!shell) return;
+    const observer = new ResizeObserver(() => setLayoutVersion((version) => version + 1));
+    observer.observe(shell);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -48,8 +57,11 @@ export function PdfPageCanvas({ source, page }: PdfPageCanvasProps) {
         const shell = shellRef.current;
         if (!canvas || !shell || cancelled) return;
         const baseViewport = documentPage.getViewport({ scale: 1 });
-        const availableWidth = Math.max(280, shell.clientWidth - 24);
-        const displayScale = Math.min(2.15, availableWidth / baseViewport.width);
+        const availableWidth = Math.max(280, shell.clientWidth - (fit === "contain" ? 0 : 24));
+        const availableHeight = Math.max(280, shell.clientHeight - (fit === "contain" ? 0 : 24));
+        const displayScale = fit === "contain"
+          ? Math.min(2.45, availableWidth / baseViewport.width, availableHeight / baseViewport.height)
+          : Math.min(2.15, availableWidth / baseViewport.width);
         const displayViewport = documentPage.getViewport({ scale: displayScale });
         const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
         const context = canvas.getContext("2d", { alpha: false });
@@ -74,7 +86,7 @@ export function PdfPageCanvas({ source, page }: PdfPageCanvasProps) {
     };
     void renderPage();
     return () => { cancelled = true; };
-  }, [page, source]);
+  }, [fit, layoutVersion, page, source]);
 
   return <div ref={shellRef} className={`pdf-canvas-viewer pdf-canvas-viewer--${state}`} aria-busy={state === "loading"}>
     {state === "loading" && <div className="pdf-canvas-viewer__status"><span />পৃষ্ঠা প্রস্তুত হচ্ছে…</div>}

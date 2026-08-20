@@ -101,3 +101,16 @@
 - [x] browser history ও safe fallback সমর্থনকারী reusable Back button তৈরি করা
 - [x] reader, book detail, book map, library, store, progress ও profile surface-এ back navigation বসানো
 - [x] mobile ও desktop-এ direct-link, normal browsing এবং first-page fallback behavior যাচাই করা
+
+## Cover delivery ও immersive swipe reader
+
+- [x] তিনটি existing book cover-এর source, caching ও error fallback audit করা
+- [x] cover asset-কে reliable local managed storage-তে এনে instant visible fallback যোগ করা
+- [x] swipe reader থেকে boxed layout, vertical scroll ও ছোট page rendering সরিয়ে full-screen page stage তৈরি করা
+- [x] PDF page viewport, controls, swipe gesture ও mobile safe-area বড়-পাঠের জন্য যাচাই করা
+
+## নতুন visual philosophy e-book
+
+- [ ] ৩০০ visual philosophy book specification, theme progression ও production boundary সম্পূর্ণ audit করা
+- [ ] ৩০ theme × ১০ thought-এর content ও art-direction blueprint তৈরি করা
+- [ ] নতুন illustrated e-book, PDF, reader modules ও catalogue entry তৈরি করে প্রকাশ করা
