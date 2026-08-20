@@ -20,10 +20,16 @@ import {
   thinkingTotalReadingMinutes,
   thinkingWorkbookExercises,
 } from "./thinking-book";
+import {
+  wealthChapterLoaders,
+  wealthChapters,
+  wealthTotalReadingMinutes,
+  wealthWorkbookExercises,
+} from "./wealth-book";
 
-export const bookIds = ["life", "dark", "thinking"] as const;
+export const bookIds = ["life", "dark", "thinking", "wealth"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "অর্থ ও সম্পদ";
 
 export type BookDefinition = {
   id: BookId;
@@ -102,6 +108,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/pdf-assets/pdf/the_art_of_thinking_300.pdf",
     pdfPageCount: 300,
     learningOutcomes: ["অনুমান ও তথ্য আলাদা করা", "কঠিন সিদ্ধান্ত ধাপে ভাবা", "নিজের চিন্তার ভুল ধরতে শেখা"],
+  },
+  wealth: {
+    id: "wealth",
+    title: "THE WEALTH CODE",
+    subtitle: "শূন্য থেকে সম্পদ গড়ার বিজ্ঞান",
+    description: "আয়, সঞ্চয়, দক্ষতা, সম্পদ ও দীর্ঘমেয়াদি সিদ্ধান্ত নিয়ে ১০০ অধ্যায়ের বাংলা practical wealth-building পাঠ।",
+    longDescription: "দ্রুত ধনী হওয়ার প্রতিশ্রুতি নয়—নিজের earning power, cash flow, capital, ownership এবং risk-aware financial system গড়ে তোলার জন্য সাজানো একটি text-first digital edition।",
+    category: "অর্থ ও সম্পদ",
+    creator: "JIBON Editorial",
+    cover: "https://github.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/releases/download/store-assets-v1/the-wealth-code-cover.webp",
+    accent: "#0B5B4B",
+    accentSoft: "#E8F2ED",
+    chapters: wealthChapters,
+    chapterLoaders: wealthChapterLoaders,
+    workbookExercises: wealthWorkbookExercises,
+    totalReadingMinutes: wealthTotalReadingMinutes,
+    pdfUrl: "",
+    pdfPageCount: 0,
+    learningOutcomes: ["আয় ও cash flow-এর ভিত্তি পরিষ্কার করা", "সঞ্চয়, capital ও asset-এর সম্পর্ক বোঝা", "ঝুঁকি-সচেতন দীর্ঘমেয়াদি wealth system তৈরি করা"],
   },
 };
 

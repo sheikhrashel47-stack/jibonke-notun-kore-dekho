@@ -17,7 +17,7 @@ export function PremiumBookCard({ book, progress, chapterId, inLibrary, onLibrar
   return <article className={`premium-book-card ${compact ? "premium-book-card--compact" : ""}`} style={{ "--book-accent": book.accent, "--book-accent-soft": book.accentSoft } as React.CSSProperties}>
     <Link href={`/store/book/${book.id}`} className="premium-book-card__cover-link" aria-label={`${book.title} বইয়ের বিস্তারিত দেখুন`}><img src={book.cover} alt={`${book.title} বইয়ের cover`} className="premium-book-card__cover" loading="eager" decoding="async" fetchPriority="high" /></Link>
     <div className="premium-book-card__body">
-      <div className="premium-book-card__meta"><span>{book.category}</span><span>{book.pdfPageCount.toLocaleString("bn-BD")} পৃষ্ঠা</span></div>
+      <div className="premium-book-card__meta"><span>{book.category}</span><span>{book.pdfUrl ? `${book.pdfPageCount.toLocaleString("bn-BD")} পৃষ্ঠা` : "ডিজিটাল সংস্করণ"}</span></div>
       <h3><Link href={`/store/book/${book.id}`}>{book.title}</Link></h3>
       <p>{book.subtitle}</p>
       <div className="premium-book-card__progress" aria-label={`${book.title} ${progress}% পড়া`}><span style={{ width: `${progress}%` }} /></div>

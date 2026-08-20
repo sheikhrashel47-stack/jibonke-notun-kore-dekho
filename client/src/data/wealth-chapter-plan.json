@@ -1,0 +1,802 @@
+[
+  {
+    "id": "01",
+    "number": 1,
+    "title": "টাকা আসলে কী?",
+    "part": 1,
+    "partTitle": "THE PSYCHOLOGY OF MONEY",
+    "focus": "টাকার সঙ্গে মানুষের আবেগ, বিশ্বাস, পরিচয় এবং আচরণকে একসঙ্গে দেখাও।"
+  },
+  {
+    "id": "02",
+    "number": 2,
+    "title": "মানুষ টাকা নিয়ে এত emotional কেন?",
+    "part": 1,
+    "partTitle": "THE PSYCHOLOGY OF MONEY",
+    "focus": "টাকার সঙ্গে মানুষের আবেগ, বিশ্বাস, পরিচয় এবং আচরণকে একসঙ্গে দেখাও।"
+  },
+  {
+    "id": "03",
+    "number": 3,
+    "title": "Rich বনাম Wealthy",
+    "part": 1,
+    "partTitle": "THE PSYCHOLOGY OF MONEY",
+    "focus": "টাকার সঙ্গে মানুষের আবেগ, বিশ্বাস, পরিচয় এবং আচরণকে একসঙ্গে দেখাও।"
+  },
+  {
+    "id": "04",
+    "number": 4,
+    "title": "Money beliefs",
+    "part": 1,
+    "partTitle": "THE PSYCHOLOGY OF MONEY",
+    "focus": "টাকার সঙ্গে মানুষের আবেগ, বিশ্বাস, পরিচয় এবং আচরণকে একসঙ্গে দেখাও।"
+  },
+  {
+    "id": "05",
+    "number": 5,
+    "title": "নিজের financial identity",
+    "part": 1,
+    "partTitle": "THE PSYCHOLOGY OF MONEY",
+    "focus": "টাকার সঙ্গে মানুষের আবেগ, বিশ্বাস, পরিচয় এবং আচরণকে একসঙ্গে দেখাও।"
+  },
+  {
+    "id": "06",
+    "number": 6,
+    "title": "Wealth কীভাবে তৈরি হয়?",
+    "part": 2,
+    "partTitle": "THE WEALTH GAME",
+    "focus": "wealth-কে value, skill, capital, ownership ও time-এর ফল হিসেবে ব্যাখ্যা করো; এটি literal formula নয়।"
+  },
+  {
+    "id": "07",
+    "number": 7,
+    "title": "Value creation",
+    "part": 2,
+    "partTitle": "THE WEALTH GAME",
+    "focus": "wealth-কে value, skill, capital, ownership ও time-এর ফল হিসেবে ব্যাখ্যা করো; এটি literal formula নয়।"
+  },
+  {
+    "id": "08",
+    "number": 8,
+    "title": "Ownership",
+    "part": 2,
+    "partTitle": "THE WEALTH GAME",
+    "focus": "wealth-কে value, skill, capital, ownership ও time-এর ফল হিসেবে ব্যাখ্যা করো; এটি literal formula নয়।"
+  },
+  {
+    "id": "09",
+    "number": 9,
+    "title": "Capital",
+    "part": 2,
+    "partTitle": "THE WEALTH GAME",
+    "focus": "wealth-কে value, skill, capital, ownership ও time-এর ফল হিসেবে ব্যাখ্যা করো; এটি literal formula নয়।"
+  },
+  {
+    "id": "10",
+    "number": 10,
+    "title": "The Wealth Equation",
+    "part": 2,
+    "partTitle": "THE WEALTH GAME",
+    "focus": "wealth-কে value, skill, capital, ownership ও time-এর ফল হিসেবে ব্যাখ্যা করো; এটি literal formula নয়।"
+  },
+  {
+    "id": "11",
+    "number": 11,
+    "title": "Income-এর ধরন",
+    "part": 3,
+    "partTitle": "INCOME",
+    "focus": "active, scalable ও asset-based income-এর পার্থক্য দেখাও; passive income নিয়ে অতিরঞ্জন কোরো না।"
+  },
+  {
+    "id": "12",
+    "number": 12,
+    "title": "Active Income",
+    "part": 3,
+    "partTitle": "INCOME",
+    "focus": "active, scalable ও asset-based income-এর পার্থক্য দেখাও; passive income নিয়ে অতিরঞ্জন কোরো না।"
+  },
+  {
+    "id": "13",
+    "number": 13,
+    "title": "Passive Income-এর বাস্তবতা",
+    "part": 3,
+    "partTitle": "INCOME",
+    "focus": "active, scalable ও asset-based income-এর পার্থক্য দেখাও; passive income নিয়ে অতিরঞ্জন কোরো না।"
+  },
+  {
+    "id": "14",
+    "number": 14,
+    "title": "Multiple Income Streams",
+    "part": 3,
+    "partTitle": "INCOME",
+    "focus": "active, scalable ও asset-based income-এর পার্থক্য দেখাও; passive income নিয়ে অতিরঞ্জন কোরো না।"
+  },
+  {
+    "id": "15",
+    "number": 15,
+    "title": "Income ceiling",
+    "part": 3,
+    "partTitle": "INCOME",
+    "focus": "active, scalable ও asset-based income-এর পার্থক্য দেখাও; passive income নিয়ে অতিরঞ্জন কোরো না।"
+  },
+  {
+    "id": "16",
+    "number": 16,
+    "title": "Skill কীভাবে income তৈরি করে?",
+    "part": 4,
+    "partTitle": "HIGH-INCOME SKILLS",
+    "focus": "দক্ষতা কীভাবে value, demand এবং earning power-এ রূপ নেয়—বাস্তব শেখার পথসহ দেখাও।"
+  },
+  {
+    "id": "17",
+    "number": 17,
+    "title": "Communication",
+    "part": 4,
+    "partTitle": "HIGH-INCOME SKILLS",
+    "focus": "দক্ষতা কীভাবে value, demand এবং earning power-এ রূপ নেয়—বাস্তব শেখার পথসহ দেখাও।"
+  },
+  {
+    "id": "18",
+    "number": 18,
+    "title": "Sales",
+    "part": 4,
+    "partTitle": "HIGH-INCOME SKILLS",
+    "focus": "দক্ষতা কীভাবে value, demand এবং earning power-এ রূপ নেয়—বাস্তব শেখার পথসহ দেখাও।"
+  },
+  {
+    "id": "19",
+    "number": 19,
+    "title": "Technology & AI",
+    "part": 4,
+    "partTitle": "HIGH-INCOME SKILLS",
+    "focus": "দক্ষতা কীভাবে value, demand এবং earning power-এ রূপ নেয়—বাস্তব শেখার পথসহ দেখাও।"
+  },
+  {
+    "id": "20",
+    "number": 20,
+    "title": "Building your personal skill stack",
+    "part": 4,
+    "partTitle": "HIGH-INCOME SKILLS",
+    "focus": "দক্ষতা কীভাবে value, demand এবং earning power-এ রূপ নেয়—বাস্তব শেখার পথসহ দেখাও।"
+  },
+  {
+    "id": "21",
+    "number": 21,
+    "title": "Career vs Job",
+    "part": 5,
+    "partTitle": "CAREER CAPITAL",
+    "focus": "job, career, human capital, reputation এবং network-এর দীর্ঘমেয়াদি compounding বোঝাও।"
+  },
+  {
+    "id": "22",
+    "number": 22,
+    "title": "Human Capital",
+    "part": 5,
+    "partTitle": "CAREER CAPITAL",
+    "focus": "job, career, human capital, reputation এবং network-এর দীর্ঘমেয়াদি compounding বোঝাও।"
+  },
+  {
+    "id": "23",
+    "number": 23,
+    "title": "Reputation",
+    "part": 5,
+    "partTitle": "CAREER CAPITAL",
+    "focus": "job, career, human capital, reputation এবং network-এর দীর্ঘমেয়াদি compounding বোঝাও।"
+  },
+  {
+    "id": "24",
+    "number": 24,
+    "title": "Networking",
+    "part": 5,
+    "partTitle": "CAREER CAPITAL",
+    "focus": "job, career, human capital, reputation এবং network-এর দীর্ঘমেয়াদি compounding বোঝাও।"
+  },
+  {
+    "id": "25",
+    "number": 25,
+    "title": "Career compounding",
+    "part": 5,
+    "partTitle": "CAREER CAPITAL",
+    "focus": "job, career, human capital, reputation এবং network-এর দীর্ঘমেয়াদি compounding বোঝাও।"
+  },
+  {
+    "id": "26",
+    "number": 26,
+    "title": "Business কী?",
+    "part": 6,
+    "partTitle": "BUSINESS",
+    "focus": "problem থেকে solution, customer value, revenue এবং profit—ব্যবসার বাস্তব যুক্তি দেখাও।"
+  },
+  {
+    "id": "27",
+    "number": 27,
+    "title": "Problem → Product",
+    "part": 6,
+    "partTitle": "BUSINESS",
+    "focus": "problem থেকে solution, customer value, revenue এবং profit—ব্যবসার বাস্তব যুক্তি দেখাও।"
+  },
+  {
+    "id": "28",
+    "number": 28,
+    "title": "Customer",
+    "part": 6,
+    "partTitle": "BUSINESS",
+    "focus": "problem থেকে solution, customer value, revenue এবং profit—ব্যবসার বাস্তব যুক্তি দেখাও।"
+  },
+  {
+    "id": "29",
+    "number": 29,
+    "title": "Revenue & Profit",
+    "part": 6,
+    "partTitle": "BUSINESS",
+    "focus": "problem থেকে solution, customer value, revenue এবং profit—ব্যবসার বাস্তব যুক্তি দেখাও।"
+  },
+  {
+    "id": "30",
+    "number": 30,
+    "title": "Scalable Business",
+    "part": 6,
+    "partTitle": "BUSINESS",
+    "focus": "problem থেকে solution, customer value, revenue এবং profit—ব্যবসার বাস্তব যুক্তি দেখাও।"
+  },
+  {
+    "id": "31",
+    "number": 31,
+    "title": "Idea",
+    "part": 7,
+    "partTitle": "ENTREPRENEURSHIP",
+    "focus": "idea নয়, market validation, unit economics, risk এবং ছোট পরীক্ষার গুরুত্ব বোঝাও।"
+  },
+  {
+    "id": "32",
+    "number": 32,
+    "title": "Market",
+    "part": 7,
+    "partTitle": "ENTREPRENEURSHIP",
+    "focus": "idea নয়, market validation, unit economics, risk এবং ছোট পরীক্ষার গুরুত্ব বোঝাও।"
+  },
+  {
+    "id": "33",
+    "number": 33,
+    "title": "Validation",
+    "part": 7,
+    "partTitle": "ENTREPRENEURSHIP",
+    "focus": "idea নয়, market validation, unit economics, risk এবং ছোট পরীক্ষার গুরুত্ব বোঝাও।"
+  },
+  {
+    "id": "34",
+    "number": 34,
+    "title": "Unit Economics",
+    "part": 7,
+    "partTitle": "ENTREPRENEURSHIP",
+    "focus": "idea নয়, market validation, unit economics, risk এবং ছোট পরীক্ষার গুরুত্ব বোঝাও।"
+  },
+  {
+    "id": "35",
+    "number": 35,
+    "title": "Scaling",
+    "part": 7,
+    "partTitle": "ENTREPRENEURSHIP",
+    "focus": "idea নয়, market validation, unit economics, risk এবং ছোট পরীক্ষার গুরুত্ব বোঝাও।"
+  },
+  {
+    "id": "36",
+    "number": 36,
+    "title": "Cash Flow",
+    "part": 8,
+    "partTitle": "PERSONAL FINANCE",
+    "focus": "cash flow, budget, emergency fund, debt এবং financial safety-কে আগে রাখো।"
+  },
+  {
+    "id": "37",
+    "number": 37,
+    "title": "Budget",
+    "part": 8,
+    "partTitle": "PERSONAL FINANCE",
+    "focus": "cash flow, budget, emergency fund, debt এবং financial safety-কে আগে রাখো।"
+  },
+  {
+    "id": "38",
+    "number": 38,
+    "title": "Emergency Fund",
+    "part": 8,
+    "partTitle": "PERSONAL FINANCE",
+    "focus": "cash flow, budget, emergency fund, debt এবং financial safety-কে আগে রাখো।"
+  },
+  {
+    "id": "39",
+    "number": 39,
+    "title": "Debt",
+    "part": 8,
+    "partTitle": "PERSONAL FINANCE",
+    "focus": "cash flow, budget, emergency fund, debt এবং financial safety-কে আগে রাখো।"
+  },
+  {
+    "id": "40",
+    "number": 40,
+    "title": "Financial Safety",
+    "part": 8,
+    "partTitle": "PERSONAL FINANCE",
+    "focus": "cash flow, budget, emergency fund, debt এবং financial safety-কে আগে রাখো।"
+  },
+  {
+    "id": "41",
+    "number": 41,
+    "title": "Saving কেন গুরুত্বপূর্ণ?",
+    "part": 9,
+    "partTitle": "SAVING & CAPITAL",
+    "focus": "saving rate, lifestyle inflation এবং capital formation নিয়ে সংখ্যাসহ ব্যবহারিক ব্যাখ্যা দাও।"
+  },
+  {
+    "id": "42",
+    "number": 42,
+    "title": "Saving rate",
+    "part": 9,
+    "partTitle": "SAVING & CAPITAL",
+    "focus": "saving rate, lifestyle inflation এবং capital formation নিয়ে সংখ্যাসহ ব্যবহারিক ব্যাখ্যা দাও।"
+  },
+  {
+    "id": "43",
+    "number": 43,
+    "title": "Lifestyle Inflation",
+    "part": 9,
+    "partTitle": "SAVING & CAPITAL",
+    "focus": "saving rate, lifestyle inflation এবং capital formation নিয়ে সংখ্যাসহ ব্যবহারিক ব্যাখ্যা দাও।"
+  },
+  {
+    "id": "44",
+    "number": 44,
+    "title": "Capital formation",
+    "part": 9,
+    "partTitle": "SAVING & CAPITAL",
+    "focus": "saving rate, lifestyle inflation এবং capital formation নিয়ে সংখ্যাসহ ব্যবহারিক ব্যাখ্যা দাও।"
+  },
+  {
+    "id": "45",
+    "number": 45,
+    "title": "First Investment Capital",
+    "part": 9,
+    "partTitle": "SAVING & CAPITAL",
+    "focus": "saving rate, lifestyle inflation এবং capital formation নিয়ে সংখ্যাসহ ব্যবহারিক ব্যাখ্যা দাও।"
+  },
+  {
+    "id": "46",
+    "number": 46,
+    "title": "Investing vs Saving",
+    "part": 10,
+    "partTitle": "INVESTING 101",
+    "focus": "saving ও investing-এর পার্থক্য, risk-return, asset classes, diversification ও দীর্ঘমেয়াদি discipline ব্যাখ্যা করো।"
+  },
+  {
+    "id": "47",
+    "number": 47,
+    "title": "Risk & Return",
+    "part": 10,
+    "partTitle": "INVESTING 101",
+    "focus": "saving ও investing-এর পার্থক্য, risk-return, asset classes, diversification ও দীর্ঘমেয়াদি discipline ব্যাখ্যা করো।"
+  },
+  {
+    "id": "48",
+    "number": 48,
+    "title": "Asset Classes",
+    "part": 10,
+    "partTitle": "INVESTING 101",
+    "focus": "saving ও investing-এর পার্থক্য, risk-return, asset classes, diversification ও দীর্ঘমেয়াদি discipline ব্যাখ্যা করো।"
+  },
+  {
+    "id": "49",
+    "number": 49,
+    "title": "Diversification",
+    "part": 10,
+    "partTitle": "INVESTING 101",
+    "focus": "saving ও investing-এর পার্থক্য, risk-return, asset classes, diversification ও দীর্ঘমেয়াদি discipline ব্যাখ্যা করো।"
+  },
+  {
+    "id": "50",
+    "number": 50,
+    "title": "Long-term investing",
+    "part": 10,
+    "partTitle": "INVESTING 101",
+    "focus": "saving ও investing-এর পার্থক্য, risk-return, asset classes, diversification ও দীর্ঘমেয়াদি discipline ব্যাখ্যা করো।"
+  },
+  {
+    "id": "51",
+    "number": 51,
+    "title": "Stock কী?",
+    "part": 11,
+    "partTitle": "STOCKS",
+    "focus": "stock মানে ownership; revenue, profit, valuation ও অনিশ্চয়তা নিয়ে stock tips দিও না।"
+  },
+  {
+    "id": "52",
+    "number": 52,
+    "title": "Company ownership",
+    "part": 11,
+    "partTitle": "STOCKS",
+    "focus": "stock মানে ownership; revenue, profit, valuation ও অনিশ্চয়তা নিয়ে stock tips দিও না।"
+  },
+  {
+    "id": "53",
+    "number": 53,
+    "title": "Revenue & Profit",
+    "part": 11,
+    "partTitle": "STOCKS",
+    "focus": "stock মানে ownership; revenue, profit, valuation ও অনিশ্চয়তা নিয়ে stock tips দিও না।"
+  },
+  {
+    "id": "54",
+    "number": 54,
+    "title": "Valuation",
+    "part": 11,
+    "partTitle": "STOCKS",
+    "focus": "stock মানে ownership; revenue, profit, valuation ও অনিশ্চয়তা নিয়ে stock tips দিও না।"
+  },
+  {
+    "id": "55",
+    "number": 55,
+    "title": "Long-term equity investing",
+    "part": 11,
+    "partTitle": "STOCKS",
+    "focus": "stock মানে ownership; revenue, profit, valuation ও অনিশ্চয়তা নিয়ে stock tips দিও না।"
+  },
+  {
+    "id": "56",
+    "number": 56,
+    "title": "Bonds",
+    "part": 12,
+    "partTitle": "FUNDS, BONDS & OTHER ASSETS",
+    "focus": "bonds, mutual funds, index funds, REITs এবং asset allocation-এর ধারণাগত পার্থক্য দেখাও; বর্তমান product recommendation নয়।"
+  },
+  {
+    "id": "57",
+    "number": 57,
+    "title": "Mutual Funds",
+    "part": 12,
+    "partTitle": "FUNDS, BONDS & OTHER ASSETS",
+    "focus": "bonds, mutual funds, index funds, REITs এবং asset allocation-এর ধারণাগত পার্থক্য দেখাও; বর্তমান product recommendation নয়।"
+  },
+  {
+    "id": "58",
+    "number": 58,
+    "title": "Index Funds",
+    "part": 12,
+    "partTitle": "FUNDS, BONDS & OTHER ASSETS",
+    "focus": "bonds, mutual funds, index funds, REITs এবং asset allocation-এর ধারণাগত পার্থক্য দেখাও; বর্তমান product recommendation নয়।"
+  },
+  {
+    "id": "59",
+    "number": 59,
+    "title": "REITs",
+    "part": 12,
+    "partTitle": "FUNDS, BONDS & OTHER ASSETS",
+    "focus": "bonds, mutual funds, index funds, REITs এবং asset allocation-এর ধারণাগত পার্থক্য দেখাও; বর্তমান product recommendation নয়।"
+  },
+  {
+    "id": "60",
+    "number": 60,
+    "title": "Asset Allocation",
+    "part": 12,
+    "partTitle": "FUNDS, BONDS & OTHER ASSETS",
+    "focus": "bonds, mutual funds, index funds, REITs এবং asset allocation-এর ধারণাগত পার্থক্য দেখাও; বর্তমান product recommendation নয়।"
+  },
+  {
+    "id": "61",
+    "number": 61,
+    "title": "Real Estate",
+    "part": 13,
+    "partTitle": "REAL ASSETS",
+    "focus": "real estate, land, gold ও physical assets-এর liquidity, ownership, maintenance ও concentration risk বোঝাও।"
+  },
+  {
+    "id": "62",
+    "number": 62,
+    "title": "Land",
+    "part": 13,
+    "partTitle": "REAL ASSETS",
+    "focus": "real estate, land, gold ও physical assets-এর liquidity, ownership, maintenance ও concentration risk বোঝাও।"
+  },
+  {
+    "id": "63",
+    "number": 63,
+    "title": "Gold",
+    "part": 13,
+    "partTitle": "REAL ASSETS",
+    "focus": "real estate, land, gold ও physical assets-এর liquidity, ownership, maintenance ও concentration risk বোঝাও।"
+  },
+  {
+    "id": "64",
+    "number": 64,
+    "title": "Physical Assets",
+    "part": 13,
+    "partTitle": "REAL ASSETS",
+    "focus": "real estate, land, gold ও physical assets-এর liquidity, ownership, maintenance ও concentration risk বোঝাও।"
+  },
+  {
+    "id": "65",
+    "number": 65,
+    "title": "Liquidity vs Ownership",
+    "part": 13,
+    "partTitle": "REAL ASSETS",
+    "focus": "real estate, land, gold ও physical assets-এর liquidity, ownership, maintenance ও concentration risk বোঝাও।"
+  },
+  {
+    "id": "66",
+    "number": 66,
+    "title": "Compound Interest",
+    "part": 14,
+    "partTitle": "THE POWER OF COMPOUNDING",
+    "focus": "compound interest, time, consistency এবং skill/capital compounding-এর illustrative math দেখাও; return guarantee নয়।"
+  },
+  {
+    "id": "67",
+    "number": 67,
+    "title": "Time",
+    "part": 14,
+    "partTitle": "THE POWER OF COMPOUNDING",
+    "focus": "compound interest, time, consistency এবং skill/capital compounding-এর illustrative math দেখাও; return guarantee নয়।"
+  },
+  {
+    "id": "68",
+    "number": 68,
+    "title": "Consistency",
+    "part": 14,
+    "partTitle": "THE POWER OF COMPOUNDING",
+    "focus": "compound interest, time, consistency এবং skill/capital compounding-এর illustrative math দেখাও; return guarantee নয়।"
+  },
+  {
+    "id": "69",
+    "number": 69,
+    "title": "Compounding of Skills",
+    "part": 14,
+    "partTitle": "THE POWER OF COMPOUNDING",
+    "focus": "compound interest, time, consistency এবং skill/capital compounding-এর illustrative math দেখাও; return guarantee নয়।"
+  },
+  {
+    "id": "70",
+    "number": 70,
+    "title": "Compounding of Capital",
+    "part": 14,
+    "partTitle": "THE POWER OF COMPOUNDING",
+    "focus": "compound interest, time, consistency এবং skill/capital compounding-এর illustrative math দেখাও; return guarantee নয়।"
+  },
+  {
+    "id": "71",
+    "number": 71,
+    "title": "What is Risk?",
+    "part": 15,
+    "partTitle": "RISK MANAGEMENT",
+    "focus": "risk, diversification, insurance, emergency planning এবং financial ruin এড়ানোর safety-first thinking শেখাও।"
+  },
+  {
+    "id": "72",
+    "number": 72,
+    "title": "Diversification",
+    "part": 15,
+    "partTitle": "RISK MANAGEMENT",
+    "focus": "risk, diversification, insurance, emergency planning এবং financial ruin এড়ানোর safety-first thinking শেখাও।"
+  },
+  {
+    "id": "73",
+    "number": 73,
+    "title": "Insurance",
+    "part": 15,
+    "partTitle": "RISK MANAGEMENT",
+    "focus": "risk, diversification, insurance, emergency planning এবং financial ruin এড়ানোর safety-first thinking শেখাও।"
+  },
+  {
+    "id": "74",
+    "number": 74,
+    "title": "Emergency Planning",
+    "part": 15,
+    "partTitle": "RISK MANAGEMENT",
+    "focus": "risk, diversification, insurance, emergency planning এবং financial ruin এড়ানোর safety-first thinking শেখাও।"
+  },
+  {
+    "id": "75",
+    "number": 75,
+    "title": "Avoiding Financial Ruin",
+    "part": 15,
+    "partTitle": "RISK MANAGEMENT",
+    "focus": "risk, diversification, insurance, emergency planning এবং financial ruin এড়ানোর safety-first thinking শেখাও।"
+  },
+  {
+    "id": "76",
+    "number": 76,
+    "title": "Inflation",
+    "part": 16,
+    "partTitle": "INFLATION, TAX & PURCHASING POWER",
+    "focus": "inflation, purchasing power, interest, tax এবং real return-এর ধারণা বোঝাও; current rules-এর জন্য official sources দেখতে বলো।"
+  },
+  {
+    "id": "77",
+    "number": 77,
+    "title": "Purchasing Power",
+    "part": 16,
+    "partTitle": "INFLATION, TAX & PURCHASING POWER",
+    "focus": "inflation, purchasing power, interest, tax এবং real return-এর ধারণা বোঝাও; current rules-এর জন্য official sources দেখতে বলো।"
+  },
+  {
+    "id": "78",
+    "number": 78,
+    "title": "Interest Rates",
+    "part": 16,
+    "partTitle": "INFLATION, TAX & PURCHASING POWER",
+    "focus": "inflation, purchasing power, interest, tax এবং real return-এর ধারণা বোঝাও; current rules-এর জন্য official sources দেখতে বলো।"
+  },
+  {
+    "id": "79",
+    "number": 79,
+    "title": "Taxes",
+    "part": 16,
+    "partTitle": "INFLATION, TAX & PURCHASING POWER",
+    "focus": "inflation, purchasing power, interest, tax এবং real return-এর ধারণা বোঝাও; current rules-এর জন্য official sources দেখতে বলো।"
+  },
+  {
+    "id": "80",
+    "number": 80,
+    "title": "Real Return",
+    "part": 16,
+    "partTitle": "INFLATION, TAX & PURCHASING POWER",
+    "focus": "inflation, purchasing power, interest, tax এবং real return-এর ধারণা বোঝাও; current rules-এর জন্য official sources দেখতে বলো।"
+  },
+  {
+    "id": "81",
+    "number": 81,
+    "title": "Salary",
+    "part": 17,
+    "partTitle": "MULTIPLE INCOME & ASSET SYSTEMS",
+    "focus": "একটি শক্তিশালী income engine থেকে ধীরে ধীরে multiple income ও asset system তৈরি করার logic দেখাও।"
+  },
+  {
+    "id": "82",
+    "number": 82,
+    "title": "Freelancing",
+    "part": 17,
+    "partTitle": "MULTIPLE INCOME & ASSET SYSTEMS",
+    "focus": "একটি শক্তিশালী income engine থেকে ধীরে ধীরে multiple income ও asset system তৈরি করার logic দেখাও।"
+  },
+  {
+    "id": "83",
+    "number": 83,
+    "title": "Business",
+    "part": 17,
+    "partTitle": "MULTIPLE INCOME & ASSET SYSTEMS",
+    "focus": "একটি শক্তিশালী income engine থেকে ধীরে ধীরে multiple income ও asset system তৈরি করার logic দেখাও।"
+  },
+  {
+    "id": "84",
+    "number": 84,
+    "title": "Investments",
+    "part": 17,
+    "partTitle": "MULTIPLE INCOME & ASSET SYSTEMS",
+    "focus": "একটি শক্তিশালী income engine থেকে ধীরে ধীরে multiple income ও asset system তৈরি করার logic দেখাও।"
+  },
+  {
+    "id": "85",
+    "number": 85,
+    "title": "Building an Income Ecosystem",
+    "part": 17,
+    "partTitle": "MULTIPLE INCOME & ASSET SYSTEMS",
+    "focus": "একটি শক্তিশালী income engine থেকে ধীরে ধীরে multiple income ও asset system তৈরি করার logic দেখাও।"
+  },
+  {
+    "id": "86",
+    "number": 86,
+    "title": "Lifestyle Inflation",
+    "part": 18,
+    "partTitle": "WEALTH TRAPS",
+    "focus": "lifestyle inflation, consumer debt, scams, get-rich-quick claims এবং emotional investing-এর traps চেনাও।"
+  },
+  {
+    "id": "87",
+    "number": 87,
+    "title": "Consumer Debt",
+    "part": 18,
+    "partTitle": "WEALTH TRAPS",
+    "focus": "lifestyle inflation, consumer debt, scams, get-rich-quick claims এবং emotional investing-এর traps চেনাও।"
+  },
+  {
+    "id": "88",
+    "number": 88,
+    "title": "Get-Rich-Quick Schemes",
+    "part": 18,
+    "partTitle": "WEALTH TRAPS",
+    "focus": "lifestyle inflation, consumer debt, scams, get-rich-quick claims এবং emotional investing-এর traps চেনাও।"
+  },
+  {
+    "id": "89",
+    "number": 89,
+    "title": "Scams & Financial Manipulation",
+    "part": 18,
+    "partTitle": "WEALTH TRAPS",
+    "focus": "lifestyle inflation, consumer debt, scams, get-rich-quick claims এবং emotional investing-এর traps চেনাও।"
+  },
+  {
+    "id": "90",
+    "number": 90,
+    "title": "Emotional Investing",
+    "part": 18,
+    "partTitle": "WEALTH TRAPS",
+    "focus": "lifestyle inflation, consumer debt, scams, get-rich-quick claims এবং emotional investing-এর traps চেনাও।"
+  },
+  {
+    "id": "91",
+    "number": 91,
+    "title": "Your Financial Dashboard",
+    "part": 19,
+    "partTitle": "BUILD YOUR WEALTH SYSTEM",
+    "focus": "financial dashboard, monthly system, automation, investment routine এবং annual review-এর মতো repeatable system তৈরি করো।"
+  },
+  {
+    "id": "92",
+    "number": 92,
+    "title": "Monthly Money System",
+    "part": 19,
+    "partTitle": "BUILD YOUR WEALTH SYSTEM",
+    "focus": "financial dashboard, monthly system, automation, investment routine এবং annual review-এর মতো repeatable system তৈরি করো।"
+  },
+  {
+    "id": "93",
+    "number": 93,
+    "title": "Automatic Saving",
+    "part": 19,
+    "partTitle": "BUILD YOUR WEALTH SYSTEM",
+    "focus": "financial dashboard, monthly system, automation, investment routine এবং annual review-এর মতো repeatable system তৈরি করো।"
+  },
+  {
+    "id": "94",
+    "number": 94,
+    "title": "Investment System",
+    "part": 19,
+    "partTitle": "BUILD YOUR WEALTH SYSTEM",
+    "focus": "financial dashboard, monthly system, automation, investment routine এবং annual review-এর মতো repeatable system তৈরি করো।"
+  },
+  {
+    "id": "95",
+    "number": 95,
+    "title": "Annual Financial Review",
+    "part": 19,
+    "partTitle": "BUILD YOUR WEALTH SYSTEM",
+    "focus": "financial dashboard, monthly system, automation, investment routine এবং annual review-এর মতো repeatable system তৈরি করো।"
+  },
+  {
+    "id": "96",
+    "number": 96,
+    "title": "The First ৳10,000",
+    "part": 20,
+    "partTitle": "THE WEALTH JOURNEY",
+    "focus": "প্রথম সঞ্চয় থেকে দীর্ঘমেয়াদি wealth journey, preservation, choice, time ও responsibility-এর দিকে সমাপ্তি টানো।"
+  },
+  {
+    "id": "97",
+    "number": 97,
+    "title": "The First ৳100,000",
+    "part": 20,
+    "partTitle": "THE WEALTH JOURNEY",
+    "focus": "প্রথম সঞ্চয় থেকে দীর্ঘমেয়াদি wealth journey, preservation, choice, time ও responsibility-এর দিকে সমাপ্তি টানো।"
+  },
+  {
+    "id": "98",
+    "number": 98,
+    "title": "The First ৳1,000,000",
+    "part": 20,
+    "partTitle": "THE WEALTH JOURNEY",
+    "focus": "প্রথম সঞ্চয় থেকে দীর্ঘমেয়াদি wealth journey, preservation, choice, time ও responsibility-এর দিকে সমাপ্তি টানো।"
+  },
+  {
+    "id": "99",
+    "number": 99,
+    "title": "The 10-Year Wealth Journey",
+    "part": 20,
+    "partTitle": "THE WEALTH JOURNEY",
+    "focus": "প্রথম সঞ্চয় থেকে দীর্ঘমেয়াদি wealth journey, preservation, choice, time ও responsibility-এর দিকে সমাপ্তি টানো।"
+  },
+  {
+    "id": "100",
+    "number": 100,
+    "title": "THE WEALTH CODE",
+    "part": 20,
+    "partTitle": "THE WEALTH JOURNEY",
+    "focus": "প্রথম সঞ্চয় থেকে দীর্ঘমেয়াদি wealth journey, preservation, choice, time ও responsibility-এর দিকে সমাপ্তি টানো।"
+  }
+]
