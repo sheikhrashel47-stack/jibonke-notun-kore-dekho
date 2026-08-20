@@ -1,4 +1,3 @@
-/* JIBON premium catalog: every surface reads one stable, book-aware registry. */
 import {
   chapterLoaders,
   chapters,
@@ -26,10 +25,28 @@ import {
   wealthTotalReadingMinutes,
   wealthWorkbookExercises,
 } from "./wealth-book";
+import {
+  habitChapterLoaders,
+  habitChapters,
+  habitTotalReadingMinutes,
+  habitWorkbookExercises,
+} from "./habit-book";
+import {
+  presenceExpandedMeta as presenceChapters,
+  presenceExpandedLoaders as presenceChapterLoaders,
+  presenceExpandedTotalReadingMinutes as presenceTotalReadingMinutes,
+  presenceExpandedExercises as presenceWorkbookExercises,
+} from "./presence-book-expanded";
+import {
+  brainChapters,
+  brainChapterLoaders,
+  brainTotalReadingMinutes,
+  brainWorkbookExercises,
+} from "./brain-book";
 
-export const bookIds = ["life", "dark", "thinking", "wealth"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "অর্থ ও সম্পদ";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ";
 
 export type BookDefinition = {
   id: BookId;
@@ -109,6 +126,63 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfPageCount: 300,
     learningOutcomes: ["অনুমান ও তথ্য আলাদা করা", "কঠিন সিদ্ধান্ত ধাপে ভাবা", "নিজের চিন্তার ভুল ধরতে শেখা"],
   },
+  presence: {
+    id: "presence",
+    title: "The Presence Code",
+    subtitle: "নিজের উপস্থিতি, আত্মবিশ্বাস ও প্রভাব গড়ে তোলার সহজ পাঠ",
+    description: "আত্মবিশ্বাস, body language, boundaries ও মানুষের সঙ্গে স্বাভাবিকভাবে connect করার ব্যবহারিক বাংলা guide।",
+    longDescription: "নিজেকে অন্য কারও মতো বানানো নয়—নিজের ভেতরের স্থিরতা, স্পষ্টতা ও উষ্ণতাকে এমনভাবে প্রকাশ করা, যাতে মানুষ তোমাকে সহজে বুঝতে পারে এবং তুমি নিজেকেও হারিয়ে না ফেলো।",
+    category: "মনোবিজ্ঞান",
+    creator: "JIBON Editorial",
+    cover: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/main/public/presence-code-cover.png",
+    accent: "#8A4B2A",
+    accentSoft: "#F6E9DF",
+    chapters: presenceChapters,
+    chapterLoaders: presenceChapterLoaders,
+    workbookExercises: presenceWorkbookExercises,
+    totalReadingMinutes: presenceTotalReadingMinutes,
+    pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/main/public/the_presence_code_ebook.pdf",
+    pdfPageCount: 305,
+    learningOutcomes: ["নিজের উপস্থিতি ও body language সচেতনভাবে ব্যবহার করা", "স্বাস্থ্যকর boundary ও assertive communication গড়ে তোলা", "চাপের মধ্যেও স্থির, উষ্ণ ও স্পষ্ট থাকা"],
+  },
+  habit: {
+    id: "habit",
+    title: "The Habit Architect",
+    subtitle: "নিজের আচরণ, পরিবেশ ও জীবনকে এমনভাবে ডিজাইন করার বিজ্ঞান",
+    description: "আচরণ, identity, environment, attention ও recovery নিয়ে ৬০ অধ্যায়ের বাংলা practical workbook।",
+    longDescription: "শুধু motivation-এর উপর নির্ভর না করে নিজের আচরণের system দেখা, ছোট experiment চালানো এবং দীর্ঘমেয়াদি habit architecture বানানোর জন্য সাজানো মৌলিক বাংলা পাঠ।",
+    category: "আচরণ ও জীবনযাপন",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}habit-architect-cover.png`,
+    accent: "#2A6B4F",
+    accentSoft: "#E6F1E9",
+    chapters: habitChapters,
+    chapterLoaders: habitChapterLoaders,
+    workbookExercises: habitWorkbookExercises,
+    totalReadingMinutes: habitTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}habit-architect.pdf`,
+    pdfPageCount: 300,
+    learningOutcomes: ["নিজের আচরণের trigger ও reward map করা", "পরিবেশ ও starting friction redesign করা", "failure-এর পর recovery system বানানো", "৩০, ৬০ ও ৯০ দিনের personal habit experiment চালানো"],
+  },
+  brain: {
+    id: "brain",
+    title: "BRAIN BOOST",
+    subtitle: "মস্তিষ্ককে শাণিত করার বিজ্ঞান",
+    description: "মনোযোগ, স্মৃতি, যুক্তি, সমস্যা সমাধান ও cognitive flexibility নিয়ে ২০ level-এর বাংলা Brain Training Journey।",
+    longDescription: "শুধু puzzle সমাধান নয়—সহজ concept, কঠিন challenge, mistake analysis, daily mission এবং progress scorecard-সহ নিজের thinking skill অনুশীলনের একটি পূর্ণাঙ্গ পাঠযাত্রা।",
+    category: "মস্তিষ্ক ও শেখা",
+    creator: "শেখ রাসেল",
+    cover: `${import.meta.env.BASE_URL}brain-boost-cover.png`,
+    accent: "#D5A83C",
+    accentSoft: "#F5EED7",
+    chapters: brainChapters,
+    chapterLoaders: brainChapterLoaders,
+    workbookExercises: brainWorkbookExercises,
+    totalReadingMinutes: brainTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}brain-boost.pdf`,
+    pdfPageCount: 289,
+    learningOutcomes: ["মনোযোগ ও working memory অনুশীলন করা", "recall, pattern ও logical reasoning উন্নত করা", "সমস্যাকে ভেঙে root cause ও alternatives দেখা", "নিজের training performance আগের baseline-এর সঙ্গে তুলনা করা"],
+  },
   wealth: {
     id: "wealth",
     title: "THE WEALTH CODE",
@@ -163,6 +237,14 @@ export function getDarkChapterPageRange(chapterNumber: number) {
     return { pageStart, pageEnd: pageStart + 8 };
   }
   return null;
+}
+
+export function getHabitChapterForPdfPage(page: number) {
+  return bookDefinitions.habit.chapters.find((chapter) => {
+    const pageStart = chapter.pageStart || 1;
+    const pageEnd = chapter.pageEnd || pageStart + 3;
+    return page >= pageStart && page <= pageEnd;
+  });
 }
 
 export function getDarkChapterForPdfPage(page: number) {
