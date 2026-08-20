@@ -45,3 +45,10 @@
 - [x] clickable contents, chapter links, worksheet ও page numbering-সহ প্রায় ৫০০-পৃষ্ঠার premium PDF e-book তৈরি করা
 - [x] ওয়েব রিডারে বই-২-এর নতুন content, chapter picker, page selector এবং নির্দিষ্ট page-এ যাওয়ার navigation যোগ করা
 - [x] mobile reader যাচাই, production build, GitHub Pages প্রকাশ ও live links পরীক্ষা করা
+
+## পৃষ্ঠা শেষ ও পরবর্তী/পূর্ববর্তী navigation
+
+- [x] দুই বইয়ের chapter reader-এর নিচে দৃশ্যমান “পৃষ্ঠা শেষ” marker যোগ করা
+- [x] বর্তমান chapter-এর আগে ও পরে যাওয়ার জন্য বড় পূর্ববর্তী/পরবর্তী navigation button যোগ করা
+- [x] প্রথম ও শেষ chapter-এর edge state, mobile layout এবং keyboard accessibility যাচাই করা
+- [ ] build, checkpoint এবং GitHub Pages update প্রকাশ করা
