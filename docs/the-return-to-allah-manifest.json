@@ -1,0 +1,31 @@
+{
+  "title": "THE RETURN TO ALLAH",
+  "subtitle": "আল্লাহর দিকে ফিরে আসার এক পূর্ণাঙ্গ যাত্রা — ঈমান, ইবাদত, আত্মশুদ্ধি ও একজন মুমিনের জীবন",
+  "author": "Zayan",
+  "chapter_count": 20,
+  "total_char_count": 52980,
+  "chapter_files": [
+    "chapter-01.json",
+    "chapter-02.json",
+    "chapter-03.json",
+    "chapter-04.json",
+    "chapter-05.json",
+    "chapter-06.json",
+    "chapter-07.json",
+    "chapter-08.json",
+    "chapter-09.json",
+    "chapter-10.json",
+    "chapter-11.json",
+    "chapter-12.json",
+    "chapter-13.json",
+    "chapter-14.json",
+    "chapter-15.json",
+    "chapter-16.json",
+    "chapter-17.json",
+    "chapter-18.json",
+    "chapter-19.json",
+    "chapter-20.json"
+  ],
+  "source_ledger": "the-return-to-allah-source-ledger.md",
+  "created_at": "2026-08-20T20:10:53Z"
+}

@@ -1,16 +1,16 @@
 {
-  "task_kind": "new-document",
+  "task_kind": "markdown-to-pdf",
   "output": "pdf",
-  "signals": ["book", "portrait", "longform"],
-  "hard_constraints": ["approximately 500 pages", "Bengali typography", "premium finance editorial design"],
+  "signals": ["bengali-book", "portrait", "longform"],
+  "hard_constraints": ["Bengali typography", "Islamic educational book", "premium editorial design"],
   "content_features": {
     "code_blocks": 0,
-    "defined_terms": 100,
+    "defined_terms": 10,
     "portrait_images": 1,
-    "tables": 0,
-    "worksheets": 100,
-    "chapters": 100,
-    "case_studies": 100,
-    "diagrams": 8
+    "tables": 4,
+    "worksheets": 20,
+    "chapters": 20,
+    "case_studies": 0,
+    "diagrams": 0
   }
 }

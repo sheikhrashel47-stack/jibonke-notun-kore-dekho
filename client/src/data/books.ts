@@ -56,6 +56,12 @@ import {
   futureWorkbookExercises,
 } from "./future-book";
 import {
+  returnAllahChapters,
+  returnAllahChapterLoaders,
+  returnAllahTotalReadingMinutes,
+  returnAllahWorkbookExercises,
+} from "./return-allah-book";
+import {
   intelligenceCodeChapters,
   intelligenceCodeChapterLoaders,
   intelligenceCodeTotalReadingMinutes,
@@ -99,9 +105,9 @@ import {
   lastWordsWorkbookExercises,
 } from "./last-words-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ" | "ইসলাম ও আত্মশুদ্ধি";
 
 export type BookDefinition = {
   id: BookId;
@@ -294,6 +300,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}the-future.pdf`,
     pdfPageCount: 300,
     learningOutcomes: ["KNOWN, EMERGING, PLAUSIBLE, SPECULATIVE ও UNCERTAIN আলাদা করে ভবিষ্যৎ ভাবা", "AI, robotics, biotechnology ও space technology সহজ ভাষায় বোঝা", "প্রযুক্তির মানবিক consequence—কাজ, পরিবার, privacy ও inequality—দেখা", "একটি নির্দিষ্ট ভবিষ্যৎ নয়, একাধিক সম্ভাব্য scenario নিয়ে চিন্তা করা"],
+  },
+  "return-allah": {
+    id: "return-allah",
+    title: "THE RETURN TO ALLAH",
+    subtitle: "আল্লাহর দিকে ফিরে আসার এক পূর্ণাঙ্গ যাত্রা",
+    description: "ঈমান, ইবাদত, আত্মশুদ্ধি, তাওবা, চরিত্র ও জীবনব্যাপী আল্লাহর দিকে ফিরে আসার একটি বাংলা educational journey।",
+    longDescription: "২০টি chapter-এ সৃষ্টির উদ্দেশ্য, আল্লাহকে চেনা, ঈমান, সালাত, কুরআন, দু‘আ, তাওবা, নফস, সবর, শুকর, তাওয়াক্কুল, চরিত্র, পরিবার, অর্থ, আখিরাত এবং ৯০ দিনের renewal system নিয়ে সাজানো একটি source-safe, emotionally honest পাঠযাত্রা।",
+    category: "ইসলাম ও আত্মশুদ্ধি",
+    creator: "Zayan",
+    cover: `${import.meta.env.BASE_URL}return-to-allah-cover.png`,
+    accent: "#153B4A",
+    accentSoft: "#E8F1F2",
+    chapters: returnAllahChapters,
+    chapterLoaders: returnAllahChapterLoaders,
+    workbookExercises: returnAllahWorkbookExercises,
+    totalReadingMinutes: returnAllahTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}return-to-allah.pdf`,
+    pdfPageCount: 28,
+    learningOutcomes: ["সৃষ্টির উদ্দেশ্য ও তাওহীদের আলোকে জীবনের কেন্দ্র পরিষ্কার করা", "সালাত, কুরআন, দু‘আ ও তাওবার ধারাবাহিক system গড়া", "নফস, গুনাহ, সবর, শুকর ও তাওয়াক্কুলকে ব্যবহারিকভাবে অনুশীলন করা", "সম্পর্ক, অর্থ ও আখিরাতের দায়িত্বকে ঈমানের সঙ্গে যুক্ত করা"],
   },
   intelligence: {
     id: "intelligence",
