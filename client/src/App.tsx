@@ -9,11 +9,12 @@ import ChapterPage from "./pages/ChapterPage";
 import Home from "./pages/Home";
 import PageReader from "./pages/PageReader";
 import ScrollReader from "./pages/ScrollReader";
+import SwipePageReader from "./pages/SwipePageReader";
 import Workbook from "./pages/Workbook";
 
 function Router() {
   const base = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
-  return <WouterRouter base={base}><Switch><Route path="/" component={Home} /><Route path="/book/:bookId/page/:page" component={PageReader} /><Route path="/book/:bookId/scroll" component={ScrollReader} /><Route path="/book/:bookId/chapter/:id" component={ChapterPage} /><Route path="/book/:bookId/workbook" component={Workbook} /><Route path="/chapter/:id" component={ChapterPage} /><Route path="/workbook" component={Workbook} /><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch></WouterRouter>;
+  return <WouterRouter base={base}><Switch><Route path="/" component={Home} /><Route path="/book/:bookId/swipe/:page" component={SwipePageReader} /><Route path="/book/:bookId/page/:page" component={PageReader} /><Route path="/book/:bookId/scroll" component={ScrollReader} /><Route path="/book/:bookId/chapter/:id" component={ChapterPage} /><Route path="/book/:bookId/workbook" component={Workbook} /><Route path="/chapter/:id" component={ChapterPage} /><Route path="/workbook" component={Workbook} /><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch></WouterRouter>;
 }
 
 function App() {

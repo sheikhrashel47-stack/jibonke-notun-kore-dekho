@@ -14,8 +14,14 @@ import {
   darkTotalReadingMinutes,
   darkWorkbookExercises,
 } from "./dark-book";
+import {
+  thinkingChapterLoaders,
+  thinkingChapters,
+  thinkingTotalReadingMinutes,
+  thinkingWorkbookExercises,
+} from "./thinking-book";
 
-export const bookIds = ["life", "dark"] as const;
+export const bookIds = ["life", "dark", "thinking"] as const;
 export type BookId = (typeof bookIds)[number];
 
 export type BookDefinition = {
@@ -50,10 +56,20 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: "/manus-storage/main_3d8d46da.pdf",
     pdfPageCount: 500,
   },
+  thinking: {
+    id: "thinking",
+    title: "The Art of Thinking",
+    chapters: thinkingChapters,
+    chapterLoaders: thinkingChapterLoaders,
+    workbookExercises: thinkingWorkbookExercises,
+    totalReadingMinutes: thinkingTotalReadingMinutes,
+    pdfUrl: "/manus-storage/the_art_of_thinking_300_ac95d94c.pdf",
+    pdfPageCount: 300,
+  },
 };
 
 export function getBookDefinition(bookId?: string): BookDefinition {
-  return bookId === "dark" ? bookDefinitions.dark : bookDefinitions.life;
+  return bookId && bookId in bookDefinitions ? bookDefinitions[bookId as BookId] : bookDefinitions.life;
 }
 
 export const chapterStorageKey = (bookId: BookId, chapterId: string) => `${bookId}:${chapterId}`;

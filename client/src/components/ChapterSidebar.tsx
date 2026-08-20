@@ -4,7 +4,7 @@ import { useReader } from "@/contexts/ReaderContext";
 import { BookOpen, Check } from "lucide-react";
 import { useLocation } from "wouter";
 
-export function ChapterSidebar({ bookId, currentChapterId, mode = "chapter" }: { bookId: BookId; currentChapterId?: string; mode?: "chapter" | "scroll" }) {
+export function ChapterSidebar({ bookId, currentChapterId, mode = "chapter" }: { bookId: BookId; currentChapterId?: string; mode?: "chapter" | "scroll" | "swipe" }) {
   const [, setLocation] = useLocation();
   const { progress, setActiveChapter } = useReader();
   const book = getBookDefinition(bookId);
@@ -16,12 +16,18 @@ export function ChapterSidebar({ bookId, currentChapterId, mode = "chapter" }: {
       window.history.replaceState(null, "", `#chapter-${id}`);
       return;
     }
+    if (mode === "swipe") {
+      const chapter = book.chapters.find((item) => item.id === id);
+      const startPage = chapter?.pageStart ?? Math.floor((((chapter?.number || 1) - 1) / book.chapters.length) * book.pdfPageCount) + 1;
+      setLocation(`/book/${bookId}/swipe/${startPage}`);
+      return;
+    }
     setLocation(`/book/${bookId}/chapter/${id}`);
   };
 
   return (
     <aside className="chapter-sidebar" aria-label={`${book.title} অধ্যায় তালিকা`}>
-      <div className="chapter-sidebar__heading"><BookOpen className="size-4" /><span>{mode === "scroll" ? "স্ক্রল করে অধ্যায় বাছুন" : `${book.chapters.length} অধ্যায়ের পথ`}</span></div>
+      <div className="chapter-sidebar__heading"><BookOpen className="size-4" /><span>{mode === "scroll" ? "স্ক্রল করে অধ্যায় বাছুন" : mode === "swipe" ? "অধ্যায় বেছে পাতা খোলো" : `${book.chapters.length} অধ্যায়ের পথ`}</span></div>
       <nav>{book.chapters.map((chapter) => {
         const percentage = progress[chapterStorageKey(bookId, chapter.id)] || 0;
         const active = chapter.id === currentChapterId;

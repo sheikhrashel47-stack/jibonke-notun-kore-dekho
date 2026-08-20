@@ -64,4 +64,12 @@
 
 - [x] বই ১-এর প্রথম chapter ও প্রথম PDF page route-এ সমস্যা পুনরুৎপাদন ও কারণ শনাক্ত করা
 - [x] প্রথম পৃষ্ঠা navigation এবং initial scroll position সংশোধন করা
-- [ ] desktop ও mobile-এ fix যাচাই করে GitHub Pages update প্রকাশ করা
+- [x] desktop ও mobile-এ fix যাচাই করে GitHub Pages update প্রকাশ করা
+
+## Swipe reader ও তৃতীয় e-book
+
+- [x] প্রতি PDF পৃষ্ঠা swipe করে পড়ার mobile-first reader mode তৈরি করা
+- [x] বই ১ ও বই ২-এর page reader-এ swipe mode navigation যোগ করা
+- [x] “The Art of Thinking — সঠিকভাবে ভাবার শিল্প” বইয়ের ৩০ অধ্যায়ের manuscript ও ৩০০-পৃষ্ঠার PDF তৈরি করা
+- [x] নতুন বইয়ের cover, reader modules, PDF page mapping ও store catalogue integration যোগ করা
+- [x] সব বইয়ের build, swipe behaviour এবং responsive view যাচাই করে GitHub Pages-এ প্রকাশ করা

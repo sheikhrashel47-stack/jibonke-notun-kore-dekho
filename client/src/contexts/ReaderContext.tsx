@@ -1,5 +1,5 @@
 /* জীবন-ড্যাশবোর্ড: local-first state, namespaced per book so both reading paths stay independent. */
-import type { BookId } from "@/data/books";
+import { bookIds, type BookId } from "@/data/books";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 type FontSize = "small" | "medium" | "large";
@@ -35,7 +35,7 @@ const defaultState: ReaderState = {
   fontSize: "large",
   activeBookId: "life",
   activeChapterId: "01",
-  lastChapterByBook: { life: "01", dark: "01" },
+  lastChapterByBook: { life: "01", dark: "01", thinking: "01" },
 };
 
 const ReaderContext = createContext<ReaderContextValue | undefined>(undefined);
@@ -60,7 +60,7 @@ const safelyReadState = (): ReaderState => {
       bookmarks: (parsed.bookmarks || []).map(namespaceBookmarkKey),
       notes: Object.fromEntries(Object.entries(parsed.notes || {}).map(([key, value]) => [namespaceNoteKey(key), value])),
       completedExercises: Object.fromEntries(Object.entries(parsed.completedExercises || {}).map(([key, value]) => [namespaceExerciseKey(key), value])),
-      activeBookId: parsed.activeBookId === "dark" ? "dark" : "life",
+      activeBookId: bookIds.includes(parsed.activeBookId as BookId) ? parsed.activeBookId as BookId : "life",
       lastChapterByBook: { ...defaultState.lastChapterByBook, ...(parsed.lastChapterByBook || {}) },
     };
     if (!localStorage.getItem(FONT_SCALE_MIGRATION_KEY)) {

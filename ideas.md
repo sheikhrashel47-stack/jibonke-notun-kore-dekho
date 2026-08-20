@@ -95,3 +95,6 @@ Headline হবে সংক্ষিপ্ত, উষ্ণ ও সৎ; CTA হ
 - Desktop scroll reader-এর প্রথম screen-এ slim chapter rail, dominant paper reading canvas এবং quiet context/action rail—এই তিনটি zone একসঙ্গে স্পষ্ট থাকবে।
 - Muted gold কেবল progress, key insight marker এবং “আজকের প্রয়োগ” action-এর অর্থপূর্ণ সংকেত হিসেবে ব্যবহৃত হবে; সাধারণ decoration হিসেবে নয়।
 - দীর্ঘ পাঠে prose-এর সঙ্গে reflection ও practice landmark নিয়মিত থাকবে, যেন পাঠের ছন্দ হয়: পড়ো → লক্ষ্য করো → প্রয়োগ করো → এগিয়ে যাও।
+- পাতা উল্টে পড়ার screen-এও প্রথম দেখাতেই chapter rail → reading canvas → context/action rail-এর তিন-zone workspace স্পষ্ট থাকবে; এটি শুধু PDF viewer হবে না।
+- পাতা বদলালে chapter-aware progress thread এবং “আজকের প্রয়োগ” action একই সাথে পাঠকের বর্তমান অবস্থানকে অর্থপূর্ণ করে তুলবে।
+- দৃশ্যমান control, mode ও action copy হবে বাংলা-first; “Swipe” নয়, “পাতা উল্টে পড়া” এবং “একটানা পাঠ” ধরনের সহায়ক ভাষা ব্যবহৃত হবে।
