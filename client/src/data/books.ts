@@ -43,7 +43,7 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     chapterLoaders,
     workbookExercises,
     totalReadingMinutes,
-    pdfUrl: "/manus-storage/jibonke_notun_kore_dekho_ebook_a2073b56.pdf",
+    pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/pdf-assets/pdf/jibonke_notun_kore_dekho_ebook.pdf",
     pdfPageCount: 300,
   },
   dark: {
@@ -53,7 +53,7 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     chapterLoaders: darkChapterLoaders,
     workbookExercises: darkWorkbookExercises,
     totalReadingMinutes: darkTotalReadingMinutes,
-    pdfUrl: "/manus-storage/main_3d8d46da.pdf",
+    pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/pdf-assets/pdf/dark_psychology_500.pdf",
     pdfPageCount: 500,
   },
   thinking: {
@@ -63,7 +63,7 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     chapterLoaders: thinkingChapterLoaders,
     workbookExercises: thinkingWorkbookExercises,
     totalReadingMinutes: thinkingTotalReadingMinutes,
-    pdfUrl: "/manus-storage/the_art_of_thinking_300_ac95d94c.pdf",
+    pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/pdf-assets/pdf/the_art_of_thinking_300.pdf",
     pdfPageCount: 300,
   },
 };

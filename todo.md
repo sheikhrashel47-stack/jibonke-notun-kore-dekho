@@ -73,3 +73,19 @@
 - [x] “The Art of Thinking — সঠিকভাবে ভাবার শিল্প” বইয়ের ৩০ অধ্যায়ের manuscript ও ৩০০-পৃষ্ঠার PDF তৈরি করা
 - [x] নতুন বইয়ের cover, reader modules, PDF page mapping ও store catalogue integration যোগ করা
 - [x] সব বইয়ের build, swipe behaviour এবং responsive view যাচাই করে GitHub Pages-এ প্রকাশ করা
+
+## JIBON premium platform redesign
+
+- [ ] বর্তমান pages, routes, reader, data model, responsive behavior ও risks-এর audit তৈরি করা
+- [ ] reusable user-data model, reading preference, position memory ও local persistence foundation তৈরি করা
+- [ ] premium app shell, home dashboard, library, store, book detail ও book map navigation তৈরি করা
+- [ ] four-theme reader, font/line-height settings, bookmarks, highlights, notes, glossary ও journal tools তৈরি করা
+- [ ] progress, activity heatmap, goals, profile, local recommendations ও reading stats তৈরি করা
+- [ ] PWA manifest, service worker, offline fallback, accessibility ও performance safeguards যোগ করা
+- [ ] সব existing ও নতুন route, mobile/tablet/desktop responsive behavior এবং refresh persistence যাচাই করে প্রকাশ করা
+
+## জরুরি page-turn reader fix
+
+- [ ] page-turn mode-এ PDF app-এর ভিতরে না খোলার কারণ শনাক্ত করা
+- [ ] দ্রুত canvas-based page render, prefetch এবং touch-friendly navigation চালু করা
+- [ ] mobile ও desktop-এ page visibility, দ্রুত পড়া এবং fallback behavior যাচাই করা
