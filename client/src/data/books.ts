@@ -195,7 +195,6 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfPageCount: 289,
     learningOutcomes: ["মনোযোগ ও working memory অনুশীলন করা", "recall, pattern ও logical reasoning উন্নত করা", "সমস্যাকে ভেঙে root cause ও alternatives দেখা", "নিজের training performance আগের baseline-এর সঙ্গে তুলনা করা"],
   },
-<<<<<<< HEAD
   wealth: {
     id: "wealth",
     title: "THE WEALTH CODE",
