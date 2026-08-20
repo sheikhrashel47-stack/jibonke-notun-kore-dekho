@@ -116,8 +116,14 @@ import {
   secondTimerBookMeta,
   secondTimerAllWorkbookExercises,
 } from "./second-timer-book";
+import {
+  seerahChapters,
+  seerahChapterLoaders,
+  seerahTotalReadingMinutes,
+  seerahWorkbookExercises,
+} from "./seerah-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "mistakes-cost-lives", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "mistakes-cost-lives", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer", "seerah"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ" | "ইসলাম ও আত্মশুদ্ধি";
 
@@ -502,9 +508,27 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}second-timer.pdf`,
     pdfPageCount: 105,
     learningOutcomes: ["নিজের ভর্তি-প্রস্তুতির data-based diagnosis তৈরি করা", "target, priority, resource ও realistic routine নির্ধারণ করা", "active recall, spaced revision, timed practice ও Error Log ব্যবহার করা", "mock analysis, exam-day decision এবং final comeback plan তৈরি করা"],
+    },
+  seerah: {
+    id: "seerah",
+    title: "মুহাম্মদ ﷺ",
+    subtitle: "একটি পূর্ণাঙ্গ সীরাত — সংক্ষিপ্ত গবেষণাভিত্তিক সংস্করণ",
+    description: "কুরআন, হাদিস ও প্রাথমিক সীরাত ঐতিহ্যের source-aware পাঠে রাসূলুল্লাহ ﷺ-এর জীবন, দাওয়াহ ও সমাজ নির্মাণের ৫০ অধ্যায়ের বাংলা সংক্ষিপ্ত সংস্করণ।",
+    longDescription: "এই সংস্করণে মক্কার সমাজ, জন্ম ও শৈশব, প্রথম ওহি, মক্কার সংগ্রাম, হিজরত, মদিনার সমাজ, যুদ্ধ ও সন্ধি, বিদায় হজ এবং ওফাত—সবগুলো পর্যায়কে সংযত ও শ্রদ্ধাপূর্ণ ভাষায় সাজানো হয়েছে। প্রতিষ্ঠিত বর্ণনা, দীর্ঘ সীরাত-ঐতিহ্য এবং অনিশ্চিত report-কে একসঙ্গে মিশিয়ে না দিয়ে source status আলাদা রাখা হয়েছে। এটি devotional reflection ও historical reading-এর সহায়ক; ফিকহি ফতোয়া বা কোনো রাজনৈতিক প্রচারপত্র নয়।",
+    category: "ইসলাম ও আত্মশুদ্ধি",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}seerah-cover.svg`,
+    accent: "#174A46",
+    accentSoft: "#E8F2EF",
+    chapters: seerahChapters,
+    chapterLoaders: seerahChapterLoaders,
+    workbookExercises: seerahWorkbookExercises,
+    totalReadingMinutes: seerahTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}seerah-concise.pdf`,
+    pdfPageCount: 55,
+    learningOutcomes: ["সীরাতের প্রধান পর্যায়গুলো কালানুক্রমে বোঝা", "কুরআন, হাদিস ও সীরাতের source status আলাদা করে পড়া", "মক্কা-মদিনার সামাজিক ও রাজনৈতিক প্রেক্ষাপট বুঝতে শেখা", "ঐতিহাসিক অনিশ্চয়তার সঙ্গে সতর্কভাবে কাজ করা"],
   },
 };
-
 export function getBookDefinition(bookId?: string) {
   return bookId && bookId in bookDefinitions ? bookDefinitions[bookId as BookId] : bookDefinitions.life;
 }

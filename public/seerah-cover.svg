@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800" role="img" aria-labelledby="title desc">
+  <title id="title">মুহাম্মদ ﷺ — একটি পূর্ণাঙ্গ সীরাত</title>
+  <desc id="desc">A restrained emerald and parchment cover for a source-aware Bengali seerah edition.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b302f"/><stop offset="1" stop-color="#174a46"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="55%"><stop offset="0" stop-color="#d9b45c" stop-opacity=".25"/><stop offset="1" stop-color="#d9b45c" stop-opacity="0"/></radialGradient>
+    <pattern id="geo" width="90" height="90" patternUnits="userSpaceOnUse"><path d="M45 4 86 27v46L45 89 4 73V27Z M45 19 70 33v28L45 75 20 61V33Z" fill="none" stroke="#d9b45c" stroke-opacity=".12" stroke-width="2"/></pattern>
+  </defs>
+  <rect width="1200" height="1800" fill="url(#bg)"/>
+  <rect width="1200" height="1800" fill="url(#glow)"/>
+  <rect x="48" y="48" width="1104" height="1704" rx="10" fill="none" stroke="#d9b45c" stroke-opacity=".55" stroke-width="3"/>
+  <rect x="80" y="80" width="1040" height="1640" fill="url(#geo)" opacity=".9"/>
+  <circle cx="600" cy="505" r="214" fill="none" stroke="#d9b45c" stroke-opacity=".65" stroke-width="3"/>
+  <circle cx="600" cy="505" r="178" fill="none" stroke="#d9b45c" stroke-opacity=".28" stroke-width="2"/>
+  <path d="M600 310 646 438 784 446 677 530 711 665 600 590 489 665 523 530 416 446 554 438Z" fill="#d9b45c" fill-opacity=".12" stroke="#d9b45c" stroke-opacity=".7" stroke-width="3"/>
+  <text x="600" y="210" fill="#e6d4a0" font-family="Georgia, serif" font-size="42" letter-spacing="8" text-anchor="middle">JIBON EDITORIAL</text>
+  <text x="600" y="875" fill="#f5edda" font-family="Noto Sans Bengali, Noto Serif Bengali, serif" font-size="104" font-weight="700" text-anchor="middle">মুহাম্মদ ﷺ</text>
+  <text x="600" y="970" fill="#d9b45c" font-family="Noto Sans Bengali, Noto Serif Bengali, serif" font-size="52" text-anchor="middle">একটি পূর্ণাঙ্গ সীরাত</text>
+  <line x1="390" y1="1035" x2="810" y2="1035" stroke="#d9b45c" stroke-opacity=".7" stroke-width="3"/>
+  <text x="600" y="1135" fill="#e6d4a0" font-family="Noto Sans Bengali, Noto Serif Bengali, serif" font-size="35" text-anchor="middle">কুরআন • হাদিস • সীরাত • ইতিহাস</text>
+  <text x="600" y="1215" fill="#dcebe5" font-family="Noto Sans Bengali, Noto Serif Bengali, serif" font-size="29" text-anchor="middle">একটি সংক্ষিপ্ত গবেষণাভিত্তিক পাঠ</text>
+  <text x="600" y="1605" fill="#c6d8d1" font-family="Noto Sans Bengali, Noto Serif Bengali, serif" font-size="25" text-anchor="middle">৫০ অধ্যায় • উৎস-সচেতন • শ্রদ্ধাপূর্ণ</text>
+  <text x="600" y="1665" fill="#d9b45c" font-family="Georgia, serif" font-size="24" letter-spacing="3" text-anchor="middle">READ WITH KNOWLEDGE AND ADAB</text>
+</svg>

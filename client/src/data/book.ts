@@ -12,10 +12,12 @@ export type BookChapter = {
   wordCount: number;
   sections: BookSection[];
   exercises: WorkbookExercise[];
+  sourceNotes?: string[];
+  uncertaintyNotes?: string[];
+  readerReflection?: string;
   pageStart?: number;
   pageEnd?: number;
 };
-
 export type ChapterMeta = Pick<BookChapter, "id" | "number" | "title" | "subtitle" | "readingMinutes"> & {
   pageStart?: number;
   pageEnd?: number;
