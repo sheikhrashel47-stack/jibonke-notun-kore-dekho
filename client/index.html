@@ -12,6 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Noto+Serif+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      (() => {
+        const savedPath = sessionStorage.getItem("github-pages-path");
+        if (!savedPath) return;
+        sessionStorage.removeItem("github-pages-path");
+        history.replaceState(null, "", `${window.location.pathname.replace(/\/$/, "")}${savedPath}`);
+      })();
+    </script>
   </head>
 
   <body>

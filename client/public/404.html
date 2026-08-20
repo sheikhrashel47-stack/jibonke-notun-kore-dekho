@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>জীবনকে নতুন করে দেখো</title>
+    <script>
+      (() => {
+        const base = "/jibonke-notun-kore-dekho";
+        const currentPath = window.location.pathname;
+        const appPath = currentPath.startsWith(base) ? currentPath.slice(base.length) : currentPath;
+        sessionStorage.setItem("github-pages-path", `${appPath}${window.location.search}${window.location.hash}` || "/");
+        window.location.replace(`${base}/`);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
