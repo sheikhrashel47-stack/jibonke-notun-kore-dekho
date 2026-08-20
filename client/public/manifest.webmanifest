@@ -1,0 +1,20 @@
+{
+  "name": "JIBON — জীবনকে নতুন করে দেখো",
+  "short_name": "JIBON",
+  "lang": "bn",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF8F1",
+  "theme_color": "#1B4332",
+  "description": "তিনটি বই, নিজের পাঠের ছন্দ এবং গভীর ভাবনার জন্য বাংলা-first reading platform।",
+  "icons": [
+    {
+      "src": "jibon-brand-symbol.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

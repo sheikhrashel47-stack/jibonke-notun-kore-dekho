@@ -98,3 +98,11 @@ Headline হবে সংক্ষিপ্ত, উষ্ণ ও সৎ; CTA হ
 - পাতা উল্টে পড়ার screen-এও প্রথম দেখাতেই chapter rail → reading canvas → context/action rail-এর তিন-zone workspace স্পষ্ট থাকবে; এটি শুধু PDF viewer হবে না।
 - পাতা বদলালে chapter-aware progress thread এবং “আজকের প্রয়োগ” action একই সাথে পাঠকের বর্তমান অবস্থানকে অর্থপূর্ণ করে তুলবে।
 - দৃশ্যমান control, mode ও action copy হবে বাংলা-first; “Swipe” নয়, “পাতা উল্টে পড়া” এবং “একটানা পাঠ” ধরনের সহায়ক ভাষা ব্যবহৃত হবে।
+
+- JIBON premium redesign-এ life-dashboard নীতিকে বিস্তৃত করে পাঁচটি স্পষ্ট surface থাকবে: Home, Library, Store, Progress ও Profile। এতে প্রথম screen-এই শেষ পাঠ, বর্তমান অবস্থান, আজকের লক্ষ্য, অগ্রগতি এবং পরের বই দেখা যাবে।
+- App shell হবে warm-paper editorial library: বড় কেন্দ্রভিত্তিক marketing hero নয়; content-led staggered panels, slim desktop navigation এবং mobile bottom navigation থাকবে।
+- Reader-এর চারটি appearance হবে Ivory, Dark, Sepia ও Focus। Reader controls পড়ার সময় লুকানো থাকবে এবং user preference local-first ভাবে মনে রাখা হবে।
+- প্রত্যেক বইয়ের নিজস্ব accent থাকবে, কিন্তু overall JIBON palette-এ quiet emerald, warm paper ও controlled muted-gold hierarchy অপরিবর্তিত থাকবে।
+- Muted gold কেবল progress, insight marker, key numeral ও “আজকের প্রয়োগ”-এর কাজে লাগবে; বড় display headline সবসময় নতুন সবুজ `#1B4332`-এ থাকবে।
+- Home, Library, Store ও Progress-এর প্রথম meaningful viewport-এ স্পষ্ট loop থাকবে: বর্তমান অবস্থান → অগ্রগতির thread → আজকের প্রয়োগ।
+- Low-data ও empty dashboard surface-এও paper-note rhythm, reflection prompt ও progress landmark থাকবে, যাতে তা অসম্পূর্ণ utility page না হয়ে শান্ত reading workspace মনে হয়।
