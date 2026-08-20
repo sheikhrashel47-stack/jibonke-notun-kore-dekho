@@ -51,4 +51,4 @@
 - [x] দুই বইয়ের chapter reader-এর নিচে দৃশ্যমান “পৃষ্ঠা শেষ” marker যোগ করা
 - [x] বর্তমান chapter-এর আগে ও পরে যাওয়ার জন্য বড় পূর্ববর্তী/পরবর্তী navigation button যোগ করা
 - [x] প্রথম ও শেষ chapter-এর edge state, mobile layout এবং keyboard accessibility যাচাই করা
-- [ ] build, checkpoint এবং GitHub Pages update প্রকাশ করা
+- [x] build, checkpoint এবং GitHub Pages update প্রকাশ করা
