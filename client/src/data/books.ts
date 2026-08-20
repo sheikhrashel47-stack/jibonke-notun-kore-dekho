@@ -21,6 +21,12 @@ import {
   thinkingWorkbookExercises,
 } from "./thinking-book";
 import {
+  habitChapterLoaders,
+  habitChapters,
+  habitTotalReadingMinutes,
+  habitWorkbookExercises,
+} from "./habit-book";
+import {
   presenceChapters as presencePhase1Chapters,
   presenceChapterLoaders as presencePhase1Loaders,
   presenceTotalReadingMinutes as presencePhase1Minutes,
@@ -50,9 +56,9 @@ const presenceWorkbookExercises: WorkbookExercise[] = [
 ];
 const presenceTotalReadingMinutes = presencePhase1Minutes + presencePhase2Meta.reduce((sum, chapter) => sum + chapter.readingMinutes, 0) + presencePhase3Meta.reduce((sum, chapter) => sum + chapter.readingMinutes, 0);
 
-export const bookIds = ["life", "dark", "thinking", "presence"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন";
 
 export type BookDefinition = {
   id: BookId;
@@ -151,6 +157,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfPageCount: 156,
     learningOutcomes: ["নিজের উপস্থিতি ও body language সচেতনভাবে ব্যবহার করা", "স্বাস্থ্যকর boundary ও assertive communication গড়ে তোলা", "চাপের মধ্যেও স্থির, উষ্ণ ও স্পষ্ট থাকা"],
   },
+  habit: {
+    id: "habit",
+    title: "The Habit Architect",
+    subtitle: "নিজের আচরণ, পরিবেশ ও জীবনকে এমনভাবে ডিজাইন করার বিজ্ঞান",
+    description: "আচরণ, identity, environment, attention ও recovery নিয়ে ৬০ অধ্যায়ের বাংলা practical workbook।",
+    longDescription: "শুধু motivation-এর উপর নির্ভর না করে নিজের আচরণের system দেখা, ছোট experiment চালানো এবং দীর্ঘমেয়াদি habit architecture বানানোর জন্য সাজানো মৌলিক বাংলা পাঠ।",
+    category: "আচরণ ও জীবনযাপন",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}habit-architect-cover.png`,
+    accent: "#2A6B4F",
+    accentSoft: "#E6F1E9",
+    chapters: habitChapters,
+    chapterLoaders: habitChapterLoaders,
+    workbookExercises: habitWorkbookExercises,
+    totalReadingMinutes: habitTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}habit-architect.pdf`,
+    pdfPageCount: 214,
+    learningOutcomes: ["নিজের আচরণের trigger ও reward map করা", "পরিবেশ ও starting friction redesign করা", "failure-এর পর recovery system বানানো", "৩০, ৬০ ও ৯০ দিনের personal habit experiment চালানো"],
+  },
 };
 
 export function getBookDefinition(bookId?: string): BookDefinition {
@@ -186,6 +211,14 @@ export function getDarkChapterPageRange(chapterNumber: number) {
     return { pageStart, pageEnd: pageStart + 8 };
   }
   return null;
+}
+
+export function getHabitChapterForPdfPage(page: number) {
+  return bookDefinitions.habit.chapters.find((chapter) => {
+    const pageStart = chapter.pageStart || 1;
+    const pageEnd = chapter.pageEnd || pageStart + 3;
+    return page >= pageStart && page <= pageEnd;
+  });
 }
 
 export function getDarkChapterForPdfPage(page: number) {

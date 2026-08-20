@@ -101,7 +101,7 @@ const defaultState: ReaderState = {
   activityMinutesByDate: {},
   activeBookId: "life",
   activeChapterId: "01",
-  lastChapterByBook: { life: "01", dark: "01", thinking: "01", presence: "01" },
+  lastChapterByBook: { life: "01", dark: "01", thinking: "01", presence: "01", habit: "01" },
   lastPositionByBook: {},
   libraryBookIds: ["life"],
 };

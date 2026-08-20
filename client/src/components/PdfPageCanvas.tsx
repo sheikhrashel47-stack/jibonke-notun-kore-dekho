@@ -48,6 +48,7 @@ export function PdfPageCanvas({ source, page, fit = "width" }: PdfPageCanvasProp
 
   useEffect(() => {
     let cancelled = false;
+    let activeRenderTask: { cancel: () => void; promise: Promise<unknown> } | null = null;
     const renderPage = async () => {
       try {
         setState("loading");
@@ -70,22 +71,26 @@ export function PdfPageCanvas({ source, page, fit = "width" }: PdfPageCanvasProp
         canvas.height = Math.floor(displayViewport.height * pixelRatio);
         canvas.style.width = `${Math.floor(displayViewport.width)}px`;
         canvas.style.height = `${Math.floor(displayViewport.height)}px`;
-        await documentPage.render({
+        activeRenderTask = documentPage.render({
           canvas,
           canvasContext: context,
           viewport: displayViewport,
           transform: pixelRatio === 1 ? undefined : [pixelRatio, 0, 0, pixelRatio, 0, 0],
-        }).promise;
+        });
+        await activeRenderTask.promise;
         if (!cancelled) setState("ready");
       } catch (error) {
-        if (!cancelled) {
+        if (!cancelled && !(error instanceof Error && error.name === "RenderingCancelledException")) {
           console.error("PDF page rendering failed", error);
           setState("error");
         }
       }
     };
     void renderPage();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+      activeRenderTask?.cancel();
+    };
   }, [fit, layoutVersion, page, source]);
 
   return <div ref={shellRef} className={`pdf-canvas-viewer pdf-canvas-viewer--${state}`} aria-busy={state === "loading"}>
