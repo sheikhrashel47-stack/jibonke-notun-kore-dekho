@@ -111,6 +111,6 @@
 
 ## নতুন visual philosophy e-book
 
-- [ ] ৩০০ visual philosophy book specification, theme progression ও production boundary সম্পূর্ণ audit করা
-- [ ] ৩০ theme × ১০ thought-এর content ও art-direction blueprint তৈরি করা
-- [ ] নতুন illustrated e-book, PDF, reader modules ও catalogue entry তৈরি করে প্রকাশ করা
+- [x] ৩০০ visual philosophy book specification, theme progression ও production boundary সম্পূর্ণ audit করা
+- [x] ৩০ theme × ১০ thought-এর content ও art-direction blueprint তৈরি করা
+- [x] নতুন illustrated e-book, PDF, reader modules ও catalogue entry তৈরি করে প্রকাশ করা
