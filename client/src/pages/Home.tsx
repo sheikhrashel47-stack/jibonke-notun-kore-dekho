@@ -1,21 +1,21 @@
 /* জীবন-ড্যাশবোর্ড storefront: paper-led reading workspace, visible progress thread and practical next actions. */
 import { AppHeader } from "@/components/AppHeader";
 import { Button } from "@/components/ui/button";
-import { bookDefinitions, bookIds, chapterStorageKey, type BookId } from "@/data/books";
+import { bookDefinitions, chapterStorageKey, darkPdfUrl, type BookId } from "@/data/books";
 import { useReader } from "@/contexts/ReaderContext";
-import { ArrowDownToLine, ArrowRight, BookMarked, BookOpen, Bookmark, ChartNoAxesCombined, CircleCheckBig, Clock3, LibraryBig, MessageSquareText, ShieldCheck, StickyNote } from "lucide-react";
+import { ArrowDownToLine, ArrowRight, BookMarked, BookOpen, Bookmark, ChartNoAxesCombined, CircleCheckBig, Clock3, FileText, LibraryBig, MessageSquareText, ShieldCheck, StickyNote } from "lucide-react";
 import { Link } from "wouter";
 
 const assets = {
   firstCover: "/manus-storage/jibon-cover_c88ed0da.png",
   darkCover: "/manus-storage/dark-psychology-cover_7f27c9b4.png",
   firstPdf: "https://github.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/releases/download/store-assets-v1/jibonke_notun_kore_dekho_ebook.pdf",
-  darkPdf: "https://github.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/releases/download/store-assets-v1/dark_psychology_ebook.pdf",
+  darkPdf: darkPdfUrl,
 };
 
 const books = [
   { id: "life" as const, title: "জীবনকে নতুন করে দেখো", subtitle: "নিজের সঙ্গে নতুন করে পরিচয়ের একটি পাঠযাত্রা", description: "চিন্তা, সম্পর্ক, মনোযোগ, সিদ্ধান্ত ও অর্থপূর্ণ জীবনের জন্য ১৫ অধ্যায়ের বাংলা companion।", meta: "৩১৬ পৃষ্ঠা · ১৫ অধ্যায়", cover: assets.firstCover, tone: "sage" },
-  { id: "dark" as const, title: "Dark Psychology", subtitle: "মানসিক প্রভাব বুঝে নিজের সীমা রক্ষার ব্যবহারিক guide", description: "৫০ অধ্যায়ের নৈতিক self-defense e-book—manipulation চিনতে, শান্ত থাকতে ও নিরাপদ সিদ্ধান্ত নিতে সাহায্য করবে।", meta: "৩০২ পৃষ্ঠা · ৫০ অধ্যায়", cover: assets.darkCover, tone: "navy" },
+  { id: "dark" as const, title: "Dark Psychology", subtitle: "মানসিক প্রভাব বুঝে নিজের সীমা রক্ষার ব্যবহারিক guide", description: "৫০ অধ্যায়ের নৈতিক self-defense e-book—manipulation চিনতে, শান্ত থাকতে ও নিরাপদ সিদ্ধান্ত নিতে সাহায্য করবে।", meta: "৫০০ পৃষ্ঠা · ৫০ অধ্যায়", cover: assets.darkCover, tone: "navy" },
 ] as const;
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
       const bookProgress = progressFor(book.id);
       const bookChapter = lastChapterByBook[book.id] || "01";
       const hasStarted = bookProgress > 0 || activeBookId === book.id;
-      return <article className={`store-book-card store-book-card--${book.tone}`} key={book.id}><div className="store-book-card__cover-wrap"><img src={book.cover} alt={`${book.title} বইয়ের cover`} className="store-book-card__cover" loading={book.id === "life" ? "eager" : "lazy"} /><span className="store-book-card__tag">{hasStarted ? "পাঠ চলমান" : "নতুন প্রকাশনা"}</span></div><div className="store-book-card__body"><div className="store-book-card__topline"><p className="store-book-card__meta">{book.meta}</p><span>{bookProgress}% পড়া</span></div><h3>{book.title}</h3><p className="store-book-card__subtitle">{book.subtitle}</p><p className="store-book-card__description">{book.description}</p><div className="store-book-card__thread" aria-label={`${book.title} এর অগ্রগতি`}><span style={{ width: `${Math.max(bookProgress, hasStarted ? 3 : 0)}%` }} /></div><div className="store-book-card__actions"><Button asChild className="store-read-button"><Link href={`/book/${book.id}/chapter/${bookChapter}`}><BookOpen className="size-4" /> {hasStarted ? "পড়া চালিয়ে যাও" : "পড়া শুরু করো"}</Link></Button><a className="store-pdf-link" href={book.id === "life" ? assets.firstPdf : assets.darkPdf} target="_blank" rel="noreferrer"><ArrowDownToLine className="size-4" /> PDF</a></div></div></article>;
+      return <article className={`store-book-card store-book-card--${book.tone}`} key={book.id}><div className="store-book-card__cover-wrap"><img src={book.cover} alt={`${book.title} বইয়ের cover`} className="store-book-card__cover" loading={book.id === "life" ? "eager" : "lazy"} /><span className="store-book-card__tag">{hasStarted ? "পাঠ চলমান" : "নতুন প্রকাশনা"}</span></div><div className="store-book-card__body"><div className="store-book-card__topline"><p className="store-book-card__meta">{book.meta}</p><span>{bookProgress}% পড়া</span></div><h3>{book.title}</h3><p className="store-book-card__subtitle">{book.subtitle}</p><p className="store-book-card__description">{book.description}</p><div className="store-book-card__thread" aria-label={`${book.title} এর অগ্রগতি`}><span style={{ width: `${Math.max(bookProgress, hasStarted ? 3 : 0)}%` }} /></div><div className="store-book-card__actions"><Button asChild className="store-read-button"><Link href={`/book/${book.id}/chapter/${bookChapter}`}><BookOpen className="size-4" /> {hasStarted ? "পড়া চালিয়ে যাও" : "পড়া শুরু করো"}</Link></Button>{book.id === "dark" && <Link className="store-pdf-link" href="/book/dark/page/1"><FileText className="size-4" /> পৃষ্ঠা বেছে পড়ো</Link>}<a className="store-pdf-link" href={book.id === "life" ? assets.firstPdf : assets.darkPdf} target="_blank" rel="noreferrer"><ArrowDownToLine className="size-4" /> PDF</a></div></div></article>;
     })}</div></section>
 
     <section className="store-principles" aria-labelledby="principles-title"><div><span className="store-eyebrow"><ShieldCheck className="size-4" /> আমাদের পাঠের দৃষ্টি</span><h2 id="principles-title">জ্ঞান মানে কাউকে নিয়ন্ত্রণ করা নয়—নিজেকে সচেতন করা।</h2></div><div className="store-principles__list"><p><BookOpen className="size-5" /><span><strong>সহজ বাংলা</strong>জটিল বিষয়ও পরিষ্কার ভাষায়</span></p><p><ShieldCheck className="size-5" /><span><strong>নৈতিক দৃষ্টি</strong>সীমা, নিরাপত্তা ও সচেতনতার পক্ষে</span></p><p><CircleCheckBig className="size-5" /><span><strong>নিজের গতি</strong>যেখান থেকে চাইবে, সেখান থেকেই পড়া</span></p></div></section>

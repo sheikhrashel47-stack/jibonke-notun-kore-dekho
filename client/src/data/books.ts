@@ -53,3 +53,37 @@ export function getBookDefinition(bookId?: string): BookDefinition {
 export const chapterStorageKey = (bookId: BookId, chapterId: string) => `${bookId}:${chapterId}`;
 export const chapterNoteStorageKey = (bookId: BookId, chapterId: string) => `note:${bookId}:${chapterId}`;
 export const workbookNoteStorageKey = (bookId: BookId) => `reflection:${bookId}`;
+
+export const darkPdfUrl = "/manus-storage/main_3d8d46da.pdf";
+export const darkPdfPageCount = 500;
+
+export function getDarkChapterPageRange(chapterNumber: number) {
+  if (chapterNumber >= 1 && chapterNumber <= 10) {
+    const pageStart = 18 + (chapterNumber - 1) * 9;
+    return { pageStart, pageEnd: pageStart + 8 };
+  }
+  if (chapterNumber >= 11 && chapterNumber <= 20) {
+    const pageStart = 111 + (chapterNumber - 11) * 9;
+    return { pageStart, pageEnd: pageStart + 8 };
+  }
+  if (chapterNumber >= 21 && chapterNumber <= 30) {
+    const pageStart = 204 + (chapterNumber - 21) * 8;
+    return { pageStart, pageEnd: pageStart + 7 };
+  }
+  if (chapterNumber >= 31 && chapterNumber <= 40) {
+    const pageStart = 287 + (chapterNumber - 31) * 8;
+    return { pageStart, pageEnd: pageStart + 7 };
+  }
+  if (chapterNumber >= 41 && chapterNumber <= 50) {
+    const pageStart = 370 + (chapterNumber - 41) * 9;
+    return { pageStart, pageEnd: pageStart + 8 };
+  }
+  return null;
+}
+
+export function getDarkChapterForPdfPage(page: number) {
+  return bookDefinitions.dark.chapters.find((chapter) => {
+    const range = getDarkChapterPageRange(chapter.number);
+    return range ? page >= range.pageStart && page <= range.pageEnd : false;
+  });
+}

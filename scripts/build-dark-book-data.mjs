@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
-const sourceDirectory = "/home/ubuntu/book_project/dark_psychology_chapters";
+const sourceDirectory = "/home/ubuntu/book_project/dark_psychology_500_chapters";
 const outputDirectory = path.join(projectRoot, "client/src/data/dark-chapters");
 
 const chapterMetadata = [
@@ -61,6 +61,15 @@ const chapterMetadata = [
 ];
 
 const normalize = (value) => value.replace(/\r/g, "").trim();
+
+const pageRange = (chapterNumber) => {
+  if (chapterNumber <= 10) { const pageStart = 18 + (chapterNumber - 1) * 9; return { pageStart, pageEnd: pageStart + 8 }; }
+  if (chapterNumber <= 20) { const pageStart = 111 + (chapterNumber - 11) * 9; return { pageStart, pageEnd: pageStart + 8 }; }
+  if (chapterNumber <= 30) { const pageStart = 204 + (chapterNumber - 21) * 8; return { pageStart, pageEnd: pageStart + 7 }; }
+  if (chapterNumber <= 40) { const pageStart = 287 + (chapterNumber - 31) * 8; return { pageStart, pageEnd: pageStart + 7 }; }
+  const pageStart = 370 + (chapterNumber - 41) * 9;
+  return { pageStart, pageEnd: pageStart + 8 };
+};
 
 const compactParagraphs = (lines) => {
   const paragraphs = [];
@@ -148,13 +157,21 @@ const parseChapter = (source, metadata) => {
 fs.mkdirSync(outputDirectory, { recursive: true });
 for (const metadata of chapterMetadata) {
   const [id] = metadata;
-  const source = fs.readFileSync(path.join(sourceDirectory, `chapter_${id}_draft_bn.md`), "utf8");
+  const source = fs.readFileSync(path.join(sourceDirectory, `chapter_${id}.md`), "utf8");
   const chapter = parseChapter(source, metadata);
   const output = `/* জীবন-ড্যাশবোর্ড: Dark Psychology-এর lazy-loaded ethical self-defense module. */\nimport type { BookChapter } from "../book";\n\nconst chapter: BookChapter = ${JSON.stringify(chapter, null, 2)};\n\nexport default chapter;\n`;
   fs.writeFileSync(path.join(outputDirectory, `chapter-${id}.ts`), output, "utf8");
 }
 
 const indexOutput = `/* জীবন-ড্যাশবোর্ড: Dark Psychology ethical self-defense book metadata and lazy loaders. */\nimport type { BookChapter, ChapterMeta, WorkbookExercise } from "./book";\n\nexport const darkChapters: ChapterMeta[] = ${JSON.stringify(chapterMetadata.map(([id, title, subtitle]) => ({ id, number: Number(id), title, subtitle, readingMinutes: 0 })), null, 2)};\n\nexport const darkChapterLoaders: Record<string, () => Promise<{ default: BookChapter }>> = {\n${chapterMetadata.map(([id]) => `  "${id}": () => import("./dark-chapters/chapter-${id}"),`).join("\n")}\n};\n\nexport const darkWorkbookExercises: WorkbookExercise[] = [\n  { title: "নিজের Red Flag Ledger", prompt: "আজকের একটি চাপের কথোপকথনে কী বলা হয়েছিল, কী বারবার ঘটছে, কোন সীমাটি দরকার এবং কাকে সহায়তার জন্য জানাতে পারো—লিখে রাখো।" },\n  { title: "Pause–Name–Check", prompt: "একটি সিদ্ধান্তের আগে থামো, অনুভূতির নাম দাও, তথ্য ও context যাচাই করো, তারপর পরের ছোট পদক্ষেপ নির্ধারণ করো।" },\n  { title: "সীমানার বাক্য", prompt: "নিজের ভাষায় তিনটি ছোট বাক্য লেখো: সময় চাওয়া, না বলা এবং অন্যের সহায়তা নেওয়ার জন্য।" }\n];\n\nexport const darkTotalReadingMinutes = 600;\n`;
-fs.writeFileSync(path.join(projectRoot, "client/src/data/dark-book.ts"), indexOutput, "utf8");
+const indexOutputWithPages = indexOutput.replace(
+  /(export const darkChapters: ChapterMeta\[\] = )(\[[\s\S]*?\]);\n\n(export const darkChapterLoaders)/,
+  (_, prefix, rawMetadata, loaderStart) => {
+    const metadata = JSON.parse(rawMetadata).map((chapter) => ({ ...chapter, ...pageRange(chapter.number) }));
+    return `${prefix}${JSON.stringify(metadata, null, 2)};\n\n${loaderStart}`;
+  },
+);
+
+fs.writeFileSync(path.join(projectRoot, "client/src/data/dark-book.ts"), indexOutputWithPages, "utf8");
 
 console.log(`Generated ${chapterMetadata.length} Dark Psychology lazy-loaded chapter modules.`);

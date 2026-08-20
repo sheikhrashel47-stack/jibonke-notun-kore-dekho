@@ -89,3 +89,6 @@ Headline হবে সংক্ষিপ্ত, উষ্ণ ও সৎ; CTA হ
 - প্রথম screen-এ current chapter, progress, next action এবং personal state illustration-এর চেয়ে বেশি গুরুত্ব পাবে।
 - Muted-gold progress thread ও “আজকের প্রয়োগ” marker home, reader এবং workbook-এ নিয়মিত ফিরে আসবে।
 - Scenic image কেবল উষ্ণ atmosphere তৈরি করবে; paper surface, margin note, rail ও reflection card আগে quiet productivity প্রকাশ করবে।
+- Header-এ open-book/path mark-এর সঙ্গে সম্পূর্ণ Bengali serif wordmark সবসময় স্পষ্ট থাকবে; এটি শুধু utility logo হবে না।
+- সব reading mode-এ মূল দৃশ্যগত loop হবে: বর্তমান অবস্থান → progress thread → আজকের প্রয়োগ।
+- Product UI copy Bengali-first, স্থির ও বাস্তববাদী companion voice-এ লেখা হবে; ইংরেজি শব্দ কেবল বইয়ের source content হলে থাকবে।

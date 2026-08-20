@@ -31,3 +31,17 @@
 - [ ] Existing reading app-কে দুই-বইয়ের mobile-first book store করা
 - [ ] নতুন বইয়ের preview ও PDF store-এ প্রকাশ করা
 - [ ] Mobile design ও GitHub Pages deployment যাচাই করা
+
+## নতুন ৫০০-পৃষ্ঠার Dark Psychology পুনর্নির্মাণ
+
+- [x] ব্যবহারকারীর দেওয়া master prompt পুরোটা পড়ে বাধ্যতামূলক লেখা, নকশা ও ethical self-defense শর্ত তালিকাভুক্ত করা
+- [x] ৫০ অধ্যায়, ৫ অংশ এবং প্রায় ৫০০ design page-এর page budget ও chapter-level content plan তৈরি করা
+- [x] প্রতিটি chapter-এর জন্য গল্প, concept, warning sign, response ও ethical application কাঠামো নির্ধারণ করা
+- [x] ৫০ অধ্যায়ের পূর্ণাঙ্গ বাংলা manuscript লেখা, সম্পাদনা ও পুনরাবৃত্তি যাচাই করা
+- [x] Part I ও Part II-এর chapter 01–20 manual editorial review, safety check ও completion করা
+- [x] Part III ও Part IV-এর chapter 21–40 manual editorial review, safety check ও completion করা
+- [x] Part V-এর chapter 41–50, 50 Red Flags index ও final practice guide manual editorial review-সহ completion করা
+- [x] সব chapter-এ গল্প, concept, safe response, practical exercise, language consistency ও duplicate-content review করা
+- [x] clickable contents, chapter links, worksheet ও page numbering-সহ প্রায় ৫০০-পৃষ্ঠার premium PDF e-book তৈরি করা
+- [ ] ওয়েব রিডারে বই-২-এর নতুন content, chapter picker, page selector এবং নির্দিষ্ট page-এ যাওয়ার navigation যোগ করা
+- [ ] mobile reader যাচাই, production build, GitHub Pages প্রকাশ ও live links পরীক্ষা করা

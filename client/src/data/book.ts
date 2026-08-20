@@ -14,7 +14,10 @@ export type BookChapter = {
   exercises: WorkbookExercise[];
 };
 
-export type ChapterMeta = Pick<BookChapter, "id" | "number" | "title" | "subtitle" | "readingMinutes">;
+export type ChapterMeta = Pick<BookChapter, "id" | "number" | "title" | "subtitle" | "readingMinutes"> & {
+  pageStart?: number;
+  pageEnd?: number;
+};
 
 export const chapters: ChapterMeta[] = [
   {
