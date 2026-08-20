@@ -27,34 +27,11 @@ import {
   habitWorkbookExercises,
 } from "./habit-book";
 import {
-  presenceChapters as presencePhase1Chapters,
-  presenceChapterLoaders as presencePhase1Loaders,
-  presenceTotalReadingMinutes as presencePhase1Minutes,
-  presenceWorkbookExercises as presencePhase1Exercises,
-} from "./presence-book";
-import {
-  presencePhase2Meta,
-  presencePhase2Loaders,
-  presencePhase2Exercises,
-} from "./presence-book-phase2";
-import {
-  presencePhase3Meta,
-  presencePhase3Loaders,
-  presencePhase3Exercises,
-} from "./presence-book-phase3";
-
-const presenceChapters: ChapterMeta[] = [...presencePhase1Chapters, ...presencePhase2Meta, ...presencePhase3Meta];
-const presenceChapterLoaders: Record<string, () => Promise<{ default: BookChapter }>> = {
-  ...presencePhase1Loaders,
-  ...presencePhase2Loaders,
-  ...presencePhase3Loaders,
-};
-const presenceWorkbookExercises: WorkbookExercise[] = [
-  ...presencePhase1Exercises,
-  ...presencePhase2Exercises,
-  ...presencePhase3Exercises,
-];
-const presenceTotalReadingMinutes = presencePhase1Minutes + presencePhase2Meta.reduce((sum, chapter) => sum + chapter.readingMinutes, 0) + presencePhase3Meta.reduce((sum, chapter) => sum + chapter.readingMinutes, 0);
+  presenceExpandedMeta as presenceChapters,
+  presenceExpandedLoaders as presenceChapterLoaders,
+  presenceExpandedTotalReadingMinutes as presenceTotalReadingMinutes,
+  presenceExpandedExercises as presenceWorkbookExercises,
+} from "./presence-book-expanded";
 
 export const bookIds = ["life", "dark", "thinking", "presence", "habit"] as const;
 export type BookId = (typeof bookIds)[number];
@@ -154,7 +131,7 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     workbookExercises: presenceWorkbookExercises,
     totalReadingMinutes: presenceTotalReadingMinutes,
     pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/main/public/the_presence_code_ebook.pdf",
-    pdfPageCount: 156,
+    pdfPageCount: 305,
     learningOutcomes: ["নিজের উপস্থিতি ও body language সচেতনভাবে ব্যবহার করা", "স্বাস্থ্যকর boundary ও assertive communication গড়ে তোলা", "চাপের মধ্যেও স্থির, উষ্ণ ও স্পষ্ট থাকা"],
   },
   habit: {

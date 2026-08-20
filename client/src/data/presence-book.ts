@@ -528,6 +528,7 @@ const chapters: BookChapter[] = [
   ])
 ];
 
+export const presenceFullChapters: BookChapter[] = chapters;
 export const presenceChapters: ChapterMeta[] = chapters.map(({ id, number, title, subtitle, readingMinutes }) => ({ id, number, title, subtitle, readingMinutes }));
 export const presenceChapterLoaders: Record<string, () => Promise<{ default: BookChapter }>> = Object.fromEntries(
   chapters.map((chapter) => [chapter.id, async () => ({ default: chapter })]),
