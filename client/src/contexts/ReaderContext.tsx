@@ -103,7 +103,7 @@ const defaultState: ReaderState = {
   activeChapterId: "01",
   lastChapterByBook: { life: "01", dark: "01", thinking: "01", presence: "01", habit: "01", brain: "01", wealth: "01", communication: "001", future: "01", "return-allah": "01", "mistakes-cost-lives": "01", intelligence: "01", "winning-mind": "001", "ai-mastery-wealth": "001", "house-remembered": "001", "hard-truth": "01", "law-everyone-should-know": "001", "last-words": "01", "second-timer": "001" },
   lastPositionByBook: {},
-  libraryBookIds: ["life"],
+  libraryBookIds: ["life", "second-timer"],
 };
 
 const ReaderContext = createContext<ReaderContextValue | undefined>(undefined);
@@ -159,7 +159,7 @@ const safelyReadState = (): ReaderState => {
       lastPositionByBook: Object.fromEntries(
         Object.entries(parsed.lastPositionByBook || {}).filter(([bookId]) => isBookId(bookId)),
       ) as Partial<Record<BookId, ReadingPosition>>,
-      libraryBookIds: Array.from(new Set([...libraryBookIds, activeBookId])),
+      libraryBookIds: Array.from(new Set<BookId>([...libraryBookIds, activeBookId, "second-timer"])),
       readerTheme: ["ivory", "dark", "sepia", "focus"].includes(parsed.readerTheme || "") ? parsed.readerTheme as ReaderTheme : defaultState.readerTheme,
       readerFont: ["serif", "sans"].includes(parsed.readerFont || "") ? parsed.readerFont as ReaderFont : defaultState.readerFont,
       readerLineHeight: ["compact", "comfort", "relaxed"].includes(parsed.readerLineHeight || "") ? parsed.readerLineHeight as ReaderLineHeight : defaultState.readerLineHeight,
