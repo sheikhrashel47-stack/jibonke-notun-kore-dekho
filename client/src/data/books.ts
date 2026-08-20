@@ -104,8 +104,14 @@ import {
   lastWordsTotalReadingMinutes,
   lastWordsWorkbookExercises,
 } from "./last-words-book";
+import {
+  secondTimerChapters,
+  secondTimerChapterLoaders,
+  secondTimerBookMeta,
+  secondTimerAllWorkbookExercises,
+} from "./second-timer-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ" | "ইসলাম ও আত্মশুদ্ধি";
 
@@ -443,8 +449,8 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     category: "জীবনচর্চা",
     creator: "Zayan",
     cover: `${import.meta.env.BASE_URL}last-words-cover.png`,
-    accent: "#9E4E54",
-    accentSoft: "#F3E9EA",
+    accent: "#6E5A78",
+    accentSoft: "#EEE8F1",
     chapters: lastWordsChapters,
     chapterLoaders: lastWordsChapterLoaders,
     workbookExercises: lastWordsWorkbookExercises,
@@ -452,6 +458,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}last-words.pdf`,
     pdfPageCount: 488,
     learningOutcomes: ["সংলাপের subtext ও নীরবতার emotional meaning বুঝতে শেখা", "ভালোবাসা, attachment, ego ও self-respect-এর পার্থক্য দেখা", "ভুল assumption, communication failure ও timing-এর consequence অনুভব করা", "ক্ষমা, acceptance ও letting go-কে সম্পর্কের বাস্তবতার ভেতর দেখা"],
+  },
+  "second-timer": {
+    id: "second-timer",
+    title: "SECOND TIMER",
+    subtitle: "সেকেন্ড টাইমারের ভর্তি যুদ্ধ — ফিরে আসার পূর্ণ সিস্টেম",
+    description: "দ্বিতীয়বার ভর্তি পরীক্ষার্থীর জন্য ৫০ অধ্যায়ের বাংলা admission-survival handbook—diagnosis, strategy, study system, exam execution ও comeback plan-সহ।",
+    longDescription: "ফল খারাপ হওয়ার পর guilt-এ আটকে না থেকে data, target, resource, active recall, timed practice, Error Log, mock analysis এবং exam-day execution-এর একটি পূর্ণ system তৈরি করার জন্য সাজানো হয়েছে। বইটিতে ২০টি myth-versus-reality, ১০টি common mistake, ১২টি ready-to-use template এবং final emergency plan রয়েছে।",
+    category: "মস্তিষ্ক ও শেখা",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}second-timer-cover.png`,
+    accent: "#B47A2C",
+    accentSoft: "#F5EBD9",
+    chapters: secondTimerChapters,
+    chapterLoaders: secondTimerChapterLoaders,
+    workbookExercises: secondTimerAllWorkbookExercises,
+    totalReadingMinutes: secondTimerBookMeta.totalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}second-timer.pdf`,
+    pdfPageCount: 105,
+    learningOutcomes: ["নিজের ভর্তি-প্রস্তুতির data-based diagnosis তৈরি করা", "target, priority, resource ও realistic routine নির্ধারণ করা", "active recall, spaced revision, timed practice ও Error Log ব্যবহার করা", "mock analysis, exam-day decision এবং final comeback plan তৈরি করা"],
   },
 };
 
