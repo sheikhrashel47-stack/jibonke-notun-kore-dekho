@@ -52,3 +52,10 @@
 - [x] বর্তমান chapter-এর আগে ও পরে যাওয়ার জন্য বড় পূর্ববর্তী/পরবর্তী navigation button যোগ করা
 - [x] প্রথম ও শেষ chapter-এর edge state, mobile layout এবং keyboard accessibility যাচাই করা
 - [x] build, checkpoint এবং GitHub Pages update প্রকাশ করা
+
+## একটানা স্ক্রল reading mode
+
+- [x] দুই বইয়ের সব অধ্যায়ের text একটানা lazy-load করে দেখানোর scroll reader তৈরি করা
+- [x] বর্তমান দৃশ্যমান chapter tracking ও chapter-mode-এ ফেরার navigation যোগ করা
+- [x] catalogue ও chapter reader-এ scroll-mode entry point যোগ করা
+- [x] mobile ও desktop layout, TypeScript build এবং GitHub Pages update যাচাই করা

@@ -92,3 +92,6 @@ Headline হবে সংক্ষিপ্ত, উষ্ণ ও সৎ; CTA হ
 - Header-এ open-book/path mark-এর সঙ্গে সম্পূর্ণ Bengali serif wordmark সবসময় স্পষ্ট থাকবে; এটি শুধু utility logo হবে না।
 - সব reading mode-এ মূল দৃশ্যগত loop হবে: বর্তমান অবস্থান → progress thread → আজকের প্রয়োগ।
 - Product UI copy Bengali-first, স্থির ও বাস্তববাদী companion voice-এ লেখা হবে; ইংরেজি শব্দ কেবল বইয়ের source content হলে থাকবে।
+- Desktop scroll reader-এর প্রথম screen-এ slim chapter rail, dominant paper reading canvas এবং quiet context/action rail—এই তিনটি zone একসঙ্গে স্পষ্ট থাকবে।
+- Muted gold কেবল progress, key insight marker এবং “আজকের প্রয়োগ” action-এর অর্থপূর্ণ সংকেত হিসেবে ব্যবহৃত হবে; সাধারণ decoration হিসেবে নয়।
+- দীর্ঘ পাঠে prose-এর সঙ্গে reflection ও practice landmark নিয়মিত থাকবে, যেন পাঠের ছন্দ হয়: পড়ো → লক্ষ্য করো → প্রয়োগ করো → এগিয়ে যাও।
