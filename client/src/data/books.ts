@@ -198,8 +198,8 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     chapterLoaders: wealthChapterLoaders,
     workbookExercises: wealthWorkbookExercises,
     totalReadingMinutes: wealthTotalReadingMinutes,
-    pdfUrl: "",
-    pdfPageCount: 0,
+    pdfUrl: "https://github.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/releases/download/store-assets-v1/the-wealth-code-500.pdf",
+    pdfPageCount: 500,
     learningOutcomes: ["আয় ও cash flow-এর ভিত্তি পরিষ্কার করা", "সঞ্চয়, capital ও asset-এর সম্পর্ক বোঝা", "ঝুঁকি-সচেতন দীর্ঘমেয়াদি wealth system তৈরি করা"],
   },
 };

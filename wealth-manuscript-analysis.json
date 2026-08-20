@@ -1,0 +1,800 @@
+{
+  "chapterCount": 99,
+  "totalWords": 60672,
+  "totalSections": 549,
+  "averageWords": 613,
+  "chapters": [
+    {
+      "id": "01",
+      "number": 1,
+      "title": "টাকা আসলে কী?",
+      "sections": 6,
+      "words": 514,
+      "readingMinutes": 5
+    },
+    {
+      "id": "02",
+      "number": 2,
+      "title": "মানুষ টাকা নিয়ে এত emotional কেন?",
+      "sections": 5,
+      "words": 594,
+      "readingMinutes": 5
+    },
+    {
+      "id": "03",
+      "number": 3,
+      "title": "Rich বনাম Wealthy",
+      "sections": 6,
+      "words": 671,
+      "readingMinutes": 5
+    },
+    {
+      "id": "04",
+      "number": 4,
+      "title": "Money beliefs",
+      "sections": 6,
+      "words": 664,
+      "readingMinutes": 5
+    },
+    {
+      "id": "05",
+      "number": 5,
+      "title": "নিজের financial identity",
+      "sections": 6,
+      "words": 548,
+      "readingMinutes": 5
+    },
+    {
+      "id": "06",
+      "number": 6,
+      "title": "Wealth কীভাবে তৈরি হয়?",
+      "sections": 6,
+      "words": 647,
+      "readingMinutes": 5
+    },
+    {
+      "id": "07",
+      "number": 7,
+      "title": "Value creation",
+      "sections": 5,
+      "words": 528,
+      "readingMinutes": 5
+    },
+    {
+      "id": "08",
+      "number": 8,
+      "title": "Ownership",
+      "sections": 6,
+      "words": 675,
+      "readingMinutes": 5
+    },
+    {
+      "id": "09",
+      "number": 9,
+      "title": "Capital",
+      "sections": 5,
+      "words": 664,
+      "readingMinutes": 5
+    },
+    {
+      "id": "10",
+      "number": 10,
+      "title": "The Wealth Equation",
+      "sections": 6,
+      "words": 766,
+      "readingMinutes": 5
+    },
+    {
+      "id": "11",
+      "number": 11,
+      "title": "Income-এর ধরন",
+      "sections": 5,
+      "words": 636,
+      "readingMinutes": 5
+    },
+    {
+      "id": "12",
+      "number": 12,
+      "title": "Active Income",
+      "sections": 5,
+      "words": 489,
+      "readingMinutes": 5
+    },
+    {
+      "id": "13",
+      "number": 13,
+      "title": "Passive Income-এর বাস্তবতা",
+      "sections": 6,
+      "words": 493,
+      "readingMinutes": 5
+    },
+    {
+      "id": "14",
+      "number": 14,
+      "title": "Multiple Income Streams",
+      "sections": 5,
+      "words": 593,
+      "readingMinutes": 5
+    },
+    {
+      "id": "15",
+      "number": 15,
+      "title": "Income ceiling",
+      "sections": 6,
+      "words": 523,
+      "readingMinutes": 5
+    },
+    {
+      "id": "16",
+      "number": 16,
+      "title": "Skill কীভাবে income তৈরি করে?",
+      "sections": 6,
+      "words": 625,
+      "readingMinutes": 5
+    },
+    {
+      "id": "17",
+      "number": 17,
+      "title": "Communication",
+      "sections": 6,
+      "words": 580,
+      "readingMinutes": 5
+    },
+    {
+      "id": "18",
+      "number": 18,
+      "title": "Sales",
+      "sections": 5,
+      "words": 550,
+      "readingMinutes": 5
+    },
+    {
+      "id": "19",
+      "number": 19,
+      "title": "Technology & AI",
+      "sections": 6,
+      "words": 610,
+      "readingMinutes": 5
+    },
+    {
+      "id": "20",
+      "number": 20,
+      "title": "Building your personal skill stack",
+      "sections": 6,
+      "words": 641,
+      "readingMinutes": 5
+    },
+    {
+      "id": "21",
+      "number": 21,
+      "title": "Career vs Job",
+      "sections": 5,
+      "words": 595,
+      "readingMinutes": 5
+    },
+    {
+      "id": "22",
+      "number": 22,
+      "title": "Human Capital",
+      "sections": 5,
+      "words": 633,
+      "readingMinutes": 5
+    },
+    {
+      "id": "23",
+      "number": 23,
+      "title": "Reputation",
+      "sections": 5,
+      "words": 581,
+      "readingMinutes": 5
+    },
+    {
+      "id": "24",
+      "number": 24,
+      "title": "Networking",
+      "sections": 6,
+      "words": 661,
+      "readingMinutes": 5
+    },
+    {
+      "id": "25",
+      "number": 25,
+      "title": "Career compounding",
+      "sections": 5,
+      "words": 651,
+      "readingMinutes": 5
+    },
+    {
+      "id": "26",
+      "number": 26,
+      "title": "Business কী?",
+      "sections": 5,
+      "words": 736,
+      "readingMinutes": 5
+    },
+    {
+      "id": "27",
+      "number": 27,
+      "title": "Problem → Product",
+      "sections": 6,
+      "words": 635,
+      "readingMinutes": 5
+    },
+    {
+      "id": "28",
+      "number": 28,
+      "title": "Customer",
+      "sections": 5,
+      "words": 594,
+      "readingMinutes": 5
+    },
+    {
+      "id": "29",
+      "number": 29,
+      "title": "Revenue & Profit",
+      "sections": 6,
+      "words": 555,
+      "readingMinutes": 5
+    },
+    {
+      "id": "30",
+      "number": 30,
+      "title": "Scalable Business",
+      "sections": 5,
+      "words": 676,
+      "readingMinutes": 5
+    },
+    {
+      "id": "31",
+      "number": 31,
+      "title": "Idea",
+      "sections": 5,
+      "words": 640,
+      "readingMinutes": 5
+    },
+    {
+      "id": "32",
+      "number": 32,
+      "title": "Market",
+      "sections": 5,
+      "words": 558,
+      "readingMinutes": 5
+    },
+    {
+      "id": "33",
+      "number": 33,
+      "title": "Validation",
+      "sections": 5,
+      "words": 673,
+      "readingMinutes": 5
+    },
+    {
+      "id": "34",
+      "number": 34,
+      "title": "Unit Economics",
+      "sections": 6,
+      "words": 795,
+      "readingMinutes": 5
+    },
+    {
+      "id": "35",
+      "number": 35,
+      "title": "Scaling",
+      "sections": 5,
+      "words": 725,
+      "readingMinutes": 5
+    },
+    {
+      "id": "36",
+      "number": 36,
+      "title": "Cash Flow",
+      "sections": 6,
+      "words": 469,
+      "readingMinutes": 5
+    },
+    {
+      "id": "37",
+      "number": 37,
+      "title": "Budget",
+      "sections": 6,
+      "words": 660,
+      "readingMinutes": 5
+    },
+    {
+      "id": "38",
+      "number": 38,
+      "title": "Emergency Fund",
+      "sections": 6,
+      "words": 529,
+      "readingMinutes": 5
+    },
+    {
+      "id": "39",
+      "number": 39,
+      "title": "Debt",
+      "sections": 6,
+      "words": 578,
+      "readingMinutes": 5
+    },
+    {
+      "id": "40",
+      "number": 40,
+      "title": "Financial Safety",
+      "sections": 6,
+      "words": 503,
+      "readingMinutes": 5
+    },
+    {
+      "id": "41",
+      "number": 41,
+      "title": "Saving কেন গুরুত্বপূর্ণ?",
+      "sections": 6,
+      "words": 637,
+      "readingMinutes": 5
+    },
+    {
+      "id": "42",
+      "number": 42,
+      "title": "Saving rate",
+      "sections": 5,
+      "words": 579,
+      "readingMinutes": 5
+    },
+    {
+      "id": "43",
+      "number": 43,
+      "title": "Lifestyle Inflation",
+      "sections": 6,
+      "words": 563,
+      "readingMinutes": 5
+    },
+    {
+      "id": "44",
+      "number": 44,
+      "title": "Capital formation",
+      "sections": 5,
+      "words": 597,
+      "readingMinutes": 5
+    },
+    {
+      "id": "45",
+      "number": 45,
+      "title": "First Investment Capital",
+      "sections": 5,
+      "words": 563,
+      "readingMinutes": 5
+    },
+    {
+      "id": "46",
+      "number": 46,
+      "title": "Investing vs Saving",
+      "sections": 6,
+      "words": 428,
+      "readingMinutes": 5
+    },
+    {
+      "id": "47",
+      "number": 47,
+      "title": "Risk & Return",
+      "sections": 6,
+      "words": 633,
+      "readingMinutes": 5
+    },
+    {
+      "id": "48",
+      "number": 48,
+      "title": "Asset Classes",
+      "sections": 6,
+      "words": 632,
+      "readingMinutes": 5
+    },
+    {
+      "id": "49",
+      "number": 49,
+      "title": "Diversification",
+      "sections": 5,
+      "words": 648,
+      "readingMinutes": 5
+    },
+    {
+      "id": "50",
+      "number": 50,
+      "title": "Long-term investing",
+      "sections": 6,
+      "words": 712,
+      "readingMinutes": 5
+    },
+    {
+      "id": "51",
+      "number": 51,
+      "title": "Stock কী?",
+      "sections": 5,
+      "words": 600,
+      "readingMinutes": 5
+    },
+    {
+      "id": "52",
+      "number": 52,
+      "title": "Company ownership",
+      "sections": 5,
+      "words": 555,
+      "readingMinutes": 5
+    },
+    {
+      "id": "53",
+      "number": 53,
+      "title": "Revenue & Profit",
+      "sections": 5,
+      "words": 575,
+      "readingMinutes": 5
+    },
+    {
+      "id": "54",
+      "number": 54,
+      "title": "Valuation",
+      "sections": 5,
+      "words": 515,
+      "readingMinutes": 5
+    },
+    {
+      "id": "55",
+      "number": 55,
+      "title": "Long-term equity investing",
+      "sections": 5,
+      "words": 629,
+      "readingMinutes": 5
+    },
+    {
+      "id": "56",
+      "number": 56,
+      "title": "Bonds",
+      "sections": 6,
+      "words": 646,
+      "readingMinutes": 5
+    },
+    {
+      "id": "57",
+      "number": 57,
+      "title": "Mutual Funds",
+      "sections": 6,
+      "words": 628,
+      "readingMinutes": 5
+    },
+    {
+      "id": "58",
+      "number": 58,
+      "title": "Index Funds",
+      "sections": 5,
+      "words": 605,
+      "readingMinutes": 5
+    },
+    {
+      "id": "59",
+      "number": 59,
+      "title": "REITs",
+      "sections": 5,
+      "words": 594,
+      "readingMinutes": 5
+    },
+    {
+      "id": "60",
+      "number": 60,
+      "title": "Asset Allocation",
+      "sections": 6,
+      "words": 551,
+      "readingMinutes": 5
+    },
+    {
+      "id": "61",
+      "number": 61,
+      "title": "Real Estate",
+      "sections": 6,
+      "words": 632,
+      "readingMinutes": 5
+    },
+    {
+      "id": "62",
+      "number": 62,
+      "title": "Land",
+      "sections": 6,
+      "words": 467,
+      "readingMinutes": 5
+    },
+    {
+      "id": "63",
+      "number": 63,
+      "title": "Gold",
+      "sections": 5,
+      "words": 573,
+      "readingMinutes": 5
+    },
+    {
+      "id": "64",
+      "number": 64,
+      "title": "Physical Assets",
+      "sections": 6,
+      "words": 683,
+      "readingMinutes": 5
+    },
+    {
+      "id": "65",
+      "number": 65,
+      "title": "Liquidity vs Ownership",
+      "sections": 5,
+      "words": 607,
+      "readingMinutes": 5
+    },
+    {
+      "id": "66",
+      "number": 66,
+      "title": "Compound Interest",
+      "sections": 6,
+      "words": 612,
+      "readingMinutes": 5
+    },
+    {
+      "id": "67",
+      "number": 67,
+      "title": "Time",
+      "sections": 6,
+      "words": 570,
+      "readingMinutes": 5
+    },
+    {
+      "id": "68",
+      "number": 68,
+      "title": "Consistency",
+      "sections": 6,
+      "words": 605,
+      "readingMinutes": 5
+    },
+    {
+      "id": "69",
+      "number": 69,
+      "title": "Compounding of Skills",
+      "sections": 6,
+      "words": 633,
+      "readingMinutes": 5
+    },
+    {
+      "id": "70",
+      "number": 70,
+      "title": "Compounding of Capital",
+      "sections": 6,
+      "words": 541,
+      "readingMinutes": 5
+    },
+    {
+      "id": "71",
+      "number": 71,
+      "title": "What is Risk?",
+      "sections": 6,
+      "words": 612,
+      "readingMinutes": 5
+    },
+    {
+      "id": "72",
+      "number": 72,
+      "title": "Diversification",
+      "sections": 6,
+      "words": 584,
+      "readingMinutes": 5
+    },
+    {
+      "id": "73",
+      "number": 73,
+      "title": "Insurance",
+      "sections": 5,
+      "words": 556,
+      "readingMinutes": 5
+    },
+    {
+      "id": "74",
+      "number": 74,
+      "title": "Emergency Planning",
+      "sections": 5,
+      "words": 583,
+      "readingMinutes": 5
+    },
+    {
+      "id": "75",
+      "number": 75,
+      "title": "Avoiding Financial Ruin",
+      "sections": 6,
+      "words": 594,
+      "readingMinutes": 5
+    },
+    {
+      "id": "76",
+      "number": 76,
+      "title": "Inflation",
+      "sections": 5,
+      "words": 675,
+      "readingMinutes": 5
+    },
+    {
+      "id": "77",
+      "number": 77,
+      "title": "Purchasing Power",
+      "sections": 6,
+      "words": 564,
+      "readingMinutes": 5
+    },
+    {
+      "id": "78",
+      "number": 78,
+      "title": "Interest Rates",
+      "sections": 5,
+      "words": 677,
+      "readingMinutes": 5
+    },
+    {
+      "id": "79",
+      "number": 79,
+      "title": "Taxes",
+      "sections": 5,
+      "words": 852,
+      "readingMinutes": 5
+    },
+    {
+      "id": "80",
+      "number": 80,
+      "title": "Real Return",
+      "sections": 5,
+      "words": 635,
+      "readingMinutes": 5
+    },
+    {
+      "id": "81",
+      "number": 81,
+      "title": "Salary",
+      "sections": 5,
+      "words": 607,
+      "readingMinutes": 5
+    },
+    {
+      "id": "82",
+      "number": 82,
+      "title": "Freelancing",
+      "sections": 5,
+      "words": 524,
+      "readingMinutes": 5
+    },
+    {
+      "id": "83",
+      "number": 83,
+      "title": "Business",
+      "sections": 5,
+      "words": 673,
+      "readingMinutes": 5
+    },
+    {
+      "id": "84",
+      "number": 84,
+      "title": "Investments",
+      "sections": 6,
+      "words": 584,
+      "readingMinutes": 5
+    },
+    {
+      "id": "85",
+      "number": 85,
+      "title": "Building an Income Ecosystem",
+      "sections": 6,
+      "words": 624,
+      "readingMinutes": 5
+    },
+    {
+      "id": "86",
+      "number": 86,
+      "title": "Lifestyle Inflation",
+      "sections": 6,
+      "words": 707,
+      "readingMinutes": 5
+    },
+    {
+      "id": "87",
+      "number": 87,
+      "title": "Consumer Debt",
+      "sections": 5,
+      "words": 608,
+      "readingMinutes": 5
+    },
+    {
+      "id": "88",
+      "number": 88,
+      "title": "Get-Rich-Quick Schemes",
+      "sections": 6,
+      "words": 714,
+      "readingMinutes": 5
+    },
+    {
+      "id": "89",
+      "number": 89,
+      "title": "Scams & Financial Manipulation",
+      "sections": 6,
+      "words": 696,
+      "readingMinutes": 5
+    },
+    {
+      "id": "90",
+      "number": 90,
+      "title": "Emotional Investing",
+      "sections": 6,
+      "words": 663,
+      "readingMinutes": 5
+    },
+    {
+      "id": "91",
+      "number": 91,
+      "title": "Your Financial Dashboard",
+      "sections": 6,
+      "words": 685,
+      "readingMinutes": 5
+    },
+    {
+      "id": "92",
+      "number": 92,
+      "title": "Monthly Money System",
+      "sections": 6,
+      "words": 551,
+      "readingMinutes": 5
+    },
+    {
+      "id": "93",
+      "number": 93,
+      "title": "Automatic Saving",
+      "sections": 6,
+      "words": 567,
+      "readingMinutes": 5
+    },
+    {
+      "id": "94",
+      "number": 94,
+      "title": "Investment System",
+      "sections": 6,
+      "words": 706,
+      "readingMinutes": 5
+    },
+    {
+      "id": "95",
+      "number": 95,
+      "title": "Annual Financial Review",
+      "sections": 5,
+      "words": 668,
+      "readingMinutes": 5
+    },
+    {
+      "id": "96",
+      "number": 96,
+      "title": "The First ৳10,000",
+      "sections": 5,
+      "words": 599,
+      "readingMinutes": 5
+    },
+    {
+      "id": "97",
+      "number": 97,
+      "title": "The First ৳100,000",
+      "sections": 5,
+      "words": 604,
+      "readingMinutes": 5
+    },
+    {
+      "id": "98",
+      "number": 98,
+      "title": "The First ৳1,000,000",
+      "sections": 5,
+      "words": 687,
+      "readingMinutes": 5
+    },
+    {
+      "id": "99",
+      "number": 99,
+      "title": "The 10-Year Wealth Journey",
+      "sections": 6,
+      "words": 602,
+      "readingMinutes": 5
+    }
+  ]
+}

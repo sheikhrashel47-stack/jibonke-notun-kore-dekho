@@ -1,0 +1,42 @@
+{
+  "base": {
+    "adoption": "A",
+    "auto_apply": false,
+    "conflict_group": "document-base",
+    "id": "ilm",
+    "init_command": "typst init @preview/ilm:2.1.1 <output-dir>",
+    "kind": "universe-template",
+    "ownership": "global",
+    "reason": "Document-structure signal uniquely matches a featured template.",
+    "status": "ready",
+    "universe_ref": "@preview/ilm:2.1.1",
+    "version": "2.1.1"
+  },
+  "catalog_version": "2026-07-17-affiliated-formats-v3",
+  "channel": "typst-pdf",
+  "confirmation_candidates": [],
+  "enhancements": [
+    {
+      "adoption": "A",
+      "auto_apply": true,
+      "conflict_group": null,
+      "id": "glossarium",
+      "kind": "universe-package",
+      "ownership": "semantic",
+      "reason": "Content evidence satisfies {\"defined_terms\": 5}",
+      "status": "ready",
+      "universe_ref": "@preview/glossarium:0.5.10",
+      "version": "0.5.10"
+    }
+  ],
+  "exclusions": [],
+  "fingerprint": "sha256:b2c58931bcbb5aef0c10ebac3525efe2104d1dddc667f0bf1d1166d34b252b66",
+  "next_action": "minimal-compile-preflight",
+  "optional_idea": null,
+  "question": null,
+  "reused": false,
+  "schema_version": 1,
+  "state": "ready",
+  "style_owner": "ilm",
+  "typst_version": "typst 0.15.1 (9dfd3a08)"
+}
