@@ -89,3 +89,15 @@
 - [ ] page-turn mode-এ PDF app-এর ভিতরে না খোলার কারণ শনাক্ত করা
 - [ ] দ্রুত canvas-based page render, prefetch এবং touch-friendly navigation চালু করা
 - [ ] mobile ও desktop-এ page visibility, দ্রুত পড়া এবং fallback behavior যাচাই করা
+
+## Swipe mode visibility repair
+
+- [x] chapter, page ও dashboard surface-এ “পাতা উল্টে পড়া” entry point দৃশ্যমান আছে কি না audit করা
+- [x] mobile-first swipe entry CTA ও mode switcher স্পষ্ট করে যোগ করা
+- [x] live page-turn route, touch gesture ও PDF fallback যাচাই করে প্রকাশ করা
+
+## Global back navigation
+
+- [x] browser history ও safe fallback সমর্থনকারী reusable Back button তৈরি করা
+- [x] reader, book detail, book map, library, store, progress ও profile surface-এ back navigation বসানো
+- [x] mobile ও desktop-এ direct-link, normal browsing এবং first-page fallback behavior যাচাই করা

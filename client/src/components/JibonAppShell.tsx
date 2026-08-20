@@ -1,4 +1,5 @@
-/* JIBON premium app shell: quiet editorial navigation, with five clear destinations and mobile-first reachability. */
+/* জীবন-ড্যাশবোর্ড: quiet editorial app shell; personal dashboard routes-এ persistent, safe Back navigation রাখে। */
+import { BackButton } from "@/components/BackButton";
 import { BrandMark } from "@/components/BrandMark";
 import { OfflineNotice } from "@/components/OfflineNotice";
 import { SearchModal } from "@/components/SearchModal";
@@ -33,6 +34,7 @@ export function JibonAppShell({ children }: { children: React.ReactNode }) {
         </nav>
         <div className="jibon-app-header__actions">
           <SearchModal />
+          {location !== "/" && <BackButton compact fallback="/" label="পেছনে" className="jibon-shell-back" />}
           <Link className="jibon-continue-pill" href={`/book/${activeBookId}/chapter/${chapterId}`}><BookOpen className="size-4" /> <span>পাঠে ফিরি</span></Link>
         </div>
       </div>
