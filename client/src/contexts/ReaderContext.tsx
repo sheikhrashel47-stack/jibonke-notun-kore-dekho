@@ -83,6 +83,8 @@ type ReaderContextValue = ReaderState & {
 const STORAGE_KEY = "jibon-notun-kore-dekho-reader-v3";
 const LEGACY_STORAGE_KEYS = ["jibon-notun-kore-dekho-reader-v2", "jibon-notun-kore-dekho-reader-v1"];
 const FONT_SCALE_MIGRATION_KEY = "jibon-notun-kore-dekho-large-font-v1";
+const REMOVED_BOOK_ID = "visual-philosophies";
+const isRemovedBookDataKey = (key: string) => key.includes(REMOVED_BOOK_ID);
 const defaultState: ReaderState = {
   progress: {},
   bookmarks: [],
@@ -99,7 +101,7 @@ const defaultState: ReaderState = {
   activityMinutesByDate: {},
   activeBookId: "life",
   activeChapterId: "01",
-  lastChapterByBook: { life: "01", dark: "01", thinking: "01", "visual-philosophies": "01" },
+  lastChapterByBook: { life: "01", dark: "01", thinking: "01" },
   lastPositionByBook: {},
   libraryBookIds: ["life"],
 };
@@ -131,15 +133,32 @@ const safelyReadState = (): ReaderState => {
     const migrated: ReaderState = {
       ...defaultState,
       ...parsed,
-      progress: Object.fromEntries(Object.entries(parsed.progress || {}).map(([key, value]) => [namespaceProgressKey(key), value])),
-      bookmarks: (parsed.bookmarks || []).map(namespaceBookmarkKey),
+      progress: Object.fromEntries(
+        Object.entries(parsed.progress || {})
+          .map(([key, value]) => [namespaceProgressKey(key), value] as const)
+          .filter(([key]) => !isRemovedBookDataKey(key)),
+      ),
+      bookmarks: (parsed.bookmarks || []).map(namespaceBookmarkKey).filter((key) => !isRemovedBookDataKey(key)),
       bookmarkDetails,
       highlights: Array.isArray(parsed.highlights) ? parsed.highlights.filter((item): item is Highlight => Boolean(item && isBookId(item.bookId) && item.text)) : [],
-      notes: Object.fromEntries(Object.entries(parsed.notes || {}).map(([key, value]) => [namespaceNoteKey(key), value])),
-      completedExercises: Object.fromEntries(Object.entries(parsed.completedExercises || {}).map(([key, value]) => [namespaceExerciseKey(key), value])),
+      notes: Object.fromEntries(
+        Object.entries(parsed.notes || {})
+          .map(([key, value]) => [namespaceNoteKey(key), value] as const)
+          .filter(([key]) => !isRemovedBookDataKey(key)),
+      ),
+      completedExercises: Object.fromEntries(
+        Object.entries(parsed.completedExercises || {})
+          .map(([key, value]) => [namespaceExerciseKey(key), value] as const)
+          .filter(([key]) => !isRemovedBookDataKey(key)),
+      ),
       activeBookId,
-      lastChapterByBook: { ...defaultState.lastChapterByBook, ...(parsed.lastChapterByBook || {}) },
-      lastPositionByBook: parsed.lastPositionByBook || {},
+      lastChapterByBook: {
+        ...defaultState.lastChapterByBook,
+        ...Object.fromEntries(Object.entries(parsed.lastChapterByBook || {}).filter(([bookId]) => isBookId(bookId))),
+      } as Record<BookId, string>,
+      lastPositionByBook: Object.fromEntries(
+        Object.entries(parsed.lastPositionByBook || {}).filter(([bookId]) => isBookId(bookId)),
+      ) as Partial<Record<BookId, ReadingPosition>>,
       libraryBookIds: Array.from(new Set([...libraryBookIds, activeBookId])),
       readerTheme: ["ivory", "dark", "sepia", "focus"].includes(parsed.readerTheme || "") ? parsed.readerTheme as ReaderTheme : defaultState.readerTheme,
       readerFont: ["serif", "sans"].includes(parsed.readerFont || "") ? parsed.readerFont as ReaderFont : defaultState.readerFont,

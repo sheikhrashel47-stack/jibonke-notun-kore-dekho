@@ -20,16 +20,10 @@ import {
   thinkingTotalReadingMinutes,
   thinkingWorkbookExercises,
 } from "./thinking-book";
-import {
-  visualPhilosophiesChapterLoaders,
-  visualPhilosophiesChapters,
-  visualPhilosophiesTotalReadingMinutes,
-  visualPhilosophiesWorkbookExercises,
-} from "./visual-philosophies-book";
 
-export const bookIds = ["life", "dark", "thinking", "visual-philosophies"] as const;
+export const bookIds = ["life", "dark", "thinking"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "দর্শন ও আত্মজিজ্ঞাসা";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত";
 
 export type BookDefinition = {
   id: BookId;
@@ -108,25 +102,6 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/pdf-assets/pdf/the_art_of_thinking_300.pdf",
     pdfPageCount: 300,
     learningOutcomes: ["অনুমান ও তথ্য আলাদা করা", "কঠিন সিদ্ধান্ত ধাপে ভাবা", "নিজের চিন্তার ভুল ধরতে শেখা"],
-  },
-  "visual-philosophies": {
-    id: "visual-philosophies",
-    title: "দৃশ্যদর্শন",
-    subtitle: "৩০০টি চিত্র-চিন্তায় দেখা, থামা ও নতুন প্রশ্ন",
-    description: "প্রতিদিনের পরিচিত দৃশ্য থেকে নিজেকে, সময়কে ও জীবনের অর্থকে নতুনভাবে দেখার একটি visual philosophy পাঠ।",
-    longDescription: "৩০টি থিমে সাজানো ৩০০টি ছোট চিত্র-চিন্তা। প্রতিটি পৃষ্ঠা একটি শান্ত invitation—দেখতে, থামতে, এবং নিজের প্রশ্নকে একটু বেশি স্পষ্টভাবে শুনতে।",
-    category: "দর্শন ও আত্মজিজ্ঞাসা",
-    creator: "JIBON Editorial",
-    cover: "https://github.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/releases/download/store-assets-v1/visual-philosophy-cover-reference.png",
-    accent: "#9A643A",
-    accentSoft: "#F4E9DD",
-    chapters: visualPhilosophiesChapters,
-    chapterLoaders: visualPhilosophiesChapterLoaders,
-    workbookExercises: visualPhilosophiesWorkbookExercises,
-    totalReadingMinutes: visualPhilosophiesTotalReadingMinutes,
-    pdfUrl: "https://raw.githubusercontent.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/pdf-assets/pdf/visual_philosophies_300.pdf",
-    pdfPageCount: 300,
-    learningOutcomes: ["পরিচিত দৃশ্যকে নতুন প্রশ্নে দেখা", "দৈনন্দিন জীবনে ছোট থামার অভ্যাস তৈরি করা", "নিজের ভেতরের প্রশ্নকে শান্তভাবে শোনা"],
   },
 };
 

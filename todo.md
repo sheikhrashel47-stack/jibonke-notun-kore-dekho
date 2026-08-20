@@ -109,8 +109,9 @@
 - [x] swipe reader থেকে boxed layout, vertical scroll ও ছোট page rendering সরিয়ে full-screen page stage তৈরি করা
 - [x] PDF page viewport, controls, swipe gesture ও mobile safe-area বড়-পাঠের জন্য যাচাই করা
 
-## নতুন visual philosophy e-book
+## ‘দৃশ্যদর্শন’ বই অপসারণ
 
-- [x] ৩০০ visual philosophy book specification, theme progression ও production boundary সম্পূর্ণ audit করা
-- [x] ৩০ theme × ১০ thought-এর content ও art-direction blueprint তৈরি করা
-- [x] নতুন illustrated e-book, PDF, reader modules ও catalogue entry তৈরি করে প্রকাশ করা
+- [x] catalogue, library, store ও generic reader route থেকে চতুর্থ বইয়ের entry বাদ দেওয়া
+- [x] ৩০টি lazy-loaded chapter module, metadata, source index ও generator file মুছে দেওয়া
+- [x] browser-এর পুরোনো local reading state থেকে চতুর্থ বইয়ের data স্বয়ংক্রিয়ভাবে বাদ দেওয়া
+- [ ] production build, mobile UI ও GitHub Pages প্রকাশ যাচাই করা
