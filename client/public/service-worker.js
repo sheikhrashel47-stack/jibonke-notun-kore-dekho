@@ -1,5 +1,5 @@
 /* JIBON offline shell: keeps the interface reachable without attempting to cache large external book PDFs. */
-const CACHE_NAME = "jibon-app-shell-v1";
+const CACHE_NAME = "jibon-app-shell-v2-brain-boost";
 const BASE_PATH = new URL("./", self.registration.scope).pathname;
 const APP_SHELL = [BASE_PATH, `${BASE_PATH}index.html`, `${BASE_PATH}manifest.webmanifest`];
 
