@@ -20,9 +20,8 @@ import {
   thinkingTotalReadingMinutes,
   thinkingWorkbookExercises,
 } from "./thinking-book";
-import { publishedBooks, type ExtraBookId } from "./new-books";
 
-export const bookIds = ["life", "dark", "thinking", "visual", "presence", "habit", "wealth", "communication", "brain"] as const;
+export const bookIds = ["life", "dark", "thinking"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত";
 
@@ -46,7 +45,7 @@ export type BookDefinition = {
   learningOutcomes: string[];
 };
 
-export const bookDefinitions = {
+export const bookDefinitions: Record<BookId, BookDefinition> = {
   life: {
     id: "life",
     title: "জীবনকে নতুন করে দেখো",
@@ -104,8 +103,7 @@ export const bookDefinitions = {
     pdfPageCount: 300,
     learningOutcomes: ["অনুমান ও তথ্য আলাদা করা", "কঠিন সিদ্ধান্ত ধাপে ভাবা", "নিজের চিন্তার ভুল ধরতে শেখা"],
   },
-  ...(publishedBooks as unknown as Record<ExtraBookId, BookDefinition>),
-} as unknown as Record<BookId, BookDefinition>;
+};
 
 export function getBookDefinition(bookId?: string): BookDefinition {
   return bookId && bookId in bookDefinitions ? bookDefinitions[bookId as BookId] : bookDefinitions.life;
