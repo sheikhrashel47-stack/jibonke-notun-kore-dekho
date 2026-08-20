@@ -43,8 +43,14 @@ import {
   brainTotalReadingMinutes,
   brainWorkbookExercises,
 } from "./brain-book";
+import {
+  communicationChaptersMeta as communicationChapters,
+  communicationChapterLoaders,
+  communicationTotalReadingMinutes,
+  communicationWorkbookExercises,
+} from "./communication-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ";
 
@@ -201,6 +207,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: "",
     pdfPageCount: 0,
     learningOutcomes: ["আয় ও cash flow-এর ভিত্তি পরিষ্কার করা", "সঞ্চয়, capital ও asset-এর সম্পর্ক বোঝা", "ঝুঁকি-সচেতন দীর্ঘমেয়াদি wealth system তৈরি করা"],
+  },
+  communication: {
+    id: "communication",
+    title: "কথার শিল্প",
+    subtitle: "মানুষের সঙ্গে কথা বলা, মানুষকে বোঝা এবং নিজেকে প্রকাশ করার সম্পূর্ণ শিল্প",
+    description: "Active listening, psychology, storytelling, difficult conversations ও ethical influence নিয়ে ১০০টি বাংলা topic-এর premium communication guide।",
+    longDescription: "কথা বলা আর সত্যিকারের যোগাযোগের পার্থক্য, শোনা, body language, conflict, boundaries, negotiation, public speaking এবং গল্প বলার ব্যবহারিক অনুশীলন নিয়ে সাজানো একটি দীর্ঘ পাঠযাত্রা। প্রতিটি অংশে realistic dialogue, Conversation Lab, mental rehearsal এবং প্রয়োগযোগ্য technique রাখা হয়েছে।",
+    category: "চিন্তা ও সিদ্ধান্ত",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}kothar-shilpo-cover.png`,
+    accent: "#7A3040",
+    accentSoft: "#F5E9E4",
+    chapters: communicationChapters,
+    chapterLoaders: communicationChapterLoaders,
+    workbookExercises: communicationWorkbookExercises,
+    totalReadingMinutes: communicationTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}the-art-of-communication.pdf`,
+    pdfPageCount: 500,
+    learningOutcomes: ["শোনা, প্রশ্ন করা ও message পরিষ্কার করা", "কঠিন কথোপকথনে assertive ও ethical থাকা", "গল্প, body language ও public speaking উন্নত করা", "conflict, negotiation ও boundary conversation অনুশীলন করা"],
   },
 };
 
