@@ -55,8 +55,14 @@ import {
   futureTotalReadingMinutes,
   futureWorkbookExercises,
 } from "./future-book";
+import {
+  intelligenceCodeChapters,
+  intelligenceCodeChapterLoaders,
+  intelligenceCodeTotalReadingMinutes,
+  intelligenceCodeWorkbookExercises,
+} from "./intelligence-code-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
@@ -251,6 +257,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}the-future.pdf`,
     pdfPageCount: 300,
     learningOutcomes: ["KNOWN, EMERGING, PLAUSIBLE, SPECULATIVE ও UNCERTAIN আলাদা করে ভবিষ্যৎ ভাবা", "AI, robotics, biotechnology ও space technology সহজ ভাষায় বোঝা", "প্রযুক্তির মানবিক consequence—কাজ, পরিবার, privacy ও inequality—দেখা", "একটি নির্দিষ্ট ভবিষ্যৎ নয়, একাধিক সম্ভাব্য scenario নিয়ে চিন্তা করা"],
+  },
+  intelligence: {
+    id: "intelligence",
+    title: "THE INTELLIGENCE CODE",
+    subtitle: "বুদ্ধিমত্তার কোড",
+    description: "কীভাবে আরও পরিষ্কার, দ্রুত, গভীর ও শক্তিশালীভাবে চিন্তা করা যায়—একটি সহজ কিন্তু গভীর বাংলা thinking journey।",
+    longDescription: "IQ score-এর প্রতিশ্রুতি নয়; attention, memory, logic, probability, creativity, decision-making এবং metacognition-এর সাহায্যে নিজের চিন্তার process দেখতে শেখার পূর্ণাঙ্গ ২০-Part, ১০০-Chapter বই।",
+    category: "চিন্তা ও সিদ্ধান্ত",
+    creator: "Zayan",
+    cover: `${import.meta.env.BASE_URL}intelligence-code-cover.png`,
+    accent: "#6B4E9B",
+    accentSoft: "#EEE8F8",
+    chapters: intelligenceCodeChapters,
+    chapterLoaders: intelligenceCodeChapterLoaders,
+    workbookExercises: intelligenceCodeWorkbookExercises,
+    totalReadingMinutes: intelligenceCodeTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}intelligence-code.pdf`,
+    pdfPageCount: 357,
+    learningOutcomes: ["তথ্য, interpretation ও assumption আলাদা করা", "logic, pattern ও probability দিয়ে reasoning করা", "complex problem ভেঙে better question তৈরি করা", "নিজের confidence, bias ও thinking strategy monitor করা"],
   },
 };
 
