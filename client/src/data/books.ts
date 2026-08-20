@@ -32,10 +32,16 @@ import {
   presenceExpandedTotalReadingMinutes as presenceTotalReadingMinutes,
   presenceExpandedExercises as presenceWorkbookExercises,
 } from "./presence-book-expanded";
+import {
+  brainChapters,
+  brainChapterLoaders,
+  brainTotalReadingMinutes,
+  brainWorkbookExercises,
+} from "./brain-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা";
 
 export type BookDefinition = {
   id: BookId;
@@ -152,6 +158,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}habit-architect.pdf`,
     pdfPageCount: 300,
     learningOutcomes: ["নিজের আচরণের trigger ও reward map করা", "পরিবেশ ও starting friction redesign করা", "failure-এর পর recovery system বানানো", "৩০, ৬০ ও ৯০ দিনের personal habit experiment চালানো"],
+  },
+  brain: {
+    id: "brain",
+    title: "BRAIN BOOST",
+    subtitle: "মস্তিষ্ককে শাণিত করার বিজ্ঞান",
+    description: "মনোযোগ, স্মৃতি, যুক্তি, সমস্যা সমাধান ও cognitive flexibility নিয়ে ২০ level-এর বাংলা Brain Training Journey।",
+    longDescription: "শুধু puzzle সমাধান নয়—সহজ concept, কঠিন challenge, mistake analysis, daily mission এবং progress scorecard-সহ নিজের thinking skill অনুশীলনের একটি পূর্ণাঙ্গ পাঠযাত্রা।",
+    category: "মস্তিষ্ক ও শেখা",
+    creator: "শেখ রাসেল",
+    cover: `${import.meta.env.BASE_URL}brain-boost-cover.png`,
+    accent: "#D5A83C",
+    accentSoft: "#F5EED7",
+    chapters: brainChapters,
+    chapterLoaders: brainChapterLoaders,
+    workbookExercises: brainWorkbookExercises,
+    totalReadingMinutes: brainTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}brain-boost.pdf`,
+    pdfPageCount: 289,
+    learningOutcomes: ["মনোযোগ ও working memory অনুশীলন করা", "recall, pattern ও logical reasoning উন্নত করা", "সমস্যাকে ভেঙে root cause ও alternatives দেখা", "নিজের training performance আগের baseline-এর সঙ্গে তুলনা করা"],
   },
 };
 
