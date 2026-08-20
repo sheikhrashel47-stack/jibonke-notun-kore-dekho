@@ -9,45 +9,13 @@ import ChapterPage from "./pages/ChapterPage";
 import Home from "./pages/Home";
 import Workbook from "./pages/Workbook";
 
-
 function Router() {
   const base = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
-
-  return (
-    <WouterRouter base={base}>
-      <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/chapter/:id"} component={ChapterPage} />
-        <Route path={"/workbook"} component={Workbook} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
-      </Switch>
-    </WouterRouter>
-  );
+  return <WouterRouter base={base}><Switch><Route path="/" component={Home} /><Route path="/book/:bookId/chapter/:id" component={ChapterPage} /><Route path="/book/:bookId/workbook" component={Workbook} /><Route path="/chapter/:id" component={ChapterPage} /><Route path="/workbook" component={Workbook} /><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch></WouterRouter>;
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
-  return (
-    <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        switchable
-      >
-        <ReaderProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-          </TooltipProvider>
-        </ReaderProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
+  return <ErrorBoundary><ThemeProvider defaultTheme="light" switchable><ReaderProvider><TooltipProvider><Toaster /><Router /></TooltipProvider></ReaderProvider></ThemeProvider></ErrorBoundary>;
 }
 
 export default App;

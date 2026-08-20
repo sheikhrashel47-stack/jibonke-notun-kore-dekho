@@ -1,80 +1,52 @@
-/* জীবন-ড্যাশবোর্ড: asymmetric landing page frames the book as a personal reading companion. */
+/* জীবন-ড্যাশবোর্ড storefront: paper-led reading workspace, visible progress thread and practical next actions. */
 import { AppHeader } from "@/components/AppHeader";
-import { chapters } from "@/data/book";
+import { Button } from "@/components/ui/button";
+import { bookDefinitions, bookIds, chapterStorageKey, type BookId } from "@/data/books";
 import { useReader } from "@/contexts/ReaderContext";
-import { ArrowRight, Bookmark, BookOpenText, CheckCircle2, Compass, NotebookPen, Play, Sparkles } from "lucide-react";
+import { ArrowDownToLine, ArrowRight, BookMarked, BookOpen, Bookmark, ChartNoAxesCombined, CircleCheckBig, Clock3, LibraryBig, MessageSquareText, ShieldCheck, StickyNote } from "lucide-react";
 import { Link } from "wouter";
 
-const coverImage = "/manus-storage/jibon-cover_f6a3eb29.png";
-const heroImage = "/manus-storage/jibon-hero-reading_85e1d2b2.png";
+const assets = {
+  firstCover: "/manus-storage/jibon-cover_c88ed0da.png",
+  darkCover: "/manus-storage/dark-psychology-cover_7f27c9b4.png",
+  firstPdf: "https://github.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/releases/download/store-assets-v1/jibonke_notun_kore_dekho_ebook.pdf",
+  darkPdf: "https://github.com/sheikhrashel47-stack/jibonke-notun-kore-dekho/releases/download/store-assets-v1/dark_psychology_ebook.pdf",
+};
+
+const books = [
+  { id: "life" as const, title: "জীবনকে নতুন করে দেখো", subtitle: "নিজের সঙ্গে নতুন করে পরিচয়ের একটি পাঠযাত্রা", description: "চিন্তা, সম্পর্ক, মনোযোগ, সিদ্ধান্ত ও অর্থপূর্ণ জীবনের জন্য ১৫ অধ্যায়ের বাংলা companion।", meta: "৩১৬ পৃষ্ঠা · ১৫ অধ্যায়", cover: assets.firstCover, tone: "sage" },
+  { id: "dark" as const, title: "Dark Psychology", subtitle: "মানসিক প্রভাব বুঝে নিজের সীমা রক্ষার ব্যবহারিক guide", description: "৫০ অধ্যায়ের নৈতিক self-defense e-book—manipulation চিনতে, শান্ত থাকতে ও নিরাপদ সিদ্ধান্ত নিতে সাহায্য করবে।", meta: "৩০২ পৃষ্ঠা · ৫০ অধ্যায়", cover: assets.darkCover, tone: "navy" },
+] as const;
 
 export default function Home() {
-  const { activeChapterId, bookmarks, completedExercises, notes, progress } = useReader();
-  const activeChapter = chapters.find((chapter) => chapter.id === activeChapterId) || chapters[0];
-  const completeChapters = Object.values(progress).filter((value) => value >= 95).length;
-  const overallProgress = Math.round((Object.values(progress).reduce((total, value) => total + value, 0) / chapters.length) || 0);
-  const completedPractice = Object.values(completedExercises).filter(Boolean).length;
-  const noteCount = Object.values(notes).filter((note) => note.trim().length > 0).length;
-  const activeProgress = progress[activeChapter.id] || 0;
+  const { activeBookId, activeChapterId, bookmarks, lastChapterByBook, notes, progress } = useReader();
+  const progressFor = (bookId: BookId) => {
+    const chapters = bookDefinitions[bookId].chapters;
+    return Math.min(100, Math.round(chapters.reduce((total, chapter) => total + (progress[chapterStorageKey(bookId, chapter.id)] || 0), 0) / chapters.length));
+  };
+  const completedFor = (bookId: BookId) => bookDefinitions[bookId].chapters.filter((chapter) => (progress[chapterStorageKey(bookId, chapter.id)] || 0) >= 95).length;
+  const activeChapter = lastChapterByBook[activeBookId] || activeChapterId || "01";
+  const activeBook = books.find((book) => book.id === activeBookId) || books[0];
+  const activeDefinition = bookDefinitions[activeBookId];
+  const activeProgress = progressFor(activeBookId);
+  const activeCompleted = completedFor(activeBookId);
+  const bookmarkCount = bookmarks.filter((key) => key.startsWith(`${activeBookId}:`)).length;
+  const noteCount = Object.entries(notes).filter(([key, value]) => key.includes(`:${activeBookId}`) && value.trim().length > 0).length;
 
-  return (
-    <div className="page-shell home-page">
-      <AppHeader />
-      <main>
-        <section className="home-hero">
-          <div className="home-hero__copy">
-            <p className="eyebrow"><Sparkles className="size-4" /> একটি বাংলা reading companion</p>
-            <h1>নিজেকে বোঝার<br /><em>একটি শান্ত জায়গা</em></h1>
-            <p className="home-hero__lead">“জীবনকে নতুন করে দেখো” শুধু পড়ার বই নয়। এখানে তুমি চিন্তার জায়গাগুলোতে থামতে পারবে, নিজের ভাষায় লিখতে পারবে, আর ছোট কাজ দিয়ে বদল শুরু করতে পারবে।</p>
-            <div className="home-hero__actions">
-              <Link href={`/chapter/${activeChapter.id}`} className="primary-cta"><Play className="size-4" fill="currentColor" /> {progress[activeChapter.id] ? "পড়া চালিয়ে যাও" : "বই পড়া শুরু করো"}</Link>
-              <Link href="/workbook" className="text-cta">Workbook খোলো <ArrowRight className="size-4" /></Link>
-            </div>
-            <div className="home-hero__cred"><span>১৫টি অধ্যায়</span><i /><span>প্রায় ৩০০ পৃষ্ঠার পাঠ</span><i /><span>নিজের নোট সেভ রাখো</span></div>
-          </div>
-          <section className="hero-system" aria-label="তোমার reading dashboard">
-            <div className="hero-system__heading"><span className="system-badge"><Compass className="size-3.5" /> তোমার reading dashboard</span><span>আজ</span></div>
-            <div className="hero-system__chapter">
-              <div className="hero-system__index">{String(activeChapter.number).padStart(2, "0")}</div>
-              <div><p>এখন পড়ছ</p><h2>{activeChapter.title}</h2><span>{activeChapter.subtitle}</span></div>
-              <strong>{activeProgress}%</strong>
-            </div>
-            <div className="hero-system__track"><span style={{ width: `${activeProgress}%` }} /></div>
-            <div className="hero-system__next">
-              <div><p className="eyebrow"><Sparkles className="size-3.5" /> আজকের প্রয়োগ</p><h3>পড়া শেষ না হলেও, একটি ভাবনা লিখে রাখো।</h3><p>একটি ছোট বাক্যই পরের পরিবর্তনের শুরু হতে পারে।</p></div>
-              <Link href="/workbook">এখন লিখি <ArrowRight className="size-4" /></Link>
-            </div>
-            <div className="hero-system__stats"><span><Bookmark className="size-4" /><b>{bookmarks.length.toLocaleString("bn-BD")}</b> বুকমার্ক</span><span><NotebookPen className="size-4" /><b>{noteCount.toLocaleString("bn-BD")}</b> নোট</span><span><CheckCircle2 className="size-4" /><b>{completedPractice.toLocaleString("bn-BD")}</b> কাজ</span></div>
-            <div className="hero-system__atmosphere"><img src={heroImage} alt="খোলা বই থেকে শুরু হওয়া শান্ত পথের ইলাস্ট্রেশন" /><div className="hero-system__cover"><img src={coverImage} alt="জীবনকে নতুন করে দেখো বইয়ের কভার" /></div></div>
-          </section>
-        </section>
+  return <div className="storefront min-h-screen"><AppHeader /><main className="store-dashboard">
+    <header className="store-dashboard__intro"><div><span className="store-eyebrow"><LibraryBig className="size-4" /> জীবন বইঘর · তোমার পাঠের জায়গা</span><h1>আজকের পাঠ,<br /><em>নিজের গতিতে।</em></h1></div><p>দুইটি বাংলা e-book, একটি স্থির পাঠের workspace এবং তোমার নিজের রেখে যাওয়া চিন্তার সূত্র।</p></header>
 
-        <section className="reading-snapshot">
-          <div className="snapshot-intro"><p className="eyebrow">তোমার পাঠের হিসাব</p><h2>ছোট অগ্রগতিও অগ্রগতি।</h2><p>তুমি যেখানে থেমেছিলে, সেখান থেকেই আবার শুরু করতে পারো।</p></div>
-          <div className="snapshot-progress"><div className="snapshot-progress__number">{overallProgress}%</div><div><p>পুরো বই পড়া হয়েছে</p><div className="progress-meter"><span style={{ width: `${overallProgress}%` }} /></div><span>{completeChapters.toLocaleString("bn-BD")}টি অধ্যায় সম্পন্ন</span></div></div>
-          <div className="snapshot-counters"><span><Bookmark className="size-4" /><strong>{bookmarks.length.toLocaleString("bn-BD")}</strong> বুকমার্ক</span><span><CheckCircle2 className="size-4" /><strong>{completedPractice.toLocaleString("bn-BD")}</strong> অনুশীলন</span><span><NotebookPen className="size-4" /> নোট সেভ থাকে</span></div>
-        </section>
+    <section className="store-workspace" aria-labelledby="today-reading-title"><article className="store-today-board"><div className="store-today-board__head"><span><CircleCheckBig className="size-4" /> আজকের প্রয়োগ</span><span>পাঠের ধারাবাহিকতা</span></div><div className="store-today-board__chapter"><div className="store-today-board__cover" aria-hidden="true"><img src={activeBook.cover} alt="" /></div><div><p>{activeBook.title} · অধ্যায় {activeChapter.padStart(2, "0")}</p><h2 id="today-reading-title">অধ্যায়টি খুলে ৭ মিনিট মন দিয়ে পড়ো</h2><span>পড়ার পর একটি বাক্য লিখে রাখো—আজকের জন্য সেটিই যথেষ্ট।</span></div></div><div className="store-today-board__thread" aria-label={`পাঠের অগ্রগতি ${activeProgress}%`}><span style={{ width: `${Math.max(activeProgress, 3)}%` }} /></div><div className="store-today-board__footer"><span><Clock3 className="size-4" /> সংক্ষিপ্ত, স্থির পাঠ</span><strong>{activeProgress}% সম্পন্ন</strong></div><Button asChild className="store-today-board__action"><Link href={`/book/${activeBookId}/chapter/${activeChapter}`}>পাঠে ফিরে যাও <ArrowRight className="size-4" /></Link></Button></article>
+      <aside className="store-context-rail" aria-label="তোমার পাঠের প্রেক্ষিত"><section className="store-context-card store-context-card--progress"><span className="store-context-card__label"><ChartNoAxesCombined className="size-4" /> পাঠের অগ্রগতি</span><div className="store-context-card__stat"><strong>{activeProgress}%</strong><span>{activeDefinition.chapters.length.toLocaleString("bn-BD")} অধ্যায়ের মধ্যে</span></div><div className="store-context-card__meter"><span style={{ width: `${Math.max(activeProgress, 3)}%` }} /></div><small>{activeCompleted.toLocaleString("bn-BD")}টি অধ্যায় সম্পূর্ণ হয়েছে</small></section><section className="store-context-card store-context-card--memory"><span className="store-context-card__label"><StickyNote className="size-4" /> তোমার পাঠচিহ্ন</span><div className="store-memory-grid"><span><Bookmark className="size-4" /><b>{bookmarkCount}</b> বুকমার্ক</span><span><MessageSquareText className="size-4" /><b>{noteCount}</b> নোট</span></div><Link className="store-context-card__link" href={`/book/${activeBookId}/chapter/${activeChapter}`}>পাঠচিহ্নে ফিরে যাও <ArrowRight className="size-3.5" /></Link></section><Link className="store-application-card" href={`/book/${activeBookId}/workbook`}><BookMarked className="size-5" /><span><b>আজকের প্রয়োগ</b><small>একটি চিন্তা বেছে worksheet-এ লিখে রাখো</small></span><ArrowRight className="size-4" /></Link></aside>
+    </section>
 
-        <section className="chapter-roadmap">
-          <div className="section-heading"><div><p className="eyebrow">বইয়ের পথনকশা</p><h2>তোমার নিজের গতিতে এগোও</h2></div><Link href={`/chapter/${activeChapter.id}`} className="section-heading__link">এখন পড়ো <ArrowRight className="size-4" /></Link></div>
-          <div className="chapter-roadmap__list">
-            {chapters.map((chapter) => {
-              const chapterProgress = progress[chapter.id] || 0;
-              return <Link href={`/chapter/${chapter.id}`} key={chapter.id} className={`roadmap-card ${chapter.id === activeChapter.id ? "roadmap-card--current" : ""}`}>
-                <span className="roadmap-card__index">{String(chapter.number).padStart(2, "0")}</span>
-                <div><h3>{chapter.title}</h3><p>{chapter.subtitle}</p></div>
-                <div className="roadmap-card__status"><span>{chapterProgress ? `${chapterProgress}%` : "শুরু"}</span><div><i style={{ width: `${chapterProgress}%` }} /></div></div>
-                <ArrowRight className="roadmap-card__arrow size-4" />
-              </Link>;
-            })}
-          </div>
-        </section>
+    <section className="store-library" id="library" aria-labelledby="library-title"><header className="store-section-heading"><div><span className="store-eyebrow">তোমার বইয়ের তাক</span><h2 id="library-title">এখন কোন বইটি খুলবে?</h2></div><p>বই দুটি আলাদা পথে হাঁটে, কিন্তু দুটিই তোমাকে নিজের অবস্থান পরিষ্কার করে দেখতে সাহায্য করে।</p></header><div className="book-shelf">{books.map((book) => {
+      const bookProgress = progressFor(book.id);
+      const bookChapter = lastChapterByBook[book.id] || "01";
+      const hasStarted = bookProgress > 0 || activeBookId === book.id;
+      return <article className={`store-book-card store-book-card--${book.tone}`} key={book.id}><div className="store-book-card__cover-wrap"><img src={book.cover} alt={`${book.title} বইয়ের cover`} className="store-book-card__cover" loading={book.id === "life" ? "eager" : "lazy"} /><span className="store-book-card__tag">{hasStarted ? "পাঠ চলমান" : "নতুন প্রকাশনা"}</span></div><div className="store-book-card__body"><div className="store-book-card__topline"><p className="store-book-card__meta">{book.meta}</p><span>{bookProgress}% পড়া</span></div><h3>{book.title}</h3><p className="store-book-card__subtitle">{book.subtitle}</p><p className="store-book-card__description">{book.description}</p><div className="store-book-card__thread" aria-label={`${book.title} এর অগ্রগতি`}><span style={{ width: `${Math.max(bookProgress, hasStarted ? 3 : 0)}%` }} /></div><div className="store-book-card__actions"><Button asChild className="store-read-button"><Link href={`/book/${book.id}/chapter/${bookChapter}`}><BookOpen className="size-4" /> {hasStarted ? "পড়া চালিয়ে যাও" : "পড়া শুরু করো"}</Link></Button><a className="store-pdf-link" href={book.id === "life" ? assets.firstPdf : assets.darkPdf} target="_blank" rel="noreferrer"><ArrowDownToLine className="size-4" /> PDF</a></div></div></article>;
+    })}</div></section>
 
-        <section className="home-closing">
-          <div><p className="eyebrow"><BookOpenText className="size-4" /> আজকের জন্য</p><h2>সব উত্তর একদিনে লাগে না।<br />একটি ভালো প্রশ্নই যথেষ্ট।</h2></div>
-          <Link href={`/chapter/${activeChapter.id}`} className="primary-cta">{activeChapter.title} পড়ো <ArrowRight className="size-4" /></Link>
-        </section>
-      </main>
-    </div>
-  );
+    <section className="store-principles" aria-labelledby="principles-title"><div><span className="store-eyebrow"><ShieldCheck className="size-4" /> আমাদের পাঠের দৃষ্টি</span><h2 id="principles-title">জ্ঞান মানে কাউকে নিয়ন্ত্রণ করা নয়—নিজেকে সচেতন করা।</h2></div><div className="store-principles__list"><p><BookOpen className="size-5" /><span><strong>সহজ বাংলা</strong>জটিল বিষয়ও পরিষ্কার ভাষায়</span></p><p><ShieldCheck className="size-5" /><span><strong>নৈতিক দৃষ্টি</strong>সীমা, নিরাপত্তা ও সচেতনতার পক্ষে</span></p><p><CircleCheckBig className="size-5" /><span><strong>নিজের গতি</strong>যেখান থেকে চাইবে, সেখান থেকেই পড়া</span></p></div></section>
+  </main><footer className="store-footer"><span>জীবন বইঘর</span><p>মনোযোগ দিয়ে পড়ার জন্য সাজানো বাংলা digital বই।</p></footer></div>;
 }
