@@ -67,8 +67,14 @@ import {
   winningMindTotalReadingMinutes,
   winningMindWorkbookExercises,
 } from "./winning-mind-book";
+import {
+  aiMasteryWealthChapters,
+  aiMasteryWealthChapterLoaders,
+  aiMasteryWealthTotalReadingMinutes,
+  aiMasteryWealthWorkbookExercises,
+} from "./ai-mastery-wealth-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
@@ -301,6 +307,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}the-winning-mind.pdf`,
     pdfPageCount: 300,
     learningOutcomes: ["নিজের জীবন ও চিন্তার pattern সচেতনভাবে দেখা", "শৃঙ্খলা, attention ও ছোট অভ্যাসের system তৈরি করা", "ব্যর্থতা ও ভয়কে feedback হিসেবে ব্যবহার করা", "সম্পর্ক, টাকা ও সাফল্যের মধ্যে নিজের মূল্যবোধ রক্ষা করা"],
+  },
+  "ai-mastery-wealth": {
+    id: "ai-mastery-wealth",
+    title: "AI MASTERY + WEALTH BUILDING",
+    subtitle: "AI শেখো • দক্ষতা গড়ো • মূল্য তৈরি করো • সম্পদ নির্মাণ করো",
+    description: "AI-এর ভিত্তি থেকে prompt, workflow, automation, agents, business, income, ownership ও compounding—২০০ lesson-এর সম্পূর্ণ বাংলা course-book।",
+    longDescription: "AI কী, কীভাবে power user হওয়া যায়, কাজ ও business-এ workflow বানানো, automation ও agents ব্যবহার, real-world project তৈরি, AI-powered career গড়া এবং skill থেকে value, income, ownership ও long-term wealth system নির্মাণ—এই বইটি একটি সম্পূর্ণ practical learning journey।",
+    category: "অর্থ ও সম্পদ",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}ai-mastery-wealth-cover.png`,
+    accent: "#C8942E",
+    accentSoft: "#F4EDDC",
+    chapters: aiMasteryWealthChapters,
+    chapterLoaders: aiMasteryWealthChapterLoaders,
+    workbookExercises: aiMasteryWealthWorkbookExercises,
+    totalReadingMinutes: aiMasteryWealthTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}ai-mastery-wealth-building.pdf`,
+    pdfPageCount: 500,
+    learningOutcomes: ["AI concepts, prompting, context, verification ও responsible use বোঝা", "AI দিয়ে productivity, research, content, automation ও agents workflow তৈরি করা", "AI-powered service, business, career ও real-world project prototype করা", "Skill → Value → Income → Ownership → Scale → Compounding wealth system গড়া"],
   },
 };
 
