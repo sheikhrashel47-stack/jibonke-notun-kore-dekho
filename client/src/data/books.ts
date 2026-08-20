@@ -80,8 +80,14 @@ import {
   houseRememberedAllWorkbookExercises,
   houseRememberedTotalReadingMinutes,
 } from "./house-remembered-book";
+import {
+  hardTruthChapters,
+  hardTruthChapterLoaders,
+  hardTruthTotalReadingMinutes,
+  hardTruthWorkbookExercises,
+} from "./hard-truth-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
@@ -352,6 +358,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}the-house-that-remembered.pdf`,
     pdfPageCount: houseRememberedBookMeta.pages,
     learningOutcomes: ["ঘটনা, evidence, inference ও সন্দেহ আলাদা করে পড়া", "motive, opportunity, timeline ও contradiction বিশ্লেষণ করা", "fair-play mystery-র clue map তৈরি করা", "crime fiction-এর নৈতিক ambiguity ও psychological consequence বোঝা"],
+  },
+  "hard-truth": {
+    id: "hard-truth",
+    title: "THE HARD TRUTH",
+    subtitle: "জীবন, ব্যর্থতা, উচ্চাকাঙ্ক্ষা ও নিজেকে গড়ে তোলার একটি বাস্তববাদী নির্দেশিকা",
+    description: "বাস্তবতার সামনে টিকে থাকা motivation, responsibility, failure, money, relationships ও long-term life strategy নিয়ে একটি গভীর বাংলা non-fiction journey।",
+    longDescription: "সবাই একই সুযোগ নিয়ে জন্মায় না, hard work সবসময় success guarantee করে না, এবং লক্ষ্য বদলানো সবসময় failure নয়—এই কঠিন সত্যগুলোকে অস্বীকার না করে Reality → Acceptance → Strategy → Action framework-এর মাধ্যমে জীবনকে সম্মানযোগ্যভাবে গড়ার ২০ অধ্যায়ের বই।",
+    category: "চিন্তা ও সিদ্ধান্ত",
+    creator: "Zayan",
+    cover: `${import.meta.env.BASE_URL}hard-truth-cover.png`,
+    accent: "#9B3E22",
+    accentSoft: "#F3E5DD",
+    chapters: hardTruthChapters,
+    chapterLoaders: hardTruthChapterLoaders,
+    workbookExercises: hardTruthWorkbookExercises,
+    totalReadingMinutes: hardTruthTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}hard-truth.pdf`,
+    pdfPageCount: 343,
+    learningOutcomes: ["বাস্তব constraint, agency ও responsibility আলাদা করে দেখা", "failure, criticism, comparison ও uncertainty-র মধ্যে strategy তৈরি করা", "time, trade-off, money ও relationships নিয়ে পরিষ্কার সিদ্ধান্ত নেওয়া", "নিজের Personal Life Operating System তৈরি ও review করা"],
   },
 };
 
