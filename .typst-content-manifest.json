@@ -2,15 +2,19 @@
   "task_kind": "markdown-to-pdf",
   "output": "pdf",
   "signals": ["bengali-book", "portrait", "longform"],
-  "hard_constraints": ["Bengali typography", "Islamic educational book", "premium editorial design"],
+  "hard_constraints": ["Bengali typography", "premium editorial design"],
   "content_features": {
     "code_blocks": 0,
-    "defined_terms": 10,
+    "defined_terms": 20,
     "portrait_images": 1,
     "tables": 4,
-    "worksheets": 20,
-    "chapters": 20,
-    "case_studies": 0,
+    "worksheets": 130,
+    "chapters": 120,
+    "case_studies": 120,
     "diagrams": 0
-  }
+  },
+  "source": "docs/the-mistakes-cost-lives-manuscript.md",
+  "title": "THE MISTAKES THAT COST US OUR LIVES",
+  "subtitle": "মানুষের করা সাধারণ ভুল, যেগুলো ধীরে ধীরে তার জীবনকে পিছিয়ে দেয়",
+  "author": "Zayan"
 }

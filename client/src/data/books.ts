@@ -62,6 +62,12 @@ import {
   returnAllahWorkbookExercises,
 } from "./return-allah-book";
 import {
+  mistakesChapters,
+  mistakesChapterLoaders,
+  mistakesTotalReadingMinutes,
+  mistakesWorkbookExercises,
+} from "./mistakes-book";
+import {
   intelligenceCodeChapters,
   intelligenceCodeChapterLoaders,
   intelligenceCodeTotalReadingMinutes,
@@ -111,7 +117,7 @@ import {
   secondTimerAllWorkbookExercises,
 } from "./second-timer-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "mistakes-cost-lives", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ" | "ইসলাম ও আত্মশুদ্ধি";
 
@@ -325,6 +331,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}return-to-allah.pdf`,
     pdfPageCount: 28,
     learningOutcomes: ["সৃষ্টির উদ্দেশ্য ও তাওহীদের আলোকে জীবনের কেন্দ্র পরিষ্কার করা", "সালাত, কুরআন, দু‘আ ও তাওবার ধারাবাহিক system গড়া", "নফস, গুনাহ, সবর, শুকর ও তাওয়াক্কুলকে ব্যবহারিকভাবে অনুশীলন করা", "সম্পর্ক, অর্থ ও আখিরাতের দায়িত্বকে ঈমানের সঙ্গে যুক্ত করা"],
+  },
+  "mistakes-cost-lives": {
+    id: "mistakes-cost-lives",
+    title: "THE MISTAKES THAT COST US OUR LIVES",
+    subtitle: "মানুষের করা সাধারণ ভুল, যেগুলো ধীরে ধীরে তার জীবনকে পিছিয়ে দেয়",
+    description: "সিদ্ধান্ত, অভ্যাস, অর্থ, সম্পর্ক, ক্যারিয়ার, মন ও সময়ের ভুলকে behaviour → psychology → consequence → correction framework-এ বিশ্লেষণ করা 120-chapter Bengali self-development book।",
+    longDescription: "বাস্তব জীবনের pattern, স্পষ্টভাবে labelled fictionalized composite cases, evidence-safe psychology, decision analysis, 100 self-reflection questions, 30-day Error Reset, 50 Expensive Life Mistakes এবং Personal Error-Correction System—সব মিলিয়ে একটি intellectually honest life-strategy পাঠযাত্রা।",
+    category: "চিন্তা ও সিদ্ধান্ত",
+    creator: "Zayan",
+    cover: `${import.meta.env.BASE_URL}mistakes-cost-lives-cover.png`,
+    accent: "#183F4B",
+    accentSoft: "#F2E7DE",
+    chapters: mistakesChapters,
+    chapterLoaders: mistakesChapterLoaders,
+    workbookExercises: mistakesWorkbookExercises,
+    totalReadingMinutes: mistakesTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}mistakes-cost-lives.pdf`,
+    pdfPageCount: 523,
+    learningOutcomes: ["নিজের ভুলকে shame নয়, behaviour–psychology–consequence framework-এ দেখা", "সময়, মনোযোগ, অভ্যাস, career, money, relationship ও decision pattern শনাক্ত করা", "100 প্রশ্ন, 30-day Error Reset ও Personal Operating System দিয়ে course-correction করা", "toxic positivity, victim blaming ও false certainty এড়িয়ে controllable factor উন্নত করা"],
   },
   intelligence: {
     id: "intelligence",
