@@ -64,13 +64,13 @@ export function ReadingCanvas({ chapter }: { chapter: BookChapter }) {
         )}
       </article>
 
-      <div className="reading-canvas__mobile-tools">
+      <div className="reading-canvas__mobile-tools" aria-label="মোবাইল reading control">
         <BookmarkButton chapterId={chapter.id} />
         <div className="font-control">
           <span>লেখার আকার</span>
           <div>
             {(["small", "medium", "large"] as const).map((size) => (
-              <button key={size} type="button" className={fontSize === size ? "is-active" : ""} onClick={() => setFontSize(size)} aria-pressed={fontSize === size}>অ</button>
+              <button key={size} type="button" className={fontSize === size ? "is-active" : ""} onClick={() => setFontSize(size)} aria-label={`${size === "small" ? "ছোট" : size === "medium" ? "মাঝারি" : "বড়"} লেখা`} aria-pressed={fontSize === size}>অ</button>
             ))}
           </div>
         </div>

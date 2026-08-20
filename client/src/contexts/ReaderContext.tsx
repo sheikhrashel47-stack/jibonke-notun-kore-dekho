@@ -22,12 +22,13 @@ type ReaderContextValue = ReaderState & {
 };
 
 const STORAGE_KEY = "jibon-notun-kore-dekho-reader-v1";
+const FONT_SCALE_MIGRATION_KEY = "jibon-notun-kore-dekho-large-font-v1";
 const defaultState: ReaderState = {
   progress: {},
   bookmarks: [],
   notes: {},
   completedExercises: {},
-  fontSize: "medium",
+  fontSize: "large",
   activeChapterId: "01",
 };
 
@@ -37,7 +38,12 @@ const safelyReadState = (): ReaderState => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) return defaultState;
-    return { ...defaultState, ...JSON.parse(stored) };
+    const parsed = JSON.parse(stored) as Partial<ReaderState>;
+    if (!localStorage.getItem(FONT_SCALE_MIGRATION_KEY)) {
+      localStorage.setItem(FONT_SCALE_MIGRATION_KEY, "done");
+      return { ...defaultState, ...parsed, fontSize: "large" };
+    }
+    return { ...defaultState, ...parsed };
   } catch {
     return defaultState;
   }
