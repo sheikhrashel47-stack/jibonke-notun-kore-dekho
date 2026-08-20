@@ -12,6 +12,8 @@ export type BookChapter = {
   wordCount: number;
   sections: BookSection[];
   exercises: WorkbookExercise[];
+  pageStart?: number;
+  pageEnd?: number;
 };
 
 export type ChapterMeta = Pick<BookChapter, "id" | "number" | "title" | "subtitle" | "readingMinutes"> & {
