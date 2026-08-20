@@ -25,12 +25,12 @@
 
 ## নতুন ‘Dark Psychology’ e-book ও book store
 
-- [ ] ‘Dark Psychology’ master outline ও ethical self-defense guideline তৈরি করা
-- [ ] ৫০ অধ্যায়ের বাংলা manuscript লেখা, সম্পাদনা ও fact-check করা
-- [ ] Cover ও interactive premium e-book PDF তৈরি করা
-- [ ] Existing reading app-কে দুই-বইয়ের mobile-first book store করা
-- [ ] নতুন বইয়ের preview ও PDF store-এ প্রকাশ করা
-- [ ] Mobile design ও GitHub Pages deployment যাচাই করা
+- [x] ‘Dark Psychology’ master outline ও ethical self-defense guideline তৈরি করা
+- [x] ৫০ অধ্যায়ের বাংলা manuscript লেখা, সম্পাদনা ও fact-check করা
+- [x] Cover ও interactive premium e-book PDF তৈরি করা
+- [x] Existing reading app-কে দুই-বইয়ের mobile-first book store করা
+- [x] নতুন বইয়ের preview ও PDF store-এ প্রকাশ করা
+- [x] Mobile design ও GitHub Pages deployment যাচাই করা
 
 ## নতুন ৫০০-পৃষ্ঠার Dark Psychology পুনর্নির্মাণ
 
@@ -43,5 +43,5 @@
 - [x] Part V-এর chapter 41–50, 50 Red Flags index ও final practice guide manual editorial review-সহ completion করা
 - [x] সব chapter-এ গল্প, concept, safe response, practical exercise, language consistency ও duplicate-content review করা
 - [x] clickable contents, chapter links, worksheet ও page numbering-সহ প্রায় ৫০০-পৃষ্ঠার premium PDF e-book তৈরি করা
-- [ ] ওয়েব রিডারে বই-২-এর নতুন content, chapter picker, page selector এবং নির্দিষ্ট page-এ যাওয়ার navigation যোগ করা
-- [ ] mobile reader যাচাই, production build, GitHub Pages প্রকাশ ও live links পরীক্ষা করা
+- [x] ওয়েব রিডারে বই-২-এর নতুন content, chapter picker, page selector এবং নির্দিষ্ট page-এ যাওয়ার navigation যোগ করা
+- [x] mobile reader যাচাই, production build, GitHub Pages প্রকাশ ও live links পরীক্ষা করা
