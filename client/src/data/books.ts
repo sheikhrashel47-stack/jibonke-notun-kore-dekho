@@ -92,8 +92,14 @@ import {
   lawEveryoneShouldKnowBookMeta,
   lawEveryoneShouldKnowAllWorkbookExercises,
 } from "./law-everyone-should-know-book";
+import {
+  lastWordsChapters,
+  lastWordsChapterLoaders,
+  lastWordsTotalReadingMinutes,
+  lastWordsWorkbookExercises,
+} from "./last-words-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
@@ -403,9 +409,28 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfPageCount: 823,
     learningOutcomes: ["আইনি issue, facts, evidence ও uncertainty আলাদা করে দেখা", "সঠিক authority ও legal route যাচাই করা", "নিরাপদভাবে document, notice, complaint ও digital evidence সংরক্ষণ করা", "বাংলাদেশের পরিবর্তনশীল আইনে official source ও qualified legal advice-এর গুরুত্ব বোঝা"],
   },
+  "last-words": {
+    id: "last-words",
+    title: "শেষ কথাটাও বলা হলো না",
+    subtitle: "একটি বাংলা literary tragedy",
+    description: "আরিয়ান ও মেহরিনের বন্ধুত্ব, ভালোবাসা, ভুল বোঝাবুঝি, নীরবতা, বিচ্ছেদ ও বহু বছর পরের পুনর্মিলনের সংযত বাংলা literary novel।",
+    longDescription: "এটি শুধু প্রেমের গল্প নয়; এটি মানুষের ছোট ভুল, ego, fear, family pressure, social expectation ও না-বলা কথার সমষ্টিতে কীভাবে একটি মূল্যবান সম্পর্ক হারিয়ে যায়—তার dialogue-driven contemporary Bangladesh story।",
+    category: "জীবনচর্চা",
+    creator: "Zayan",
+    cover: `${import.meta.env.BASE_URL}last-words-cover.png`,
+    accent: "#9E4E54",
+    accentSoft: "#F3E9EA",
+    chapters: lastWordsChapters,
+    chapterLoaders: lastWordsChapterLoaders,
+    workbookExercises: lastWordsWorkbookExercises,
+    totalReadingMinutes: lastWordsTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}last-words.pdf`,
+    pdfPageCount: 488,
+    learningOutcomes: ["সংলাপের subtext ও নীরবতার emotional meaning বুঝতে শেখা", "ভালোবাসা, attachment, ego ও self-respect-এর পার্থক্য দেখা", "ভুল assumption, communication failure ও timing-এর consequence অনুভব করা", "ক্ষমা, acceptance ও letting go-কে সম্পর্কের বাস্তবতার ভেতর দেখা"],
+  },
 };
 
-export function getBookDefinition(bookId?: string): BookDefinition {
+export function getBookDefinition(bookId?: string) {
   return bookId && bookId in bookDefinitions ? bookDefinitions[bookId as BookId] : bookDefinitions.life;
 }
 
