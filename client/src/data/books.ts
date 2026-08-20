@@ -150,7 +150,7 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     workbookExercises: habitWorkbookExercises,
     totalReadingMinutes: habitTotalReadingMinutes,
     pdfUrl: `${import.meta.env.BASE_URL}habit-architect.pdf`,
-    pdfPageCount: 214,
+    pdfPageCount: 300,
     learningOutcomes: ["নিজের আচরণের trigger ও reward map করা", "পরিবেশ ও starting friction redesign করা", "failure-এর পর recovery system বানানো", "৩০, ৬০ ও ৯০ দিনের personal habit experiment চালানো"],
   },
 };
