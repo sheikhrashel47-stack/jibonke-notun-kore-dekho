@@ -86,8 +86,14 @@ import {
   hardTruthTotalReadingMinutes,
   hardTruthWorkbookExercises,
 } from "./hard-truth-book";
+import {
+  lawEveryoneShouldKnowChapters,
+  lawEveryoneShouldKnowChapterLoaders,
+  lawEveryoneShouldKnowBookMeta,
+  lawEveryoneShouldKnowAllWorkbookExercises,
+} from "./law-everyone-should-know-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
@@ -377,6 +383,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}hard-truth.pdf`,
     pdfPageCount: 343,
     learningOutcomes: ["বাস্তব constraint, agency ও responsibility আলাদা করে দেখা", "failure, criticism, comparison ও uncertainty-র মধ্যে strategy তৈরি করা", "time, trade-off, money ও relationships নিয়ে পরিষ্কার সিদ্ধান্ত নেওয়া", "নিজের Personal Life Operating System তৈরি ও review করা"],
+  },
+  "law-everyone-should-know": {
+    id: "law-everyone-should-know",
+    title: "⚖️ THE LAW EVERYONE SHOULD KNOW",
+    subtitle: "বাংলাদেশে একজন সাধারণ মানুষের জন্য Practical Legal Knowledge & Everyday Law Handbook",
+    description: "বাংলাদেশের সাধারণ নাগরিকের জন্য ৫০ Part, ১০০ scenario এবং প্রায় ৮০০ পৃষ্ঠার ব্যবহারিক বাংলা legal knowledge handbook।",
+    longDescription: "সংবিধান, police ও court process, contract, employment, business, banking, consumer rights, cyber safety, property, family, health, tax এবং everyday legal documentation—সবকিছু সহজ ভাষায়, source-aware disclaimer ও practical decision framework-সহ সাজানো হয়েছে।",
+    category: "জীবনচর্চা",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}law-everyone-should-know-cover.png`,
+    accent: "#0B1F2A",
+    accentSoft: "#E7EEF2",
+    chapters: lawEveryoneShouldKnowChapters,
+    chapterLoaders: lawEveryoneShouldKnowChapterLoaders,
+    workbookExercises: lawEveryoneShouldKnowAllWorkbookExercises,
+    totalReadingMinutes: lawEveryoneShouldKnowBookMeta.totalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}the-law-everyone-should-know.pdf`,
+    pdfPageCount: 823,
+    learningOutcomes: ["আইনি issue, facts, evidence ও uncertainty আলাদা করে দেখা", "সঠিক authority ও legal route যাচাই করা", "নিরাপদভাবে document, notice, complaint ও digital evidence সংরক্ষণ করা", "বাংলাদেশের পরিবর্তনশীল আইনে official source ও qualified legal advice-এর গুরুত্ব বোঝা"],
   },
 };
 

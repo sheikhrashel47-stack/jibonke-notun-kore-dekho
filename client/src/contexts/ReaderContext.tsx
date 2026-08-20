@@ -101,7 +101,7 @@ const defaultState: ReaderState = {
   activityMinutesByDate: {},
   activeBookId: "life",
   activeChapterId: "01",
-  lastChapterByBook: { life: "01", dark: "01", thinking: "01", presence: "01", habit: "01", brain: "01", wealth: "01", communication: "001", future: "01", intelligence: "01", "winning-mind": "001", "ai-mastery-wealth": "001", "house-remembered": "001", "hard-truth": "01" },
+  lastChapterByBook: { life: "01", dark: "01", thinking: "01", presence: "01", habit: "01", brain: "01", wealth: "01", communication: "001", future: "01", intelligence: "01", "winning-mind": "001", "ai-mastery-wealth": "001", "house-remembered": "001", "hard-truth": "01", "law-everyone-should-know": "001" },
   lastPositionByBook: {},
   libraryBookIds: ["life"],
 };
