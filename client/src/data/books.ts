@@ -61,8 +61,14 @@ import {
   intelligenceCodeTotalReadingMinutes,
   intelligenceCodeWorkbookExercises,
 } from "./intelligence-code-book";
+import {
+  winningMindChaptersMeta as winningMindChapters,
+  winningMindChapterLoaders,
+  winningMindTotalReadingMinutes,
+  winningMindWorkbookExercises,
+} from "./winning-mind-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "intelligence", "winning-mind"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ";
 
@@ -276,6 +282,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: `${import.meta.env.BASE_URL}intelligence-code.pdf`,
     pdfPageCount: 357,
     learningOutcomes: ["তথ্য, interpretation ও assumption আলাদা করা", "logic, pattern ও probability দিয়ে reasoning করা", "complex problem ভেঙে better question তৈরি করা", "নিজের confidence, bias ও thinking strategy monitor করা"],
+  },
+  "winning-mind": {
+    id: "winning-mind",
+    title: "THE WINNING MIND",
+    subtitle: "নিজেকে গড়ো • জীবনকে গড়ো • নিজের পথে জয়ী হও",
+    description: "Self-awareness, চিন্তা, শৃঙ্খলা, সাহস, কাজ, সম্পর্ক ও অর্থপূর্ণ সাফল্য নিয়ে ২৫ অধ্যায়ের বাংলা self-development পাঠ।",
+    longDescription: "নিজের বর্তমান জীবনকে দেখা থেকে শুরু করে মনোযোগ, অভ্যাস, কাজ, ব্যর্থতা, সম্পর্ক, যোগাযোগ, টাকা এবং নিজের পরের অধ্যায়—এই বইটি দ্রুত উত্তেজনা নয়, বরং ধারাবাহিক ছোট সিদ্ধান্তের মাধ্যমে জীবন গড়ার একটি শান্ত ও বাস্তব পাঠযাত্রা।",
+    category: "জীবনচর্চা",
+    creator: "JIBON Editorial",
+    cover: `${import.meta.env.BASE_URL}winning-mind-cover.png`,
+    accent: "#102A43",
+    accentSoft: "#E8F0F7",
+    chapters: winningMindChapters,
+    chapterLoaders: winningMindChapterLoaders,
+    workbookExercises: winningMindWorkbookExercises,
+    totalReadingMinutes: winningMindTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}the-winning-mind.pdf`,
+    pdfPageCount: 300,
+    learningOutcomes: ["নিজের জীবন ও চিন্তার pattern সচেতনভাবে দেখা", "শৃঙ্খলা, attention ও ছোট অভ্যাসের system তৈরি করা", "ব্যর্থতা ও ভয়কে feedback হিসেবে ব্যবহার করা", "সম্পর্ক, টাকা ও সাফল্যের মধ্যে নিজের মূল্যবোধ রক্ষা করা"],
   },
 };
 
