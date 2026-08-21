@@ -1,7 +1,28 @@
 /* JIBON offline shell: keeps the interface reachable without attempting to cache large external book PDFs. */
-const CACHE_NAME = "jibon-app-shell-v5-last-words";
+const CACHE_NAME = "jibon-app-shell-v6-local-covers";
 const BASE_PATH = new URL("./", self.registration.scope).pathname;
-const APP_SHELL = [BASE_PATH, `${BASE_PATH}index.html`, `${BASE_PATH}manifest.webmanifest`];
+const LOCAL_COVERS = [
+  "jibon-cover.webp",
+  "dark-psychology-cover.webp",
+  "the-art-of-thinking-cover.webp",
+  "presence-code-cover.png",
+  "habit-architect-cover.png",
+  "brain-boost-cover.png",
+  "the-wealth-code-cover.webp",
+  "kothar-shilpo-cover.png",
+  "the-future-cover.png",
+  "return-to-allah-cover.png",
+  "mistakes-cost-lives-cover.png",
+  "intelligence-code-cover.png",
+  "winning-mind-cover.png",
+  "ai-mastery-wealth-cover.png",
+  "house-that-remembered-cover.png",
+  "hard-truth-cover.png",
+  "law-everyone-should-know-cover.png",
+  "last-words-cover.png",
+  "second-timer-cover.png",
+];
+const APP_SHELL = [BASE_PATH, `${BASE_PATH}index.html`, `${BASE_PATH}manifest.webmanifest`, ...LOCAL_COVERS.map((cover) => `${BASE_PATH}${cover}`)];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));

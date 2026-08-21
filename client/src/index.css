@@ -592,3 +592,9 @@ button { border: 0; }
 .reader-preferences__compact-font button:disabled { cursor: not-allowed; opacity: .35; }
 .reader-preferences__compact-font strong { min-width: 3.7rem; color: var(--forest-deep); text-align: center; font-size: .66rem; }
 @media (min-width: 681px) { .reader-preferences__compact-font { display: none; } }
+
+
+/* Personal library removal: this hides a book from the current user's shelf, while keeping the public catalog intact. */
+.premium-book-card__remove { display: inline-flex; align-items: center; gap: .25rem; padding: .4rem 0; border: 0; background: transparent; color: #9b4a4a; font-family: "Noto Sans Bengali", sans-serif; font-size: .62rem; font-weight: 800; }
+.premium-book-card__remove:hover { color: #7c2f2f; text-decoration: underline; text-underline-offset: .16rem; }
+.premium-book-card__remove:focus-visible { outline: 2px solid var(--book-accent); outline-offset: 3px; border-radius: .2rem; }
