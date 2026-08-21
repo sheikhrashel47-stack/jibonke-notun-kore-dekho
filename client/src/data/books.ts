@@ -567,7 +567,7 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     longDescription: "এই সংস্করণে মক্কার সমাজ, জন্ম ও শৈশব, প্রথম ওহি, মক্কার সংগ্রাম, হিজরত, মদিনার সমাজ, যুদ্ধ ও সন্ধি, বিদায় হজ এবং ওফাত—সবগুলো পর্যায়কে সংযত ও শ্রদ্ধাপূর্ণ ভাষায় সাজানো হয়েছে। প্রতিষ্ঠিত বর্ণনা, দীর্ঘ সীরাত-ঐতিহ্য এবং অনিশ্চিত report-কে একসঙ্গে মিশিয়ে না দিয়ে source status আলাদা রাখা হয়েছে। এটি devotional reflection ও historical reading-এর সহায়ক; ফিকহি ফতোয়া বা কোনো রাজনৈতিক প্রচারপত্র নয়।",
     category: "ইসলাম ও আত্মশুদ্ধি",
     creator: "JIBON Editorial",
-    cover: `${import.meta.env.BASE_URL}covers/seerah-cover.svg`,
+    cover: `${import.meta.env.BASE_URL}seerah-cover.svg`,
     accent: "#174A46",
     accentSoft: "#E8F2EF",
     chapters: seerahChapters,
