@@ -21,6 +21,9 @@ const LOCAL_COVERS = [
   "law-everyone-should-know-cover.png",
   "last-words-cover.png",
   "second-timer-cover.png",
+  "knowledge-book-cover.png",
+  "somajer-aina-cover.png",
+  "seerah-cover.svg",
 ];
 const APP_SHELL = [BASE_PATH, `${BASE_PATH}index.html`, `${BASE_PATH}manifest.webmanifest`, ...LOCAL_COVERS.map((cover) => `${BASE_PATH}${cover}`)];
 
