@@ -6,3 +6,9 @@
 - Generated manuscript manifest: 94 chapter modules; মোট আনুমানিক 92,377 শব্দ।
 - Generated PDF: `public/somajer-aina.pdf`, 611 pages, A5 page size, approximately 7.8 MB.
 - Build passed after adding the new book ID to `ReaderContext` defaults.
+
+## Live deployment verification
+
+- GitHub Actions workflow `Deploy website to GitHub Pages` completed successfully for commit `8aad272`.
+- Live catalog detail route verified at `https://sheikhrashel47-stack.github.io/jibonke-notun-kore-dekho/store/book/somajer-aina`.
+- Live page reports 94 chapters, 611 pages, the Bengali title/subtitle, cover, first-chapter reader link, and PDF download/open links.
