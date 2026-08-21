@@ -128,8 +128,14 @@ import {
   knowledgeTotalReadingMinutes,
   knowledgeWorkbookExercises,
 } from "./knowledge-book";
+import {
+  somajerAinaChapters,
+  somajerAinaChapterLoaders,
+  somajerAinaTotalReadingMinutes,
+  somajerAinaWorkbookExercises,
+} from "./somajer-aina-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "mistakes-cost-lives", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer", "seerah", "knowledge"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "mistakes-cost-lives", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer", "seerah", "knowledge", "somajer-aina"] as const;
 export type BookId = (typeof bookIds)[number];
 export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ" | "ইসলাম ও আত্মশুদ্ধি" | "সাধারণ জ্ঞান";
 
@@ -533,6 +539,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfUrl: "",
     pdfPageCount: 0,
     learningOutcomes: ["তথ্যকে context ও কারণের সঙ্গে বোঝা", "বাংলাদেশ ও বিশ্বের ঘটনাকে সংযোগ করে দেখা", "বিজ্ঞান, অর্থনীতি, প্রযুক্তি ও সমাজের মৌলিক ধারণা পরিষ্কার করা", "মিথ, তথ্য ও অনিশ্চয়তার মধ্যে পার্থক্য করা"],
+  },
+  "somajer-aina": {
+    id: "somajer-aina",
+    title: "সমাজের আয়না",
+    subtitle: "যে বাস্তবতাগুলো আমরা দেখি, কিন্তু দেখতে চাই না",
+    description: "মানুষ, পরিবার, শিক্ষা, অর্থ, সম্পর্ক, ক্ষমতা, প্রযুক্তি ও সামাজিক মানসিকতার ৯৪ অধ্যায়ের গবেষণা-সচেতন বাংলা পাঠ।",
+    longDescription: "সমাজের প্রচলিত মুখোশের আড়ালে থাকা incentive, ভয়, অসম সুযোগ, সামাজিক প্রত্যাশা ও ব্যক্তিগত সিদ্ধান্তকে পর্যবেক্ষণ, বাংলাদেশি প্রেক্ষিত, evidence limitation এবং ব্যবহারিক আত্মপর্যালোচনার মাধ্যমে দেখা হয়েছে। বইটিতে ৯০টি মূল অধ্যায়, ১০০টি সমাজ বনাম বাস্তবতা পাঠ, ৫০টি fictionalized composite case file, ১০০টি source-aware সংখ্যা-পাঠ এবং সমাজকে বোঝার ১০০টি শিক্ষা রয়েছে।",
+    category: "চিন্তা ও সিদ্ধান্ত",
+    creator: "শেখ রাসেল",
+    cover: `${import.meta.env.BASE_URL}somajer-aina-cover.png`,
+    accent: "#174B3B",
+    accentSoft: "#EEF4EE",
+    chapters: somajerAinaChapters,
+    chapterLoaders: somajerAinaChapterLoaders,
+    workbookExercises: somajerAinaWorkbookExercises,
+    totalReadingMinutes: somajerAinaTotalReadingMinutes,
+    pdfUrl: `${import.meta.env.BASE_URL}somajer-aina.pdf`,
+    pdfPageCount: 611,
+    learningOutcomes: ["নিজের সামাজিক অভিজ্ঞতা ও বৃহত্তর কাঠামো আলাদা করে দেখা", "প্রমাণ, ব্যাখ্যা ও অনিশ্চয়তার মধ্যে পার্থক্য করা", "পরিবার, শিক্ষা, অর্থ, সম্পর্ক ও প্রযুক্তির সামাজিক mechanism বোঝা", "সামাজিক বাস্তবতার মধ্যে আরও সচেতন ও দায়িত্বশীল সিদ্ধান্ত নেওয়া"],
   },
   seerah: {
     id: "seerah",
