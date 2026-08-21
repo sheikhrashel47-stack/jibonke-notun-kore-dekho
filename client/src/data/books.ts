@@ -122,10 +122,16 @@ import {
   seerahTotalReadingMinutes,
   seerahWorkbookExercises,
 } from "./seerah-book";
+import {
+  knowledgeChapters,
+  knowledgeChapterLoaders,
+  knowledgeTotalReadingMinutes,
+  knowledgeWorkbookExercises,
+} from "./knowledge-book";
 
-export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "mistakes-cost-lives", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer", "seerah"] as const;
+export const bookIds = ["life", "dark", "thinking", "presence", "habit", "brain", "wealth", "communication", "future", "return-allah", "mistakes-cost-lives", "intelligence", "winning-mind", "ai-mastery-wealth", "house-remembered", "hard-truth", "law-everyone-should-know", "last-words", "second-timer", "seerah", "knowledge"] as const;
 export type BookId = (typeof bookIds)[number];
-export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ" | "ইসলাম ও আত্মশুদ্ধি";
+export type BookCategory = "জীবনচর্চা" | "মনোবিজ্ঞান" | "চিন্তা ও সিদ্ধান্ত" | "আচরণ ও জীবনযাপন" | "মস্তিষ্ক ও শেখা" | "অর্থ ও সম্পদ" | "বিজ্ঞান ও ভবিষ্যৎ" | "ইসলাম ও আত্মশুদ্ধি" | "সাধারণ জ্ঞান";
 
 export type BookDefinition = {
   id: BookId;
@@ -509,6 +515,25 @@ export const bookDefinitions: Record<BookId, BookDefinition> = {
     pdfPageCount: 105,
     learningOutcomes: ["নিজের ভর্তি-প্রস্তুতির data-based diagnosis তৈরি করা", "target, priority, resource ও realistic routine নির্ধারণ করা", "active recall, spaced revision, timed practice ও Error Log ব্যবহার করা", "mock analysis, exam-day decision এবং final comeback plan তৈরি করা"],
     },
+  knowledge: {
+    id: "knowledge",
+    title: "THE KNOWLEDGE BOOK",
+    subtitle: "যে সাধারণ জ্ঞান একজন মানুষকে সত্যিকার অর্থে জ্ঞানী করে তোলে",
+    description: "বাংলাদেশ, বিশ্ব, বিজ্ঞান, ইতিহাস, মানুষ, প্রযুক্তি, অর্থনীতি, সংস্কৃতি ও দৈনন্দিন জীবনের দরকারি জ্ঞান—সহজ বাংলায় একটি সংযুক্ত পাঠযাত্রা।",
+    longDescription: "এই প্রথম ডিজিটাল সংস্করণে ২০টি প্রধান অধ্যায়ে সাধারণ জ্ঞানকে isolated fact হিসেবে নয়, context, explanation, connection ও critical thinking-এর সঙ্গে উপস্থাপন করা হয়েছে। এটি শুধু ভর্তি বা চাকরির পরীক্ষার বই নয়; পৃথিবীকে আরও ভালোভাবে বোঝার জন্য একজন lifelong learner-এর পাঠসঙ্গী।",
+    category: "সাধারণ জ্ঞান",
+    creator: "শেখ রাসেল",
+    cover: `${import.meta.env.BASE_URL}knowledge-book-cover.png`,
+    accent: "#214E5A",
+    accentSoft: "#E6F1F2",
+    chapters: knowledgeChapters,
+    chapterLoaders: knowledgeChapterLoaders,
+    workbookExercises: knowledgeWorkbookExercises,
+    totalReadingMinutes: knowledgeTotalReadingMinutes,
+    pdfUrl: "",
+    pdfPageCount: 0,
+    learningOutcomes: ["তথ্যকে context ও কারণের সঙ্গে বোঝা", "বাংলাদেশ ও বিশ্বের ঘটনাকে সংযোগ করে দেখা", "বিজ্ঞান, অর্থনীতি, প্রযুক্তি ও সমাজের মৌলিক ধারণা পরিষ্কার করা", "মিথ, তথ্য ও অনিশ্চয়তার মধ্যে পার্থক্য করা"],
+  },
   seerah: {
     id: "seerah",
     title: "মুহাম্মদ ﷺ",
